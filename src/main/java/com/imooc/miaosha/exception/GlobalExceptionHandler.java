@@ -4,6 +4,8 @@ import com.imooc.miaosha.result.CodeMsg;
 import com.imooc.miaosha.result.Result;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -18,8 +20,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class GlobalExceptionHandler {
 
+  private Logger logger = LoggerFactory.getLogger(getClass());
+
   @ExceptionHandler(value = Exception.class)
   public Result<String> exceptionHandler(HttpServletRequest request, Exception e) {
+    logger.error(e.getMessage(), e);
     if (e instanceof GlobalException) {
       GlobalException globalException = (GlobalException) e;
       return Result.error(globalException.getCodeMsg());
