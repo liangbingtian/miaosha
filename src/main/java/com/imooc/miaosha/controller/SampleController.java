@@ -1,7 +1,7 @@
 package com.imooc.miaosha.controller;
 
 import com.imooc.miaosha.redis.RedisService;
-import com.imooc.miaosha.redis.UserKey;
+import com.imooc.miaosha.redis.MiaoshaUserKey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,15 +27,15 @@ public class SampleController {
   @RequestMapping("/redis/get")
   @ResponseBody
   public Long redisGet() {
-    Long v1 = redisService.get(UserKey.getById,"1", Long.class);
+    Long v1 = redisService.get(MiaoshaUserKey.token,"1", Long.class);
     return v1;
   }
 
   @RequestMapping("/redis/set")
   @ResponseBody
   public String redisSet() {
-    boolean v1 = redisService.set(UserKey.getById,"1", "hello,imooc");
-    String str = redisService.get(UserKey.getByName,"2", String.class);
+    boolean v1 = redisService.set(MiaoshaUserKey.token,"1", "hello,imooc");
+    String str = redisService.get(MiaoshaUserKey.token,"2", String.class);
     return str;
   }
 

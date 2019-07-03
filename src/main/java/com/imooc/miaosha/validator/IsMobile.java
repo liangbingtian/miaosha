@@ -10,6 +10,7 @@ import javax.validation.Payload;
 
 /**
  * liangbingtian 2019/6/27 下午8:44
+ * @author liangbingtian
  */
 @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
