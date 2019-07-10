@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.miaosha.repository.MiaoshaGoodsVOMapper">
-  <resultMap id="BaseResultMap" type="com.imooc.miaosha.entity.MiaoshaGoodsVO">
+<mapper namespace="com.imooc.miaosha.repository.MiaoshaUserMapper">
+  <resultMap id="BaseResultMap" type="com.imooc.miaosha.entity.MiaoshaUser">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="goods_id" jdbcType="BIGINT" property="goodsId" />
-    <result column="miaosha_price" jdbcType="DECIMAL" property="miaoshaPrice" />
-    <result column="stock_count" jdbcType="INTEGER" property="stockCount" />
-    <result column="start_date" jdbcType="TIMESTAMP" property="startDate" />
-    <result column="end_date" jdbcType="TIMESTAMP" property="endDate" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="register_date" jdbcType="TIMESTAMP" property="registerDate" />
+    <result column="last_login_date" jdbcType="TIMESTAMP" property="lastLoginDate" />
+    <result column="login_count" jdbcType="INTEGER" property="loginCount" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -92,15 +94,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    `id`, `goods_id`, `miaosha_price`, `stock_count`, `start_date`, `end_date`
+    `id`, `nickname`, `password`, `salt`, `head`, `register_date`, `last_login_date`, `login_count`
   </sql>
-  <select id="selectByExample" parameterType="com.imooc.miaosha.entity.MiaoshaGoodsVOExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.imooc.miaosha.entity.MiaoshaUserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from miaosha_goods
+    from miaosha_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -111,99 +113,119 @@
       limit #{startPos}, #{pageSize}
     </if>
   </select>
-<select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
-  select
-  <include refid="Base_Column_List" />
-  from miaosha_goods
-  where `id`=#{id}
-</select>
-  <delete id="deleteByExample" parameterType="com.imooc.miaosha.entity.MiaoshaGoodsVOExample">
-    delete from miaosha_goods
+  <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from miaosha_user
+    where `id`=#{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByExample" parameterType="com.imooc.miaosha.entity.MiaoshaUserExample">
+    delete from miaosha_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.imooc.miaosha.entity.MiaoshaGoodsVO"  useGeneratedKeys="true" keyProperty="id">
-    insert into miaosha_goods (`goods_id`, `miaosha_price`, `stock_count`, `start_date`, `end_date`)
+  <insert id="insert" parameterType="com.imooc.miaosha.entity.MiaoshaUser"  useGeneratedKeys="true" keyProperty="id">
+    insert into miaosha_user (`nickname`, `password`, `salt`, `head`, `register_date`, `last_login_date`, `login_count`)
 
-    values (#{goodsId,jdbcType=BIGINT}, #{miaoshaPrice,jdbcType=DECIMAL}, #{stockCount,jdbcType=INTEGER}, #{startDate,jdbcType=TIMESTAMP}, #{endDate,jdbcType=TIMESTAMP})
+    values (#{nickname,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{salt,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{registerDate,jdbcType=TIMESTAMP}, #{lastLoginDate,jdbcType=TIMESTAMP}, #{loginCount,jdbcType=INTEGER})
   </insert>
-  <insert id="insertSelective" parameterType="com.imooc.miaosha.entity.MiaoshaGoodsVO" useGeneratedKeys="true" keyProperty="id">
-    insert into miaosha_goods
+  <insert id="insertSelective" parameterType="com.imooc.miaosha.entity.MiaoshaUser" useGeneratedKeys="true" keyProperty="id">
+    insert into miaosha_user
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="goodsId != null">
-        `goods_id`,
+      <if test="nickname != null">
+        `nickname`,
       </if>
-      <if test="miaoshaPrice != null">
-        `miaosha_price`,
+      <if test="password != null">
+        `password`,
       </if>
-      <if test="stockCount != null">
-        `stock_count`,
+      <if test="salt != null">
+        `salt`,
       </if>
-      <if test="startDate != null">
-        `start_date`,
+      <if test="head != null">
+        `head`,
       </if>
-      <if test="endDate != null">
-        `end_date`,
+      <if test="registerDate != null">
+        `register_date`,
+      </if>
+      <if test="lastLoginDate != null">
+        `last_login_date`,
+      </if>
+      <if test="loginCount != null">
+        `login_count`,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="goodsId != null">
-        #{goodsId,jdbcType=BIGINT},
+      <if test="nickname != null">
+        #{nickname,jdbcType=VARCHAR},
       </if>
-      <if test="miaoshaPrice != null">
-        #{miaoshaPrice,jdbcType=DECIMAL},
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
       </if>
-      <if test="stockCount != null">
-        #{stockCount,jdbcType=INTEGER},
+      <if test="salt != null">
+        #{salt,jdbcType=VARCHAR},
       </if>
-      <if test="startDate != null">
-        #{startDate,jdbcType=TIMESTAMP},
+      <if test="head != null">
+        #{head,jdbcType=VARCHAR},
       </if>
-      <if test="endDate != null">
-        #{endDate,jdbcType=TIMESTAMP},
+      <if test="registerDate != null">
+        #{registerDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastLoginDate != null">
+        #{lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loginCount != null">
+        #{loginCount,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
-  <insert id="insertMiaoshaGoodsVOList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
-    insert into miaosha_goods (`goods_id`, `miaosha_price`, `stock_count`, `start_date`, `end_date`)
+  <insert id="insertMiaoshaUserVOList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+    insert into miaosha_user (`nickname`, `password`, `salt`, `head`, `register_date`, `last_login_date`, `login_count`)
 
     values 
 	<foreach collection="list" item="item" separator=",">
 		(
-		#{item.goodsId,jdbcType=BIGINT}, 
-		#{item.miaoshaPrice,jdbcType=DECIMAL}, 
-		#{item.stockCount,jdbcType=INTEGER}, 
-		#{item.startDate,jdbcType=TIMESTAMP}, 
-		#{item.endDate,jdbcType=TIMESTAMP}		)
+		#{item.nickname,jdbcType=VARCHAR}, 
+		#{item.password,jdbcType=VARCHAR}, 
+		#{item.salt,jdbcType=VARCHAR}, 
+		#{item.head,jdbcType=VARCHAR}, 
+		#{item.registerDate,jdbcType=TIMESTAMP}, 
+		#{item.lastLoginDate,jdbcType=TIMESTAMP}, 
+		#{item.loginCount,jdbcType=INTEGER}		)
 	</foreach>
   </insert>
-  <select id="countByExample" parameterType="com.imooc.miaosha.entity.MiaoshaGoodsVOExample" resultType="java.lang.Integer">
-    select count(*) from miaosha_goods
+  <select id="countByExample" parameterType="com.imooc.miaosha.entity.MiaoshaUserExample" resultType="java.lang.Integer">
+    select count(*) from miaosha_user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update miaosha_goods
+    update miaosha_user
     <set>
       <if test="record.id != null">
         `id` = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.goodsId != null">
-        `goods_id` = #{record.goodsId,jdbcType=BIGINT},
+      <if test="record.nickname != null">
+        `nickname` = #{record.nickname,jdbcType=VARCHAR},
       </if>
-      <if test="record.miaoshaPrice != null">
-        `miaosha_price` = #{record.miaoshaPrice,jdbcType=DECIMAL},
+      <if test="record.password != null">
+        `password` = #{record.password,jdbcType=VARCHAR},
       </if>
-      <if test="record.stockCount != null">
-        `stock_count` = #{record.stockCount,jdbcType=INTEGER},
+      <if test="record.salt != null">
+        `salt` = #{record.salt,jdbcType=VARCHAR},
       </if>
-      <if test="record.startDate != null">
-        `start_date` = #{record.startDate,jdbcType=TIMESTAMP},
+      <if test="record.head != null">
+        `head` = #{record.head,jdbcType=VARCHAR},
       </if>
-      <if test="record.endDate != null">
-        `end_date` = #{record.endDate,jdbcType=TIMESTAMP},
+      <if test="record.registerDate != null">
+        `register_date` = #{record.registerDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.lastLoginDate != null">
+        `last_login_date` = #{record.lastLoginDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.loginCount != null">
+        `login_count` = #{record.loginCount,jdbcType=INTEGER},
       </if>
     </set>
     <if test="_parameter != null">
@@ -211,33 +233,35 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update miaosha_goods
+    update miaosha_user
     set 
       `id` = #{record.id,jdbcType=BIGINT},
-      `goods_id` = #{record.goodsId,jdbcType=BIGINT},
-      `miaosha_price` = #{record.miaoshaPrice,jdbcType=DECIMAL},
-      `stock_count` = #{record.stockCount,jdbcType=INTEGER},
-      `start_date` = #{record.startDate,jdbcType=TIMESTAMP},
-      `end_date` = #{record.endDate,jdbcType=TIMESTAMP}
+      `nickname` = #{record.nickname,jdbcType=VARCHAR},
+      `password` = #{record.password,jdbcType=VARCHAR},
+      `salt` = #{record.salt,jdbcType=VARCHAR},
+      `head` = #{record.head,jdbcType=VARCHAR},
+      `register_date` = #{record.registerDate,jdbcType=TIMESTAMP},
+      `last_login_date` = #{record.lastLoginDate,jdbcType=TIMESTAMP},
+      `login_count` = #{record.loginCount,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateMiaoshaGoodsVOList" parameterType="java.util.List" >
+  <update id="updateMiaoshaUserVOList" parameterType="java.util.List" >
   <if test="example != null and example.updateFields.size != 0">
-    insert into miaosha_goods (<include refid="Base_Column_List" />)
+    insert into miaosha_user (<include refid="Base_Column_List" />)
     values
 	<foreach collection="recordList" item="item" separator=",">
-  (#{item.id,jdbcType=BIGINT},#{item.goodsId,jdbcType=BIGINT},#{item.miaoshaPrice,jdbcType=DECIMAL},#{item.stockCount,jdbcType=INTEGER},#{item.startDate,jdbcType=TIMESTAMP},#{item.endDate,jdbcType=TIMESTAMP})
+  (#{item.id,jdbcType=BIGINT},#{item.nickname,jdbcType=VARCHAR},#{item.password,jdbcType=VARCHAR},#{item.salt,jdbcType=VARCHAR},#{item.head,jdbcType=VARCHAR},#{item.registerDate,jdbcType=TIMESTAMP},#{item.lastLoginDate,jdbcType=TIMESTAMP},#{item.loginCount,jdbcType=INTEGER})
 	</foreach>
 	on duplicate key update
 	<foreach collection="example.updateFields" item="item" separator=",">`${item}`=values(`${item}`)</foreach>
   </if>
   <if test="example == null or example.updateFields.size == 0">
-     replace into miaosha_goods (<include refid="Base_Column_List" />)
+     replace into miaosha_user (<include refid="Base_Column_List" />)
     values
     <foreach collection="recordList" item="item" separator=",">
-    (#{item.id,jdbcType=BIGINT},#{item.goodsId,jdbcType=BIGINT},#{item.miaoshaPrice,jdbcType=DECIMAL},#{item.stockCount,jdbcType=INTEGER},#{item.startDate,jdbcType=TIMESTAMP},#{item.endDate,jdbcType=TIMESTAMP})
+    (#{item.id,jdbcType=BIGINT},#{item.nickname,jdbcType=VARCHAR},#{item.password,jdbcType=VARCHAR},#{item.salt,jdbcType=VARCHAR},#{item.head,jdbcType=VARCHAR},#{item.registerDate,jdbcType=TIMESTAMP},#{item.lastLoginDate,jdbcType=TIMESTAMP},#{item.loginCount,jdbcType=INTEGER})
     </foreach>
   </if>
   </update>

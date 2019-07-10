@@ -4,6 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import java.util.*;
 import java.math.BigDecimal;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +15,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class GoodsVO {
+public class Goods {
 
 
     /**
@@ -46,7 +47,7 @@ public class GoodsVO {
      * 商品的详情介绍
      * goods.goods_detail
      */
-    private DataTypeWithBLOBs.String goodsDetail;
+    private String goodsDetail;
   
     /**
      * 商品单价
@@ -59,6 +60,5 @@ public class GoodsVO {
      * goods.goods_stock
      */
     private Integer goodsStock;
-  
 
 }

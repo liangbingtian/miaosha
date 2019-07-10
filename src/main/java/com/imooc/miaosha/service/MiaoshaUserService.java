@@ -1,11 +1,11 @@
 package com.imooc.miaosha.service;
 
-import com.imooc.miaosha.entity.MiaoshaUserVO;
-import com.imooc.miaosha.entity.MiaoshaUserVOExample;
+import com.imooc.miaosha.entity.MiaoshaUser;
+import com.imooc.miaosha.entity.MiaoshaUserExample;
 import com.imooc.miaosha.exception.GlobalException;
 import com.imooc.miaosha.redis.MiaoshaUserKey;
 import com.imooc.miaosha.redis.RedisService;
-import com.imooc.miaosha.repository.MiaoshaUserVOMapper;
+import com.imooc.miaosha.repository.MiaoshaUserMapper;
 import com.imooc.miaosha.result.CodeMsg;
 import com.imooc.miaosha.result.Result;
 import com.imooc.miaosha.util.MD5Util;
@@ -26,7 +26,7 @@ public class MiaoshaUserService {
   public static final String COOKI_NAME_TOKEN = "token";
 
   @Autowired
-  private MiaoshaUserVOMapper miaoshaUserVOMapper;
+  private MiaoshaUserMapper miaoshaUserMapper;
 
   @Autowired
   private RedisService redisService;
@@ -35,9 +35,9 @@ public class MiaoshaUserService {
   public Result<String> login(LoginVo loginVo, HttpServletResponse response) {
     String mobile = loginVo.getMobile();
     String formPass = loginVo.getPassword();
-    MiaoshaUserVOExample example = new MiaoshaUserVOExample();
-    MiaoshaUserVOExample.Criteria criteria = example.createCriteria();
-    MiaoshaUserVO userVO = miaoshaUserVOMapper.selectById(Long.parseLong(mobile));
+    MiaoshaUserExample example = new MiaoshaUserExample();
+    MiaoshaUserExample.Criteria criteria = example.createCriteria();
+    MiaoshaUser userVO = miaoshaUserMapper.selectById(Long.parseLong(mobile));
     if (userVO == null) {
       throw new GlobalException(CodeMsg.MOBILE_NOT_EXIST);
     }
@@ -55,11 +55,11 @@ public class MiaoshaUserService {
     return Result.success("登录成功");
   }
 
-  public MiaoshaUserVO getByToken(HttpServletResponse response, String token) {
+  public MiaoshaUser getByToken(HttpServletResponse response, String token) {
     if (StringUtils.isEmpty(token)) {
       return null;
     }
-    MiaoshaUserVO userVO = redisService.get(MiaoshaUserKey.token, token, MiaoshaUserVO.class);
+    MiaoshaUser userVO = redisService.get(MiaoshaUserKey.token, token, MiaoshaUser.class);
     //延长有效期
     if (userVO!=null){
       addCookie(response, userVO);
@@ -68,7 +68,7 @@ public class MiaoshaUserService {
   }
 
 
-  private void addCookie(HttpServletResponse response, MiaoshaUserVO userVO) {
+  private void addCookie(HttpServletResponse response, MiaoshaUser userVO) {
     //生成token
     String token = UUIDUtil.uuid();
     redisService.set(MiaoshaUserKey.token, token, userVO);

@@ -4,6 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import java.util.*;
 import java.math.BigDecimal;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,7 +15,8 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class OrderInfoVO {
+@Builder
+public class OrderInfo {
 
 
     /**

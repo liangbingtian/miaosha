@@ -3,8 +3,6 @@ package com.imooc.miaosha.entity;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 的查询类
@@ -12,7 +10,7 @@ import java.math.BigDecimal;
  * @author liuqiangm
  *
  */
-public class GoodsVOExample {
+public class GoodsExample {
 
     protected List<String> updateFields;
 
@@ -38,42 +36,42 @@ public class GoodsVOExample {
      */
     protected List<Criteria> oredCriteria;
 
-    public GoodsVOExample updateIdField() {
+    public GoodsExample updateIdField() {
         updateFields.add("id");
         return this;
     }
 
-    public GoodsVOExample updateGoodsNameField() {
+    public GoodsExample updateGoodsNameField() {
         updateFields.add("goods_name");
         return this;
     }
 
-    public GoodsVOExample updateGoodsTitleField() {
+    public GoodsExample updateGoodsTitleField() {
         updateFields.add("goods_title");
         return this;
     }
 
-    public GoodsVOExample updateGoodsImgField() {
+    public GoodsExample updateGoodsImgField() {
         updateFields.add("goods_img");
         return this;
     }
 
-    public GoodsVOExample updateGoodsDetailField() {
+    public GoodsExample updateGoodsDetailField() {
         updateFields.add("goods_detail");
         return this;
     }
 
-    public GoodsVOExample updateGoodsPriceField() {
+    public GoodsExample updateGoodsPriceField() {
         updateFields.add("goods_price");
         return this;
     }
 
-    public GoodsVOExample updateGoodsStockField() {
+    public GoodsExample updateGoodsStockField() {
         updateFields.add("goods_stock");
         return this;
     }
 
-    public GoodsVOExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
+    public GoodsExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
         if(pageNum != null && pageSize != null) {
             this.setStartPos((pageNum - 1) * pageSize);
             this.setPageSize(pageSize);
@@ -81,7 +79,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample addPageNumAndPageSize(String pageNum, String pageSize) {
+    public GoodsExample addPageNumAndPageSize(String pageNum, String pageSize) {
         if(pageNum != null && pageSize != null) {
             int num = Integer.valueOf(pageNum);
             int size = Integer.valueOf(pageSize);
@@ -91,7 +89,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample() {
+    public GoodsExample() {
         oredCriteria = new ArrayList<Criteria>();
         updateFields = new ArrayList<String>();
     }
@@ -112,7 +110,7 @@ public class GoodsVOExample {
         this.pageSize = pageSize;
     }
 
-    public GoodsVOExample orderByIdAsc() {
+    public GoodsExample orderByIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` asc";
         }
@@ -122,7 +120,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByIdDesc() {
+    public GoodsExample orderByIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` desc";
         }
@@ -131,7 +129,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsNameAsc() {
+    public GoodsExample orderByGoodsNameAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_name` asc";
         }
@@ -141,7 +139,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsNameDesc() {
+    public GoodsExample orderByGoodsNameDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_name` desc";
         }
@@ -150,7 +148,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsTitleAsc() {
+    public GoodsExample orderByGoodsTitleAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_title` asc";
         }
@@ -160,7 +158,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsTitleDesc() {
+    public GoodsExample orderByGoodsTitleDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_title` desc";
         }
@@ -169,7 +167,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsImgAsc() {
+    public GoodsExample orderByGoodsImgAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_img` asc";
         }
@@ -179,7 +177,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsImgDesc() {
+    public GoodsExample orderByGoodsImgDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_img` desc";
         }
@@ -188,7 +186,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsDetailAsc() {
+    public GoodsExample orderByGoodsDetailAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_detail` asc";
         }
@@ -198,7 +196,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsDetailDesc() {
+    public GoodsExample orderByGoodsDetailDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_detail` desc";
         }
@@ -207,7 +205,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsPriceAsc() {
+    public GoodsExample orderByGoodsPriceAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_price` asc";
         }
@@ -217,7 +215,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsPriceDesc() {
+    public GoodsExample orderByGoodsPriceDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_price` desc";
         }
@@ -226,7 +224,7 @@ public class GoodsVOExample {
         }
         return this;
     }
-    public GoodsVOExample orderByGoodsStockAsc() {
+    public GoodsExample orderByGoodsStockAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_stock` asc";
         }
@@ -236,7 +234,7 @@ public class GoodsVOExample {
         return this;
     }
 
-    public GoodsVOExample orderByGoodsStockDesc() {
+    public GoodsExample orderByGoodsStockDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_stock` desc";
         }
@@ -643,52 +641,52 @@ public class GoodsVOExample {
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailEqualTo(String value) {
             addAndCriterion("`goods_detail` =", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailNotEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailNotEqualTo(String value) {
             addAndCriterion("`goods_detail` <>", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailGreaterThan(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailGreaterThan(String value) {
             addAndCriterion("`goods_detail` >", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailGreaterThanOrEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailGreaterThanOrEqualTo(String value) {
             addAndCriterion("`goods_detail` >=", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailLessThan(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailLessThan(String value) {
             addAndCriterion("`goods_detail` <", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailLessThanOrEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria andGoodsDetailLessThanOrEqualTo(String value) {
             addAndCriterion("`goods_detail` <=", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailIn(List<DataTypeWithBLOBs.String> values) {
+        public Criteria andGoodsDetailIn(List<String> values) {
             addAndCriterion("`goods_detail` in", values, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailNotIn(List<DataTypeWithBLOBs.String> values) {
+        public Criteria andGoodsDetailNotIn(List<String> values) {
             addAndCriterion("`goods_detail` not in", values, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailBetween(DataTypeWithBLOBs.String value1, DataTypeWithBLOBs.String value2) {
+        public Criteria andGoodsDetailBetween(String value1, String value2) {
             addAndCriterion("`goods_detail` between", value1, value2, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria andGoodsDetailNotBetween(DataTypeWithBLOBs.String value1, DataTypeWithBLOBs.String value2) {
+        public Criteria andGoodsDetailNotBetween(String value1, String value2) {
             addAndCriterion("`goods_detail` not between", value1, value2, "goodsDetail");
             return (Criteria) this;
         }
@@ -1090,52 +1088,52 @@ public class GoodsVOExample {
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailEqualTo(String value) {
             addOrCriterion("`goods_detail` =", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailNotEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailNotEqualTo(String value) {
             addOrCriterion("`goods_detail` <>", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailGreaterThan(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailGreaterThan(String value) {
             addOrCriterion("`goods_detail` >", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailGreaterThanOrEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailGreaterThanOrEqualTo(String value) {
             addOrCriterion("`goods_detail` >=", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailLessThan(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailLessThan(String value) {
             addOrCriterion("`goods_detail` <", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailLessThanOrEqualTo(DataTypeWithBLOBs.String value) {
+        public Criteria orGoodsDetailLessThanOrEqualTo(String value) {
             addOrCriterion("`goods_detail` <=", value, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailIn(List<DataTypeWithBLOBs.String> values) {
+        public Criteria orGoodsDetailIn(List<String> values) {
             addOrCriterion("`goods_detail` in", values, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailNotIn(List<DataTypeWithBLOBs.String> values) {
+        public Criteria orGoodsDetailNotIn(List<String> values) {
             addOrCriterion("`goods_detail` not in", values, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailBetween(DataTypeWithBLOBs.String value1, DataTypeWithBLOBs.String value2) {
+        public Criteria orGoodsDetailBetween(String value1, String value2) {
             addOrCriterion("`goods_detail` between", value1, value2, "goodsDetail");
             return (Criteria) this;
         }
 
-        public Criteria orGoodsDetailNotBetween(DataTypeWithBLOBs.String value1, DataTypeWithBLOBs.String value2) {
+        public Criteria orGoodsDetailNotBetween(String value1, String value2) {
             addOrCriterion("`goods_detail` not between", value1, value2, "goodsDetail");
             return (Criteria) this;
         }

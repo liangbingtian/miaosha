@@ -1,10 +1,15 @@
 package com.imooc.miaosha.controller;
 
-import com.imooc.miaosha.entity.MiaoshaUserVO;
+import com.imooc.miaosha.entity.MiaoshaUser;
+import com.imooc.miaosha.service.GoodsService;
+import com.imooc.miaosha.vo.GoodsVo;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -17,11 +22,58 @@ public class GoodsController {
 
   private Logger logger = LoggerFactory.getLogger(getClass());
 
+  @Autowired
+  private GoodsService goodsService;
+
   @RequestMapping("/to_list")
-  public String toList(Model model, MiaoshaUserVO miaoshaUserVO) {
+  public String toList(Model model, MiaoshaUser miaoshaUser) {
     logger.info("进入了接口了");
-    model.addAttribute("user", miaoshaUserVO);
+    model.addAttribute("user", miaoshaUser);
+
+    List<GoodsVo> goodsVoList = goodsService.listGoodsVo();
+    model.addAttribute("goodsList", goodsVoList);
+
     return "goods_list";
+  }
+
+
+  @RequestMapping("/to_detail/{goodsId}")
+  public String toList(Model model, MiaoshaUser miaoshaUser,
+      @PathVariable("goodsId") long goodsId) {
+    logger.info("进入了接口了");
+    //用snowflack生成id主键
+    model.addAttribute("user", miaoshaUser);
+
+    GoodsVo goodsVo = goodsService.getGoodsVoByGoodsId(goodsId);
+    model.addAttribute("goods", goodsVo);
+
+    //获取开始时间和结束时间
+    int miaoshaStatus = 0;
+    int remainSeconds = 0;
+
+    long startAt = goodsVo.getStartDate().getTime();
+    long endAt = goodsVo.getEndDate().getTime();
+    long now = System.currentTimeMillis();
+
+    //秒杀的过程
+    if (now < startAt) {
+      //秒杀还没开始,倒计时
+      miaoshaStatus = 0;
+      remainSeconds = (int) ((startAt - now)/1000);
+    }else if (now > endAt){
+      //秒杀已经结束
+      miaoshaStatus = 2;
+      remainSeconds = -1;
+    }else {
+      //秒杀进行中
+      miaoshaStatus = 1;
+      remainSeconds = 0;
+    }
+
+    model.addAttribute("miaoshaStatus", miaoshaStatus);
+    model.addAttribute("remainSeconds", remainSeconds);
+
+    return "goods_detail";
   }
 
 }

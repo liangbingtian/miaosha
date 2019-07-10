@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 的查询类
@@ -12,7 +11,7 @@ import java.math.BigDecimal;
  * @author liuqiangm
  *
  */
-public class MiaoshaGoodsVOExample {
+public class MiaoshaGoodsExample {
 
     protected List<String> updateFields;
 
@@ -38,37 +37,37 @@ public class MiaoshaGoodsVOExample {
      */
     protected List<Criteria> oredCriteria;
 
-    public MiaoshaGoodsVOExample updateIdField() {
+    public MiaoshaGoodsExample updateIdField() {
         updateFields.add("id");
         return this;
     }
 
-    public MiaoshaGoodsVOExample updateGoodsIdField() {
+    public MiaoshaGoodsExample updateGoodsIdField() {
         updateFields.add("goods_id");
         return this;
     }
 
-    public MiaoshaGoodsVOExample updateMiaoshaPriceField() {
+    public MiaoshaGoodsExample updateMiaoshaPriceField() {
         updateFields.add("miaosha_price");
         return this;
     }
 
-    public MiaoshaGoodsVOExample updateStockCountField() {
+    public MiaoshaGoodsExample updateStockCountField() {
         updateFields.add("stock_count");
         return this;
     }
 
-    public MiaoshaGoodsVOExample updateStartDateField() {
+    public MiaoshaGoodsExample updateStartDateField() {
         updateFields.add("start_date");
         return this;
     }
 
-    public MiaoshaGoodsVOExample updateEndDateField() {
+    public MiaoshaGoodsExample updateEndDateField() {
         updateFields.add("end_date");
         return this;
     }
 
-    public MiaoshaGoodsVOExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
+    public MiaoshaGoodsExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
         if(pageNum != null && pageSize != null) {
             this.setStartPos((pageNum - 1) * pageSize);
             this.setPageSize(pageSize);
@@ -76,7 +75,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample addPageNumAndPageSize(String pageNum, String pageSize) {
+    public MiaoshaGoodsExample addPageNumAndPageSize(String pageNum, String pageSize) {
         if(pageNum != null && pageSize != null) {
             int num = Integer.valueOf(pageNum);
             int size = Integer.valueOf(pageSize);
@@ -86,7 +85,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample() {
+    public MiaoshaGoodsExample() {
         oredCriteria = new ArrayList<Criteria>();
         updateFields = new ArrayList<String>();
     }
@@ -107,7 +106,7 @@ public class MiaoshaGoodsVOExample {
         this.pageSize = pageSize;
     }
 
-    public MiaoshaGoodsVOExample orderByIdAsc() {
+    public MiaoshaGoodsExample orderByIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` asc";
         }
@@ -117,7 +116,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByIdDesc() {
+    public MiaoshaGoodsExample orderByIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` desc";
         }
@@ -126,7 +125,7 @@ public class MiaoshaGoodsVOExample {
         }
         return this;
     }
-    public MiaoshaGoodsVOExample orderByGoodsIdAsc() {
+    public MiaoshaGoodsExample orderByGoodsIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` asc";
         }
@@ -136,7 +135,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByGoodsIdDesc() {
+    public MiaoshaGoodsExample orderByGoodsIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` desc";
         }
@@ -145,7 +144,7 @@ public class MiaoshaGoodsVOExample {
         }
         return this;
     }
-    public MiaoshaGoodsVOExample orderByMiaoshaPriceAsc() {
+    public MiaoshaGoodsExample orderByMiaoshaPriceAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`miaosha_price` asc";
         }
@@ -155,7 +154,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByMiaoshaPriceDesc() {
+    public MiaoshaGoodsExample orderByMiaoshaPriceDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`miaosha_price` desc";
         }
@@ -164,7 +163,7 @@ public class MiaoshaGoodsVOExample {
         }
         return this;
     }
-    public MiaoshaGoodsVOExample orderByStockCountAsc() {
+    public MiaoshaGoodsExample orderByStockCountAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`stock_count` asc";
         }
@@ -174,7 +173,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByStockCountDesc() {
+    public MiaoshaGoodsExample orderByStockCountDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`stock_count` desc";
         }
@@ -183,7 +182,7 @@ public class MiaoshaGoodsVOExample {
         }
         return this;
     }
-    public MiaoshaGoodsVOExample orderByStartDateAsc() {
+    public MiaoshaGoodsExample orderByStartDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`start_date` asc";
         }
@@ -193,7 +192,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByStartDateDesc() {
+    public MiaoshaGoodsExample orderByStartDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`start_date` desc";
         }
@@ -202,7 +201,7 @@ public class MiaoshaGoodsVOExample {
         }
         return this;
     }
-    public MiaoshaGoodsVOExample orderByEndDateAsc() {
+    public MiaoshaGoodsExample orderByEndDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`end_date` asc";
         }
@@ -212,7 +211,7 @@ public class MiaoshaGoodsVOExample {
         return this;
     }
 
-    public MiaoshaGoodsVOExample orderByEndDateDesc() {
+    public MiaoshaGoodsExample orderByEndDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`end_date` desc";
         }

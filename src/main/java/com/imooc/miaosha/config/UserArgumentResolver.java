@@ -1,6 +1,6 @@
 package com.imooc.miaosha.config;
 
-import com.imooc.miaosha.entity.MiaoshaUserVO;
+import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.service.MiaoshaUserService;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +28,7 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
   @Override
   public boolean supportsParameter(MethodParameter methodParameter) {
     Class<?> clazz = methodParameter.getParameterType();
-    return clazz == MiaoshaUserVO.class;
+    return clazz == MiaoshaUser.class;
   }
 
   @Override

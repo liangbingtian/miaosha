@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.imooc.miaosha.repository.GoodsVOMapper">
-  <resultMap id="BaseResultMap" type="com.imooc.miaosha.entity.GoodsVO">
+<mapper namespace="com.imooc.miaosha.repository.OrderInfoMapper">
+  <resultMap id="BaseResultMap" type="com.imooc.miaosha.entity.OrderInfo">
     <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="goods_id" jdbcType="BIGINT" property="goodsId" />
+    <result column="delivery_addr_id" jdbcType="BIGINT" property="deliveryAddrId" />
     <result column="goods_name" jdbcType="VARCHAR" property="goodsName" />
-    <result column="goods_title" jdbcType="VARCHAR" property="goodsTitle" />
-    <result column="goods_img" jdbcType="VARCHAR" property="goodsImg" />
-    <result column="goods_detail" jdbcType="LONGVARCHAR" property="goodsDetail" />
+    <result column="goods_count" jdbcType="INTEGER" property="goodsCount" />
     <result column="goods_price" jdbcType="DECIMAL" property="goodsPrice" />
-    <result column="goods_stock" jdbcType="INTEGER" property="goodsStock" />
+    <result column="order_channel" jdbcType="TINYINT" property="orderChannel" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="pay_date" jdbcType="TIMESTAMP" property="payDate" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -93,15 +97,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    `id`, `goods_name`, `goods_title`, `goods_img`, `goods_detail`, `goods_price`, `goods_stock`
+    `id`, `user_id`, `goods_id`, `delivery_addr_id`, `goods_name`, `goods_count`, `goods_price`, `order_channel`, `status`, `create_date`, `pay_date`
   </sql>
-  <select id="selectByExample" parameterType="com.imooc.miaosha.entity.GoodsVOExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.imooc.miaosha.entity.OrderInfoExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from goods
+    from order_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -115,106 +119,146 @@
 <select id="selectById" parameterType="java.lang.Long" resultMap="BaseResultMap">
   select
   <include refid="Base_Column_List" />
-  from goods
+  from order_info
   where `id`=#{id}
 </select>
-  <delete id="deleteByExample" parameterType="com.imooc.miaosha.entity.GoodsVOExample">
-    delete from goods
+  <delete id="deleteByExample" parameterType="com.imooc.miaosha.entity.OrderInfoExample">
+    delete from order_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.imooc.miaosha.entity.GoodsVO"  useGeneratedKeys="true" keyProperty="id">
-    insert into goods (`goods_name`, `goods_title`, `goods_img`, `goods_detail`, `goods_price`, `goods_stock`)
+  <insert id="insert" parameterType="com.imooc.miaosha.entity.OrderInfo"  useGeneratedKeys="true" keyProperty="id">
+    insert into order_info (`user_id`, `goods_id`, `delivery_addr_id`, `goods_name`, `goods_count`, `goods_price`, `order_channel`, `status`, `create_date`, `pay_date`)
 
-    values (#{goodsName,jdbcType=VARCHAR}, #{goodsTitle,jdbcType=VARCHAR}, #{goodsImg,jdbcType=VARCHAR}, #{goodsDetail,jdbcType=LONGVARCHAR}, #{goodsPrice,jdbcType=DECIMAL}, #{goodsStock,jdbcType=INTEGER})
+    values (#{userId,jdbcType=BIGINT}, #{goodsId,jdbcType=BIGINT}, #{deliveryAddrId,jdbcType=BIGINT}, #{goodsName,jdbcType=VARCHAR}, #{goodsCount,jdbcType=INTEGER}, #{goodsPrice,jdbcType=DECIMAL}, #{orderChannel,jdbcType=TINYINT}, #{status,jdbcType=TINYINT}, #{createDate,jdbcType=TIMESTAMP}, #{payDate,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.imooc.miaosha.entity.GoodsVO" useGeneratedKeys="true" keyProperty="id">
-    insert into goods
+  <insert id="insertSelective" parameterType="com.imooc.miaosha.entity.OrderInfo" useGeneratedKeys="true" keyProperty="id">
+    insert into order_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        `user_id`,
+      </if>
+      <if test="goodsId != null">
+        `goods_id`,
+      </if>
+      <if test="deliveryAddrId != null">
+        `delivery_addr_id`,
+      </if>
       <if test="goodsName != null">
         `goods_name`,
       </if>
-      <if test="goodsTitle != null">
-        `goods_title`,
-      </if>
-      <if test="goodsImg != null">
-        `goods_img`,
-      </if>
-      <if test="goodsDetail != null">
-        `goods_detail`,
+      <if test="goodsCount != null">
+        `goods_count`,
       </if>
       <if test="goodsPrice != null">
         `goods_price`,
       </if>
-      <if test="goodsStock != null">
-        `goods_stock`,
+      <if test="orderChannel != null">
+        `order_channel`,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="createDate != null">
+        `create_date`,
+      </if>
+      <if test="payDate != null">
+        `pay_date`,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userId != null">
+        #{userId,jdbcType=BIGINT},
+      </if>
+      <if test="goodsId != null">
+        #{goodsId,jdbcType=BIGINT},
+      </if>
+      <if test="deliveryAddrId != null">
+        #{deliveryAddrId,jdbcType=BIGINT},
+      </if>
       <if test="goodsName != null">
         #{goodsName,jdbcType=VARCHAR},
       </if>
-      <if test="goodsTitle != null">
-        #{goodsTitle,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsImg != null">
-        #{goodsImg,jdbcType=VARCHAR},
-      </if>
-      <if test="goodsDetail != null">
-        #{goodsDetail,jdbcType=LONGVARCHAR},
+      <if test="goodsCount != null">
+        #{goodsCount,jdbcType=INTEGER},
       </if>
       <if test="goodsPrice != null">
         #{goodsPrice,jdbcType=DECIMAL},
       </if>
-      <if test="goodsStock != null">
-        #{goodsStock,jdbcType=INTEGER},
+      <if test="orderChannel != null">
+        #{orderChannel,jdbcType=TINYINT},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="payDate != null">
+        #{payDate,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <insert id="insertGoodsVOList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
-    insert into goods (`goods_name`, `goods_title`, `goods_img`, `goods_detail`, `goods_price`, `goods_stock`)
+  <insert id="insertOrderInfoVOList" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+    insert into order_info (`user_id`, `goods_id`, `delivery_addr_id`, `goods_name`, `goods_count`, `goods_price`, `order_channel`, `status`, `create_date`, `pay_date`)
 
     values 
 	<foreach collection="list" item="item" separator=",">
 		(
+		#{item.userId,jdbcType=BIGINT}, 
+		#{item.goodsId,jdbcType=BIGINT}, 
+		#{item.deliveryAddrId,jdbcType=BIGINT}, 
 		#{item.goodsName,jdbcType=VARCHAR}, 
-		#{item.goodsTitle,jdbcType=VARCHAR}, 
-		#{item.goodsImg,jdbcType=VARCHAR}, 
-		#{item.goodsDetail,jdbcType=LONGVARCHAR}, 
+		#{item.goodsCount,jdbcType=INTEGER}, 
 		#{item.goodsPrice,jdbcType=DECIMAL}, 
-		#{item.goodsStock,jdbcType=INTEGER}		)
+		#{item.orderChannel,jdbcType=TINYINT}, 
+		#{item.status,jdbcType=TINYINT}, 
+		#{item.createDate,jdbcType=TIMESTAMP}, 
+		#{item.payDate,jdbcType=TIMESTAMP}		)
 	</foreach>
   </insert>
-  <select id="countByExample" parameterType="com.imooc.miaosha.entity.GoodsVOExample" resultType="java.lang.Integer">
-    select count(*) from goods
+  <select id="countByExample" parameterType="com.imooc.miaosha.entity.OrderInfoExample" resultType="java.lang.Integer">
+    select count(*) from order_info
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update goods
+    update order_info
     <set>
       <if test="record.id != null">
         `id` = #{record.id,jdbcType=BIGINT},
       </if>
+      <if test="record.userId != null">
+        `user_id` = #{record.userId,jdbcType=BIGINT},
+      </if>
+      <if test="record.goodsId != null">
+        `goods_id` = #{record.goodsId,jdbcType=BIGINT},
+      </if>
+      <if test="record.deliveryAddrId != null">
+        `delivery_addr_id` = #{record.deliveryAddrId,jdbcType=BIGINT},
+      </if>
       <if test="record.goodsName != null">
         `goods_name` = #{record.goodsName,jdbcType=VARCHAR},
       </if>
-      <if test="record.goodsTitle != null">
-        `goods_title` = #{record.goodsTitle,jdbcType=VARCHAR},
-      </if>
-      <if test="record.goodsImg != null">
-        `goods_img` = #{record.goodsImg,jdbcType=VARCHAR},
-      </if>
-      <if test="record.goodsDetail != null">
-        `goods_detail` = #{record.goodsDetail,jdbcType=LONGVARCHAR},
+      <if test="record.goodsCount != null">
+        `goods_count` = #{record.goodsCount,jdbcType=INTEGER},
       </if>
       <if test="record.goodsPrice != null">
         `goods_price` = #{record.goodsPrice,jdbcType=DECIMAL},
       </if>
-      <if test="record.goodsStock != null">
-        `goods_stock` = #{record.goodsStock,jdbcType=INTEGER},
+      <if test="record.orderChannel != null">
+        `order_channel` = #{record.orderChannel,jdbcType=TINYINT},
+      </if>
+      <if test="record.status != null">
+        `status` = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.createDate != null">
+        `create_date` = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.payDate != null">
+        `pay_date` = #{record.payDate,jdbcType=TIMESTAMP},
       </if>
     </set>
     <if test="_parameter != null">
@@ -222,34 +266,38 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update goods
+    update order_info
     set 
       `id` = #{record.id,jdbcType=BIGINT},
+      `user_id` = #{record.userId,jdbcType=BIGINT},
+      `goods_id` = #{record.goodsId,jdbcType=BIGINT},
+      `delivery_addr_id` = #{record.deliveryAddrId,jdbcType=BIGINT},
       `goods_name` = #{record.goodsName,jdbcType=VARCHAR},
-      `goods_title` = #{record.goodsTitle,jdbcType=VARCHAR},
-      `goods_img` = #{record.goodsImg,jdbcType=VARCHAR},
-      `goods_detail` = #{record.goodsDetail,jdbcType=LONGVARCHAR},
+      `goods_count` = #{record.goodsCount,jdbcType=INTEGER},
       `goods_price` = #{record.goodsPrice,jdbcType=DECIMAL},
-      `goods_stock` = #{record.goodsStock,jdbcType=INTEGER}
+      `order_channel` = #{record.orderChannel,jdbcType=TINYINT},
+      `status` = #{record.status,jdbcType=TINYINT},
+      `create_date` = #{record.createDate,jdbcType=TIMESTAMP},
+      `pay_date` = #{record.payDate,jdbcType=TIMESTAMP}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateGoodsVOList" parameterType="java.util.List" >
+  <update id="updateOrderInfoVOList" parameterType="java.util.List" >
   <if test="example != null and example.updateFields.size != 0">
-    insert into goods (<include refid="Base_Column_List" />)
+    insert into order_info (<include refid="Base_Column_List" />)
     values
 	<foreach collection="recordList" item="item" separator=",">
-  (#{item.id,jdbcType=BIGINT},#{item.goodsName,jdbcType=VARCHAR},#{item.goodsTitle,jdbcType=VARCHAR},#{item.goodsImg,jdbcType=VARCHAR},#{item.goodsDetail,jdbcType=LONGVARCHAR},#{item.goodsPrice,jdbcType=DECIMAL},#{item.goodsStock,jdbcType=INTEGER})
+  (#{item.id,jdbcType=BIGINT},#{item.userId,jdbcType=BIGINT},#{item.goodsId,jdbcType=BIGINT},#{item.deliveryAddrId,jdbcType=BIGINT},#{item.goodsName,jdbcType=VARCHAR},#{item.goodsCount,jdbcType=INTEGER},#{item.goodsPrice,jdbcType=DECIMAL},#{item.orderChannel,jdbcType=TINYINT},#{item.status,jdbcType=TINYINT},#{item.createDate,jdbcType=TIMESTAMP},#{item.payDate,jdbcType=TIMESTAMP})
 	</foreach>
 	on duplicate key update
 	<foreach collection="example.updateFields" item="item" separator=",">`${item}`=values(`${item}`)</foreach>
   </if>
   <if test="example == null or example.updateFields.size == 0">
-     replace into goods (<include refid="Base_Column_List" />)
+     replace into order_info (<include refid="Base_Column_List" />)
     values
     <foreach collection="recordList" item="item" separator=",">
-    (#{item.id,jdbcType=BIGINT},#{item.goodsName,jdbcType=VARCHAR},#{item.goodsTitle,jdbcType=VARCHAR},#{item.goodsImg,jdbcType=VARCHAR},#{item.goodsDetail,jdbcType=LONGVARCHAR},#{item.goodsPrice,jdbcType=DECIMAL},#{item.goodsStock,jdbcType=INTEGER})
+    (#{item.id,jdbcType=BIGINT},#{item.userId,jdbcType=BIGINT},#{item.goodsId,jdbcType=BIGINT},#{item.deliveryAddrId,jdbcType=BIGINT},#{item.goodsName,jdbcType=VARCHAR},#{item.goodsCount,jdbcType=INTEGER},#{item.goodsPrice,jdbcType=DECIMAL},#{item.orderChannel,jdbcType=TINYINT},#{item.status,jdbcType=TINYINT},#{item.createDate,jdbcType=TIMESTAMP},#{item.payDate,jdbcType=TIMESTAMP})
     </foreach>
   </if>
   </update>

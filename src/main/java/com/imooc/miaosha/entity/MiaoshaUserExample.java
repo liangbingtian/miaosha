@@ -1,10 +1,8 @@
 package com.imooc.miaosha.entity;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 的查询类
@@ -12,7 +10,7 @@ import java.math.BigDecimal;
  * @author liuqiangm
  *
  */
-public class MiaoshaUserVOExample {
+public class MiaoshaUserExample {
 
     protected List<String> updateFields;
 
@@ -38,47 +36,47 @@ public class MiaoshaUserVOExample {
      */
     protected List<Criteria> oredCriteria;
 
-    public MiaoshaUserVOExample updateIdField() {
+    public MiaoshaUserExample updateIdField() {
         updateFields.add("id");
         return this;
     }
 
-    public MiaoshaUserVOExample updateNicknameField() {
+    public MiaoshaUserExample updateNicknameField() {
         updateFields.add("nickname");
         return this;
     }
 
-    public MiaoshaUserVOExample updatePasswordField() {
+    public MiaoshaUserExample updatePasswordField() {
         updateFields.add("password");
         return this;
     }
 
-    public MiaoshaUserVOExample updateSaltField() {
+    public MiaoshaUserExample updateSaltField() {
         updateFields.add("salt");
         return this;
     }
 
-    public MiaoshaUserVOExample updateHeadField() {
+    public MiaoshaUserExample updateHeadField() {
         updateFields.add("head");
         return this;
     }
 
-    public MiaoshaUserVOExample updateRegisterDateField() {
+    public MiaoshaUserExample updateRegisterDateField() {
         updateFields.add("register_date");
         return this;
     }
 
-    public MiaoshaUserVOExample updateLastLoginDateField() {
+    public MiaoshaUserExample updateLastLoginDateField() {
         updateFields.add("last_login_date");
         return this;
     }
 
-    public MiaoshaUserVOExample updateLoginCountField() {
+    public MiaoshaUserExample updateLoginCountField() {
         updateFields.add("login_count");
         return this;
     }
 
-    public MiaoshaUserVOExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
+    public MiaoshaUserExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
         if(pageNum != null && pageSize != null) {
             this.setStartPos((pageNum - 1) * pageSize);
             this.setPageSize(pageSize);
@@ -86,7 +84,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample addPageNumAndPageSize(String pageNum, String pageSize) {
+    public MiaoshaUserExample addPageNumAndPageSize(String pageNum, String pageSize) {
         if(pageNum != null && pageSize != null) {
             int num = Integer.valueOf(pageNum);
             int size = Integer.valueOf(pageSize);
@@ -96,7 +94,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample() {
+    public MiaoshaUserExample() {
         oredCriteria = new ArrayList<Criteria>();
         updateFields = new ArrayList<String>();
     }
@@ -117,7 +115,7 @@ public class MiaoshaUserVOExample {
         this.pageSize = pageSize;
     }
 
-    public MiaoshaUserVOExample orderByIdAsc() {
+    public MiaoshaUserExample orderByIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` asc";
         }
@@ -127,7 +125,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByIdDesc() {
+    public MiaoshaUserExample orderByIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` desc";
         }
@@ -136,7 +134,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByNicknameAsc() {
+    public MiaoshaUserExample orderByNicknameAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`nickname` asc";
         }
@@ -146,7 +144,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByNicknameDesc() {
+    public MiaoshaUserExample orderByNicknameDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`nickname` desc";
         }
@@ -155,7 +153,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByPasswordAsc() {
+    public MiaoshaUserExample orderByPasswordAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`password` asc";
         }
@@ -165,7 +163,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByPasswordDesc() {
+    public MiaoshaUserExample orderByPasswordDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`password` desc";
         }
@@ -174,7 +172,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderBySaltAsc() {
+    public MiaoshaUserExample orderBySaltAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`salt` asc";
         }
@@ -184,7 +182,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderBySaltDesc() {
+    public MiaoshaUserExample orderBySaltDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`salt` desc";
         }
@@ -193,7 +191,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByHeadAsc() {
+    public MiaoshaUserExample orderByHeadAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`head` asc";
         }
@@ -203,7 +201,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByHeadDesc() {
+    public MiaoshaUserExample orderByHeadDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`head` desc";
         }
@@ -212,7 +210,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByRegisterDateAsc() {
+    public MiaoshaUserExample orderByRegisterDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`register_date` asc";
         }
@@ -222,7 +220,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByRegisterDateDesc() {
+    public MiaoshaUserExample orderByRegisterDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`register_date` desc";
         }
@@ -231,7 +229,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByLastLoginDateAsc() {
+    public MiaoshaUserExample orderByLastLoginDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`last_login_date` asc";
         }
@@ -241,7 +239,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByLastLoginDateDesc() {
+    public MiaoshaUserExample orderByLastLoginDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`last_login_date` desc";
         }
@@ -250,7 +248,7 @@ public class MiaoshaUserVOExample {
         }
         return this;
     }
-    public MiaoshaUserVOExample orderByLoginCountAsc() {
+    public MiaoshaUserExample orderByLoginCountAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`login_count` asc";
         }
@@ -260,7 +258,7 @@ public class MiaoshaUserVOExample {
         return this;
     }
 
-    public MiaoshaUserVOExample orderByLoginCountDesc() {
+    public MiaoshaUserExample orderByLoginCountDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`login_count` desc";
         }

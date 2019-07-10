@@ -14,7 +14,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class MiaoshaGoodsVO {
+public class MiaoshaGoods {
 
 
     /**

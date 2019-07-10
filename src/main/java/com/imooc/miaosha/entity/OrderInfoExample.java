@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 的查询类
@@ -12,7 +11,7 @@ import java.math.BigDecimal;
  * @author liuqiangm
  *
  */
-public class OrderInfoVOExample {
+public class OrderInfoExample {
 
     protected List<String> updateFields;
 
@@ -38,62 +37,62 @@ public class OrderInfoVOExample {
      */
     protected List<Criteria> oredCriteria;
 
-    public OrderInfoVOExample updateIdField() {
+    public OrderInfoExample updateIdField() {
         updateFields.add("id");
         return this;
     }
 
-    public OrderInfoVOExample updateUserIdField() {
+    public OrderInfoExample updateUserIdField() {
         updateFields.add("user_id");
         return this;
     }
 
-    public OrderInfoVOExample updateGoodsIdField() {
+    public OrderInfoExample updateGoodsIdField() {
         updateFields.add("goods_id");
         return this;
     }
 
-    public OrderInfoVOExample updateDeliveryAddrIdField() {
+    public OrderInfoExample updateDeliveryAddrIdField() {
         updateFields.add("delivery_addr_id");
         return this;
     }
 
-    public OrderInfoVOExample updateGoodsNameField() {
+    public OrderInfoExample updateGoodsNameField() {
         updateFields.add("goods_name");
         return this;
     }
 
-    public OrderInfoVOExample updateGoodsCountField() {
+    public OrderInfoExample updateGoodsCountField() {
         updateFields.add("goods_count");
         return this;
     }
 
-    public OrderInfoVOExample updateGoodsPriceField() {
+    public OrderInfoExample updateGoodsPriceField() {
         updateFields.add("goods_price");
         return this;
     }
 
-    public OrderInfoVOExample updateOrderChannelField() {
+    public OrderInfoExample updateOrderChannelField() {
         updateFields.add("order_channel");
         return this;
     }
 
-    public OrderInfoVOExample updateStatusField() {
+    public OrderInfoExample updateStatusField() {
         updateFields.add("status");
         return this;
     }
 
-    public OrderInfoVOExample updateCreateDateField() {
+    public OrderInfoExample updateCreateDateField() {
         updateFields.add("create_date");
         return this;
     }
 
-    public OrderInfoVOExample updatePayDateField() {
+    public OrderInfoExample updatePayDateField() {
         updateFields.add("pay_date");
         return this;
     }
 
-    public OrderInfoVOExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
+    public OrderInfoExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
         if(pageNum != null && pageSize != null) {
             this.setStartPos((pageNum - 1) * pageSize);
             this.setPageSize(pageSize);
@@ -101,7 +100,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample addPageNumAndPageSize(String pageNum, String pageSize) {
+    public OrderInfoExample addPageNumAndPageSize(String pageNum, String pageSize) {
         if(pageNum != null && pageSize != null) {
             int num = Integer.valueOf(pageNum);
             int size = Integer.valueOf(pageSize);
@@ -111,7 +110,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample() {
+    public OrderInfoExample() {
         oredCriteria = new ArrayList<Criteria>();
         updateFields = new ArrayList<String>();
     }
@@ -132,7 +131,7 @@ public class OrderInfoVOExample {
         this.pageSize = pageSize;
     }
 
-    public OrderInfoVOExample orderByIdAsc() {
+    public OrderInfoExample orderByIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` asc";
         }
@@ -142,7 +141,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByIdDesc() {
+    public OrderInfoExample orderByIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` desc";
         }
@@ -151,7 +150,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByUserIdAsc() {
+    public OrderInfoExample orderByUserIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`user_id` asc";
         }
@@ -161,7 +160,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByUserIdDesc() {
+    public OrderInfoExample orderByUserIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`user_id` desc";
         }
@@ -170,7 +169,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByGoodsIdAsc() {
+    public OrderInfoExample orderByGoodsIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` asc";
         }
@@ -180,7 +179,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByGoodsIdDesc() {
+    public OrderInfoExample orderByGoodsIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` desc";
         }
@@ -189,7 +188,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByDeliveryAddrIdAsc() {
+    public OrderInfoExample orderByDeliveryAddrIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`delivery_addr_id` asc";
         }
@@ -199,7 +198,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByDeliveryAddrIdDesc() {
+    public OrderInfoExample orderByDeliveryAddrIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`delivery_addr_id` desc";
         }
@@ -208,7 +207,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByGoodsNameAsc() {
+    public OrderInfoExample orderByGoodsNameAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_name` asc";
         }
@@ -218,7 +217,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByGoodsNameDesc() {
+    public OrderInfoExample orderByGoodsNameDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_name` desc";
         }
@@ -227,7 +226,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByGoodsCountAsc() {
+    public OrderInfoExample orderByGoodsCountAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_count` asc";
         }
@@ -237,7 +236,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByGoodsCountDesc() {
+    public OrderInfoExample orderByGoodsCountDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_count` desc";
         }
@@ -246,7 +245,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByGoodsPriceAsc() {
+    public OrderInfoExample orderByGoodsPriceAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_price` asc";
         }
@@ -256,7 +255,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByGoodsPriceDesc() {
+    public OrderInfoExample orderByGoodsPriceDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_price` desc";
         }
@@ -265,7 +264,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByOrderChannelAsc() {
+    public OrderInfoExample orderByOrderChannelAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`order_channel` asc";
         }
@@ -275,7 +274,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByOrderChannelDesc() {
+    public OrderInfoExample orderByOrderChannelDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`order_channel` desc";
         }
@@ -284,7 +283,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByStatusAsc() {
+    public OrderInfoExample orderByStatusAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`status` asc";
         }
@@ -294,7 +293,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByStatusDesc() {
+    public OrderInfoExample orderByStatusDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`status` desc";
         }
@@ -303,7 +302,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByCreateDateAsc() {
+    public OrderInfoExample orderByCreateDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`create_date` asc";
         }
@@ -313,7 +312,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByCreateDateDesc() {
+    public OrderInfoExample orderByCreateDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`create_date` desc";
         }
@@ -322,7 +321,7 @@ public class OrderInfoVOExample {
         }
         return this;
     }
-    public OrderInfoVOExample orderByPayDateAsc() {
+    public OrderInfoExample orderByPayDateAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`pay_date` asc";
         }
@@ -332,7 +331,7 @@ public class OrderInfoVOExample {
         return this;
     }
 
-    public OrderInfoVOExample orderByPayDateDesc() {
+    public OrderInfoExample orderByPayDateDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`pay_date` desc";
         }

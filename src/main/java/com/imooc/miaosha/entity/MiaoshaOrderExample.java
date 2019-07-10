@@ -1,10 +1,7 @@
 package com.imooc.miaosha.entity;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Date;
-import java.math.BigDecimal;
 
 /**
  * 的查询类
@@ -12,7 +9,7 @@ import java.math.BigDecimal;
  * @author liuqiangm
  *
  */
-public class MiaoshaOrderVOExample {
+public class MiaoshaOrderExample {
 
     protected List<String> updateFields;
 
@@ -38,27 +35,27 @@ public class MiaoshaOrderVOExample {
      */
     protected List<Criteria> oredCriteria;
 
-    public MiaoshaOrderVOExample updateIdField() {
+    public MiaoshaOrderExample updateIdField() {
         updateFields.add("id");
         return this;
     }
 
-    public MiaoshaOrderVOExample updateUserIdField() {
+    public MiaoshaOrderExample updateUserIdField() {
         updateFields.add("user_id");
         return this;
     }
 
-    public MiaoshaOrderVOExample updateOrderIdField() {
+    public MiaoshaOrderExample updateOrderIdField() {
         updateFields.add("order_id");
         return this;
     }
 
-    public MiaoshaOrderVOExample updateGoodsIdField() {
+    public MiaoshaOrderExample updateGoodsIdField() {
         updateFields.add("goods_id");
         return this;
     }
 
-    public MiaoshaOrderVOExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
+    public MiaoshaOrderExample addPageNumAndPageSize(Integer pageNum, Integer pageSize) {
         if(pageNum != null && pageSize != null) {
             this.setStartPos((pageNum - 1) * pageSize);
             this.setPageSize(pageSize);
@@ -66,7 +63,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample addPageNumAndPageSize(String pageNum, String pageSize) {
+    public MiaoshaOrderExample addPageNumAndPageSize(String pageNum, String pageSize) {
         if(pageNum != null && pageSize != null) {
             int num = Integer.valueOf(pageNum);
             int size = Integer.valueOf(pageSize);
@@ -76,7 +73,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample() {
+    public MiaoshaOrderExample() {
         oredCriteria = new ArrayList<Criteria>();
         updateFields = new ArrayList<String>();
     }
@@ -97,7 +94,7 @@ public class MiaoshaOrderVOExample {
         this.pageSize = pageSize;
     }
 
-    public MiaoshaOrderVOExample orderByIdAsc() {
+    public MiaoshaOrderExample orderByIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` asc";
         }
@@ -107,7 +104,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample orderByIdDesc() {
+    public MiaoshaOrderExample orderByIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`id` desc";
         }
@@ -116,7 +113,7 @@ public class MiaoshaOrderVOExample {
         }
         return this;
     }
-    public MiaoshaOrderVOExample orderByUserIdAsc() {
+    public MiaoshaOrderExample orderByUserIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`user_id` asc";
         }
@@ -126,7 +123,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample orderByUserIdDesc() {
+    public MiaoshaOrderExample orderByUserIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`user_id` desc";
         }
@@ -135,7 +132,7 @@ public class MiaoshaOrderVOExample {
         }
         return this;
     }
-    public MiaoshaOrderVOExample orderByOrderIdAsc() {
+    public MiaoshaOrderExample orderByOrderIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`order_id` asc";
         }
@@ -145,7 +142,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample orderByOrderIdDesc() {
+    public MiaoshaOrderExample orderByOrderIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`order_id` desc";
         }
@@ -154,7 +151,7 @@ public class MiaoshaOrderVOExample {
         }
         return this;
     }
-    public MiaoshaOrderVOExample orderByGoodsIdAsc() {
+    public MiaoshaOrderExample orderByGoodsIdAsc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` asc";
         }
@@ -164,7 +161,7 @@ public class MiaoshaOrderVOExample {
         return this;
     }
 
-    public MiaoshaOrderVOExample orderByGoodsIdDesc() {
+    public MiaoshaOrderExample orderByGoodsIdDesc() {
         if(this.orderByClause == null || this.orderByClause.length() == 0) {
             orderByClause = "`goods_id` desc";
         }
