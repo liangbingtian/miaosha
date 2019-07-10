@@ -43,6 +43,6 @@ public interface OrderInfoMapper {
   int updateOrderInfoVOList(@Param("recordList") List<OrderInfo> recordList,
       @Param("example") OrderInfoExample example);
 
-  @Select("select from miaosha_order where user_id = #{userId} and goods_id = #{goodsId}")
+  @Select("select * from miaosha_order where user_id = #{userid} and goods_id = #{goodsId}")
   MiaoshaOrder getMiaoshaOrderByUserIdGoodsId(@Param("userid") long userid, @Param("goodsId") long goodsId);
 }

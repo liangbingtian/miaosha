@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds">
+  <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+  <include resource="logpattern.xml"/>
+
+  <!-- 定义变量APP_NAME用于区分不同应用的的记录 -->
+  <property name="APP_NAME" value="miaosha"/>
+  <!-- 定义变量LOG_HOME用于配置log日志生成的目录 -->
+  <property name="LOG_HOME" value="/tmp/logs/"/>
+  <!-- 滚动历史文件个数 -->
+  <property name="MAX_HIS" value="7"/>
+  <!-- 定义输出日志的格式 -->
+  <property name="EINVOICE_CNSL_PATTERN"
+    value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} [%X{request_id:-EMPTY}] [%X{current_user_id:-EMPTY}] %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(-){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+  <property name="EINVOICE_FILE_PATTERN"
+    value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%X{request_id:-EMPTY}] [%X{current_user_id:-EMPTY}] [%t] %-40.40logger{39} - %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+  <property name="EINVOICE_LOG_PATTERN"
+    value="%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } [%X{request_id:-EMPTY}] [%X{current_user_id:-EMPTY}] [%t] %-40.40logger{39} - %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}"/>
+
+  <contextName>${APP_NAME}</contextName>
+
+  <!-- 控制台输出 -->
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>${EINVOICE_CNSL_PATTERN}</pattern>
+      <charset>utf8</charset>
+    </encoder>
+  </appender>
+
+  <!-- 滚动日志 -->
+  <appender name="FILE"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_HOME}/${APP_NAME}.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_HOME}/${APP_NAME}.%d{yyyy-MM-dd}.log
+      </fileNamePattern>
+      <maxHistory>${MAX_HIS}</maxHistory>
+    </rollingPolicy>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>${EINVOICE_LOG_PATTERN}</pattern>
+    </encoder>
+  </appender>
+  <!-- 错误日志 -->
+  <appender name="ERROR_FILE"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_HOME}/${APP_NAME}.error.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_HOME}/${APP_NAME}.error.%d{yyyy-MM-dd}.log
+      </fileNamePattern>
+      <maxHistory>${MAX_HIS}</maxHistory>
+    </rollingPolicy>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>${EINVOICE_LOG_PATTERN}</pattern>
+    </encoder>
+    <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+      <level>WARN</level>
+    </filter>
+  </appender>
+
+  <!-- 耗时操作日志 -->
+  <appender name="SLOW_FILE"
+    class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>${LOG_HOME}/${APP_NAME}.slow.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <fileNamePattern>${LOG_HOME}/${APP_NAME}.slow.%d{yyyy-MM-dd}.log
+      </fileNamePattern>
+      <maxHistory>${MAX_HIS}</maxHistory>
+    </rollingPolicy>
+    <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+      <pattern>${EINVOICE_LOG_PATTERN}</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="org.springframework.web" level="INFO"/>
+  <logger name="com.yonyou" level="${einvoice.logger.level:-DEBUG}"/>
+
+  <!--log4jdbc -->
+  <logger name="jdbc.connection" level="OFF"/>
+  <logger name="jdbc.audit" level="OFF"/>
+  <logger name="jdbc.resultset" level="OFF"/>
+  <logger name="jdbc.sqlonly" level="OFF"/>
+  <logger name="jdbc.sqltiming" level="OFF"/>
+
+  <logger name="com.imooc.miaosha.repository" level="DEBUG">
+    <appender-ref ref="SLOW_FILE" />
+  </logger>
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE"/>
+    <appender-ref ref="FILE"/>
+    <appender-ref ref="ERROR_FILE"/>
+  </root>
+</configuration>

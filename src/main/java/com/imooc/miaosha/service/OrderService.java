@@ -37,7 +37,7 @@ public class OrderService {
     //插入orderInfo
     OrderInfo orderInfo = OrderInfo.builder().deliveryAddrId(0L).goodsCount(1)
         .goodsId(goodsVo.getId()).goodsName(goodsVo.getGoodsName()).goodsPrice(goodsVo.getGoodsPrice())
-        .orderChannel(1).status(0).id(user.getId()).build();
+        .orderChannel(1).status(0).id(user.getId()).userId(user.getId()).build();
     int oResult = orderInfoMapper.insert(orderInfo);
     if (oResult != 1) {
       throw new GlobalException(CodeMsg.SERVER_ERROR);
