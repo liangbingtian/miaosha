@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zzssyyybnsr_jdcxstyfplycybbywbw">
+		<xs:annotation>
+			<xs:documentation>《机动车销售统一发票领用存月报表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_jdcxstyfplycybb" type="zzssyyybnsr_jdcxstyfplycybb">
+						<xs:annotation>
+							<xs:documentation>《机动车销售统一发票领用存月报表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jdcxstyfplycybb">
+		<xs:annotation>
+			<xs:documentation>《机动车销售统一发票领用存月报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jdcxstyfplycybbGrid">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票领用存月报表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jdcxstyfplycybbGridlbVO" type="jdcxstyfplycybbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcxstyfplycybbGrid">
+		<xs:annotation>
+			<xs:documentation>《机动车销售统一发票领用存月报表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jdcxstyfplycybbGridlbVO" type="jdcxstyfplycybbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票领用存月报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcxstyfplycybbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>机动车销售统一发票领用存月报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xm" type="fpzlDm">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qccc_fs" type="fpkcfs">
+				<xs:annotation>
+					<xs:documentation>期初库存份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qccc_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>期初库存起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qccc_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>期初库存终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqlg_fs" type="fplgfs">
+				<xs:annotation>
+					<xs:documentation>本期领购份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqlg_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期领购发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqlg_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期领购发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkj_fs" type="fpkjfs">
+				<xs:annotation>
+					<xs:documentation>本期开具份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkj_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期开具发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkj_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期开具发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjhwkjsl_fs" type="fpkjfs">
+				<xs:annotation>
+					<xs:documentation>本期交回未开具数量份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjhwkjsl_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期交回未开具发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqjhwkjsl_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期交回未开具发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzfhys_fs" type="fpzfhysfs">
+				<xs:annotation>
+					<xs:documentation>本期作废或遗失份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzfhys_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期作废或遗失发票起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqzfhys_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>本期作废或遗失发票终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkc_fs" type="fpkcfs">
+				<xs:annotation>
+					<xs:documentation>期末库存份数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkc_qshm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>期末库存起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkc_zzhm" type="fphm">
+				<xs:annotation>
+					<xs:documentation>期末库存终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

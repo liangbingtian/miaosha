@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr11_hqysqyfzjgcddywbw">
+		<xs:annotation>
+			<xs:documentation>《航空运输企业分支机构传递单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="hqysqyfzjgcdd">
+						<xs:annotation>
+							<xs:documentation>航空运输企业分支机构传递单</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="hqysqyfzjgcdd"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="yjnzzsqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>已缴纳增值税情况Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zsxm" type="zsxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse1" type="yjse1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bjse" type="bjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>补缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yjnzzsqkGrid">
+		<xs:annotation>
+			<xs:documentation>已缴纳增值税情况Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yjnzzsqkGridlbVO" type="yjnzzsqkGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qdjxseqkGridlbVO">
+		<xs:annotation>
+			<xs:documentation>取得进项税额情况Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fzjgmc" type="fzjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分支机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpdmjhmhjkshm" type="fpdmjhmhjkshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票代码及号码/缴款书号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jxse" type="jxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzhjhyf" type="rzhjhyf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认证/稽核月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qdjxseqkGrid">
+		<xs:annotation>
+			<xs:documentation>取得进项税额情况Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qdjxseqkGridlbVO" type="qdjxseqkGridlbVO">
+				<xs:annotation>
+					<xs:documentation>取得进项税额情况Grid列表VO</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hqysqyfzjgcdd">
+		<xs:annotation>
+			<xs:documentation>《航空运输企业分支机构传递单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnzzsqkGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yjnzzsqkGridlbVO" type="yjnzzsqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="qdjxseqkGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qdjxseqkGridlbVO" type="qdjxseqkGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_zzsysfpdkqdywbw">
+		<xs:annotation>
+			<xs:documentation>增值税运输发票抵扣清单业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_zzsysfpdkqd">
+						<xs:annotation>
+							<xs:documentation>增值税运输发票抵扣清单</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_zzsysfpdkqd"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_zzsysfpdkqd">
+		<xs:annotation>
+			<xs:documentation>增值税运输发票抵扣清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkqdGrid">
+				<xs:annotation>
+					<xs:documentation>抵扣清单</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dkqdGridlbVO" type="dkqdGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsysfpdkqdFormVO">
+		<xs:annotation>
+			<xs:documentation>增值税（适用于增值税一般纳税人）-纳税人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yfje_tl" type="je">
+				<xs:annotation>
+					<xs:documentation>铁路运输运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjsdkyfje_tl" type="je">
+				<xs:annotation>
+					<xs:documentation>铁路运输允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse_tl" type="je">
+				<xs:annotation>
+					<xs:documentation>铁路运输计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfje_hk" type="je">
+				<xs:annotation>
+					<xs:documentation>航空运输运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjsdkyfje_hk" type="je">
+				<xs:annotation>
+					<xs:documentation>航空运输允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse_hk" type="je">
+				<xs:annotation>
+					<xs:documentation>航空运输计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfje_gd" type="je">
+				<xs:annotation>
+					<xs:documentation>管道运输运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjsdkyfje_gd" type="je">
+				<xs:annotation>
+					<xs:documentation>管道运输允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse_gd" type="je">
+				<xs:annotation>
+					<xs:documentation>管道运输计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfje_hy" type="je">
+				<xs:annotation>
+					<xs:documentation>海洋运输运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjsdkyfje_hy" type="je">
+				<xs:annotation>
+					<xs:documentation>海洋运输允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse_hy" type="je">
+				<xs:annotation>
+					<xs:documentation>海洋运输计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glysGrid">
+		<xs:annotation>
+			<xs:documentation>五、公路运输</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="glysGridlb" type="glysGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="glysGridlbVO">
+		<xs:sequence>
+			<xs:element name="xh" type="xh">
+				<xs:annotation>
+					<xs:documentation>公路运输序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fphm_gl" type="fphm">
+				<xs:annotation>
+					<xs:documentation>公路运输发票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq_gl" type="kprq">
+				<xs:annotation>
+					<xs:documentation>公路运输开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwmc_gl" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>公路运输运输单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwnsrsbh_gl" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>公路运输运输单位纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwzgdfswjmc_gl" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>公路运输运输单位主管地方税务局名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwzgdfswjdm_gl" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>公路运输运输单位主管地方税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfje_gl" type="je">
+				<xs:annotation>
+					<xs:documentation>公路运输运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yxjsdkyfje_gl" type="je">
+				<xs:annotation>
+					<xs:documentation>公路运输允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse_gl" type="je">
+				<xs:annotation>
+					<xs:documentation>公路运输计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dkqdGrid">
+		<xs:annotation>
+			<xs:documentation>抵扣清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="dkqdGridlbVO" type="dkqdGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dkqdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>抵扣清单Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fpzlDm" type="fpzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fphm" type="fphm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kprq" type="kprq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开票日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwMc" type="ysdwMc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>运输单位名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwNsrsbh" type="ysdwNsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>运输单位纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwZgdfswjmc" type="ysdwZgdfswjmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>运输单位主管地方税务局名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysdwZgdfswjDm" type="ysdwZgdfswjDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>运输单位主管地方税务局代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yfje" type="yfje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkYfje" type="jsdkYfje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>允许计算抵扣运费金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsdkdjxse" type="jsdkdjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计算抵扣的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

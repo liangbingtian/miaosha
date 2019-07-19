@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_yqtqyzzsfpbywbw">
+		<xs:annotation>
+			<xs:documentation>《油气田企业增值税分配表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_yqtqyzzsfpb">
+						<xs:annotation>
+							<xs:documentation>油气田企业增值税分配表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_yqtqyzzsfpb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_yqtqyzzsfpb">
+		<xs:annotation>
+			<xs:documentation>《油气田企业增值税分配表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yqtqyzzsfpbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yqtqyzzsfpbGridlbVO" type="yqtqyzzsfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="yqtqyzzsfpbForm" type="yqtqyzzsfpbFormVO">
+				<xs:annotation>
+					<xs:documentation>油气田企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yqtqyzzsfpbFormVO">
+		<xs:annotation>
+			<xs:documentation>油气田企业增值税分配表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="djxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="dqynsze" type="se">
+				<xs:annotation>
+					<xs:documentation>当期应纳税总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="bcyfpskze" type="se">
+				<xs:annotation>
+					<xs:documentation>不参与分配税款总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="sjfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>实际分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="yyzcl" type="xssr">
+				<xs:annotation>
+					<xs:documentation>原油总产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="trqzcl" type="xssr">
+				<xs:annotation>
+					<xs:documentation>天然气总产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="yytrqxxbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>原油天然气销项比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yqtqyzzsfpbGrid">
+		<xs:annotation>
+			<xs:documentation>油气田企业增值税分配表Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="yqtqyzzsfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>油气田企业增值税分配表Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		    <xs:element name="djxh" type="djxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划数字代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="skrkgk" type="skgkDm">
+				<xs:annotation>
+					<xs:documentation>税款入库国库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="ysfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>预算分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="yycl" type="xssr">
+				<xs:annotation>
+					<xs:documentation>原油产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="yybl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>原油比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="trqcl" type="xssr">
+				<xs:annotation>
+					<xs:documentation>天然气产量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="trqbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>天然气比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zhfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>综合分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fpse" type="se">
+				<xs:annotation>
+					<xs:documentation>分配所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

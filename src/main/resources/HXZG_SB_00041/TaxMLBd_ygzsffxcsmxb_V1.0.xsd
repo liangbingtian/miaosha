@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_ygzsffxcsmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《营改增税负分析测算明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_ygzsffxcsmxb" type="zzssyyybnsr_ygzsffxcsmxb">
+						<xs:annotation>
+							<xs:documentation>《营改增税负分析测算明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_ygzsffxcsmxb">
+		<xs:annotation>
+			<xs:documentation>《营改增税负分析测算明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO"/>
+			<xs:element name="ygzsffxcsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>营改增税负分析测算明细表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="ygzsffxcsmxbGridlbVO" type="ygzsffxcsmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ygzsffxcsmxbGrid">
+		<xs:annotation>
+			<xs:documentation>营改增税负分析测算明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmdmjmc" type="ywmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项目代码及名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsslhzsl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税税率或征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbhsxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsxxynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税销项应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsjshj" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税价税合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbqsjkcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzskchhsxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税扣除后含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzskchxxynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税扣除后销项应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysqcye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqfse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqykcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期应扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqsjkcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysqmye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysysyye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ygzsffxcsmxbGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmdmjmc" type="ywmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项目代码及名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsslhzsl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税税率或征收率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbhsxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsxxynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税销项应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsjshj" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税价税合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsbqsjkcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzskchhsxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税扣除后含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzskchxxynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税扣除后销项应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysqcye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqfse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqykcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期应扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysbqsjkcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysqmye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysysyye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税应税营业额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yysynse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营业税应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

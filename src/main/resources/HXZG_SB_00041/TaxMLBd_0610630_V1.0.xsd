@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_yzqyfzjgzzshznsxxcddbw">
+		<xs:annotation>
+			<xs:documentation>《邮政企业分支机构增值税汇总纳税信息传递单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_yzqyfzjgzzshznsxxcdd" type="zzsybnsrsb_yzqyfzjgzzshznsxxcdd">
+						<xs:annotation>
+							<xs:documentation>《邮政企业分支机构增值税汇总纳税信息传递单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_yzqyfzjgzzshznsxxcdd">
+		<xs:annotation>
+			<xs:documentation>《邮政企业分支机构增值税汇总纳税信息传递单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_yjnzzsqkForm" type="zzsybnsrsb_yjnzzsqkForm">
+				<xs:annotation>
+					<xs:documentation>《已缴纳增值税情况》</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_qdjxseqkGrid">
+				<xs:annotation>
+					<xs:documentation>《取得进项税额情况》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="zzsybnsrsb_qdjxseqkGrid">
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="zzsybnsrsb_qdjxseqkGridlb" type="zzsybnsrsb_qdjxseqkGridlb"/>
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_yjnzzsqkForm">
+		<xs:annotation>
+			<xs:documentation>《已缴纳增值税情况》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dbsdwllywcjjrqdsrje" type="dbsdwllywcjjrqdsrje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代办速递物流类业务从寄件人取得的收入金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywBz" type="qtyzfwDlsdwllywBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywYdk" type="qtyzfwDlsdwllywYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywXse" type="qtyzfwDlsdwllywXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywYzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywYjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywCbxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywSysl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDlsdwllywCbse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理速递物流类业务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywBz" type="qtyzfwDljrbxywBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywYdk" type="qtyzfwDljrbxywYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywXse" type="qtyzfwDljrbxywXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywYzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务z预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywYjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywCbxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywSysl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtyzfwDljrbxywCbse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他邮政服务—代理金融保险业务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwBz" type="yztsfwBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwYdk" type="yztsfwYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwXse" type="yztsfwXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwYzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwYjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwCbxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwSysl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yztsfwCbse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政特殊服务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwBz" type="yzpbfwBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwYdk" type="yzpbfwYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwXse" type="yzpbfwXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwYzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwYjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwCbxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwSysl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务适用税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzpbfwCbse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政普遍服务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtBz" type="qtBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtCbse" type="qtCbse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtSysl" type="qtSysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他适用税率%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtCbxse" type="qtCbxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtYjse" type="qtYjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtYzl" type="qtYzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他预征率%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtYdk" type="qtYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtXse" type="qtXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsBz" type="ypxsBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsCbse" type="ypxsCbse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsSysl" type="ypxsSysl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售适用税率%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsCbxse" type="ypxsCbxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsYjse" type="ypxsYjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsYzl" type="ypxsYzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售预征率%</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsYdk" type="ypxsYdk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售预订款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxsXse" type="ypxsXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮品销售销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_qdjxseqkGrid">
+		<xs:annotation>
+			<xs:documentation>《取得进项税额情况》</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_qdjxseqkGridlb">
+		<xs:annotation>
+			<xs:documentation>《取得进项税额情况》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm1" type="pzzlDm1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>凭证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jxse" type="jxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzhjhyf" type="rzhjhyf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认证/稽核月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

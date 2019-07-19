@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_bfcpxstjbywbw">
+		<xs:annotation>
+			<xs:documentation>部分产品销售统计表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="Zzssyyybnsr_bfcpxstjb" type="zzssyyybnsr_bfcpxstjb">
+						<xs:annotation>
+							<xs:documentation>部分产品销售统计表</xs:documentation>
+						</xs:annotation>
+					</xs:element>				
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_bfcpxstjb">
+		<xs:annotation>
+			<xs:documentation>《部分产品销售统计表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bfcpxstjbForm" type="bfcpxstjbFormVO">
+				<xs:annotation>
+					<xs:documentation>部分产品销售统计表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bfcpxstjbFormVO">
+		<xs:annotation>
+			<xs:documentation>部分产品销售统计表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ltxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>轮胎销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ltxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>轮胎销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwxltxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>子午线轮胎销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zwxltxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>子午线轮胎销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjltxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>斜交轮胎销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjltxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>斜交轮胎销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>酒精销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jjxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>酒精销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyycqydjjxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于乙醇汽油的酒精销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yyycqydjjxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>用于乙醇汽油的酒精销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjjxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>食用酒精销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syjjxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>食用酒精销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他酒精销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtjjxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他酒精销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mtcxssl" type="sl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>摩托车销售数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mtcxse" type="xse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>摩托车销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

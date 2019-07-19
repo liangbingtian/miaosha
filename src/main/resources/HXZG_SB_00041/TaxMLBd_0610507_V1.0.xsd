@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_ncphdkczzsjxsejsbbw">
+		<xs:annotation>
+			<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_ncphdkczzsjxsejsb" type="zzsybnsrsb_ncphdkczzsjxsejsb">
+						<xs:annotation>
+							<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_ncphdkczzsjxsejsb">
+		<xs:annotation>
+			<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncphdkczzsjxsejsbGrid">
+				<xs:annotation>
+					<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="ncphdkczzsjxsejsbGridlbVO" type="ncphdkczzsjxsejsbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ncphdkczzsjxsejsbGrid">
+		<xs:annotation>
+			<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="ncphdkczzsjxsejsbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《农产品核定扣除增值税进项税额计算表（汇总表）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="scjyBz" type="scjyBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品用于生产经营且不构成货物实体备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scjyJxse" type="scjyJxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品用于生产经营且不构成货物实体当期允许抵扣农产品增值税进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjxsBz" type="zjxsBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品直接销售备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjxsJxse" type="zjxsJxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品直接销售当期允许抵扣农产品增值税进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schwCbfBz" type="schwCbfBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以购进农产品为原料生产货物成本法备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schwCbfJxse" type="schwCbfJxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以购进农产品为原料生产货物成本法当期允许抵扣农产品增值税进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schwTrccfBz" type="schwTrccfBz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以购进农产品为原料生产货物投入产出法备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="schwTrccfJxse" type="schwTrccfJxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>以购进农产品为原料生产货物投入产出法当期允许抵扣农产品增值税进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

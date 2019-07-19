@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_jyzyxsyphzbbw">
+		<xs:annotation>
+			<xs:documentation>《加油站月销售油品汇总表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_jyzyxsyphzb" type="zzsybnsrsb_jyzyxsyphzb">
+						<xs:annotation>
+							<xs:documentation>《加油站月销售油品汇总表》业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_jyzyxsyphzb">
+		<xs:annotation>
+			<xs:documentation>《加油站月销售油品汇总表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyzyxsyphzbGrid">
+				<xs:annotation>
+					<xs:documentation>《加油站月销售油品汇总表》业务报文</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jyzyxsyphzbGridlbVO" type="jyzyxsyphzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jyzyxsyphzbGrid">
+		<xs:annotation>
+			<xs:documentation>《加油站月销售油品汇总表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jyzyxsyphzbGridlbVO" type="jyzyxsyphzbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>加油站月销售油品汇总表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jyzyxsyphzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《加油站月销售油品汇总表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xsjeBtgjyjLjs" type="xsjeBtgjyjLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售金额不通过加油机累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjeBtgjyjBys" type="xsjeBtgjyjBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售金额不通过加油机本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjeTgjyjLjs" type="xsjeTgjyjLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售金额通过加油机累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsjeTgjyjBys" type="xsjeTgjyjBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售金额通过加油机本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxsslLjs" type="ysxsslLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税销售数量累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxsslBys" type="ysxsslBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税销售数量本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylJcLjs" type="ykcylJcLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量累计数检测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylDcLjs" type="ykcylDcLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量累计数代储</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylDkLjs" type="ykcylDkLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量累计数倒库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylZyLjs" type="ykcylZyLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量累计数自用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylJcBys" type="ykcylJcBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量本月数检测</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylDcBys" type="ykcylDcBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量本月数代储</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylDkBys" type="ykcylDkBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量本月数倒库</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ykcylZyBys" type="ykcylZyBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应扣除油量本月数自用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyslLjs" type="cyslLjs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出油数量累计数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cyslBys" type="cyslBys" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>出油数量本月数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

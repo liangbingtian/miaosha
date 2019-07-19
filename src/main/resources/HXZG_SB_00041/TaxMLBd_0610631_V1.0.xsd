@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_tlysqyfzjgzzshznsxxcddbw">
+		<xs:annotation>
+			<xs:documentation>《铁路运输企业分支机构增值税汇总纳税信息传递单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_tlysqyfzjgzzshznsxxcdd">
+						<xs:annotation>
+							<xs:documentation>《铁路运输企业分支机构增值税汇总纳税信息传递单》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzsybnsrsb_tlysqyfzjgzzshznsxxcdd"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_tlysqyfzjgzzshznsxxcdd">
+		<xs:annotation>
+			<xs:documentation>《铁路运输企业分支机构增值税汇总纳税信息传递单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjnzzsqkGrid" type="yjnzzskGrid">
+				<xs:annotation>
+					<xs:documentation>已缴纳增值税情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qdjxseqkGrid" type="qdjxsekGrid">
+				<xs:annotation>
+					<xs:documentation>取得进项税额情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yjnzzskGrid">
+		<xs:annotation>
+			<xs:documentation>已缴纳增值税情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yjnzzskGridlb" type="yjnzzskGridlb">
+				<xs:annotation>
+					<xs:documentation>已缴纳增值税情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="yjnzzskGridlb">
+		<xs:annotation>
+			<xs:documentation>已缴纳增值税情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wlfzfwTljsjj" type="wlfzfwTljsjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务铁路建设基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwCbse" type="wlfzfwCbse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwSl" type="wlfzfwSl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwCbxse" type="wlfzfwCbxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwYjse" type="wlfzfwYjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwYzl" type="wlfzfwYzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wlfzfwXse" type="wlfzfwXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>物流辅助服务销售额不含铁路建设基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwTljsjj" type="jtysfwTljsjj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务铁路建设基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwCbse" type="jtysfwCbse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务查补税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwSl" type="jtysfwSl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwCbxse" type="jtysfwCbxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务查补销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwYjse" type="jtysfwYjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwYzl" type="jtysfwYzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jtysfwXse" type="jtysfwXse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交通运输服务销售额不含铁路建设基金</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qdjxsekGrid">
+		<xs:annotation>
+			<xs:documentation>取得进项税额情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qdjxseqkGridlb" type="qdjxsekGridlb">
+				<xs:annotation>
+					<xs:documentation>取得进项税额情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qdjxsekGridlb">
+		<xs:annotation>
+			<xs:documentation>取得进项税额情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fpdmjhmhjkshm" type="fpdmjhmhjkshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票代码及号码/缴款书号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="je" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzhjhyf" type="rzhjhyf" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认证/稽核月份</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jxse" type="jxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

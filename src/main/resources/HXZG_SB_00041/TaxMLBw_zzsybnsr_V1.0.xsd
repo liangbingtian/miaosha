@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxMLBd_0210112_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610025_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610026_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610027_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610028_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610031_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610112_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610113_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610337_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610338_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610339_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610344_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610491_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610491_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610505_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610505_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610506_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610507_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610534_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610535_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610564_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610566_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610568_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610569_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610606_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610614_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_hznsqyzzsfpb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_kstlqyzzsfpb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610628_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610629_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610630_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610631_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610667_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610029_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610028_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610492_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zzsfjs_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_bfcpxstjb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610758_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yqtqyzzsfpb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_bdcfqdkjsb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_bqdkjxsejgmxb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_tljsjjnssbb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_ygzsffxcsmxb_V1.0.xsd"/>
+	<xs:complexType name="zzsywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税（一般纳税人）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsSbb" type="ZzsybsbSbbdxxVO">
+						<xs:annotation>
+							<xs:documentation>《增值税（一般纳税人）》业务报文</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ZzsybsbSbbdxxVO">
+		<xs:annotation>
+			<xs:documentation>《增值税（一般纳税人）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzssyyybnsr_zb" type="zzssyyybnsr_zb">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表（一般纳税人适用）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr01_bqxsqkmxb" type="zzssyyybnsr01_bqxsqkmxb">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料一（本期销售情况明细）》</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr02_bqjxsemxb" type="zzssyyybnsr02_bqjxsemxb">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料二（本期进项税额明细）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr03_ysfwkcxmmx" type="zzssyyybnsr03_ysfwkcxmmx">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料三（应税服务扣除项目明细）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr04_bqjxsemxb" type="zzssyyybnsr04_bqjxsemxb">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料四（税额抵减情况表）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr05_bdcfqdkjsb" type="zzssyyybnsr05_bdcfqdkjsb">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料五（不动产分期抵扣计算表）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_zzsybnsrbqynseayskmfjb" type="zzssyyybnsr_zzsybnsrbqynseayskmfjb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税一般纳税人本期应纳税额按预算科目分解表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_gdzcjxsedkqkb" type="zzsybnsrsb_gdzcjxsedkqkb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>固定资产进项税额抵扣情况表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hqysqyfzjgcdd" type="hqysqyfzjgcdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>航空运输企业分支机构传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_ndhkysqyqsb" type="zzsybnsrsb_ndhkysqyqsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度航空运输企业年度清算表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_cpygxcqkmxb" type="zzssyyybnsr_cpygxcqkmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>成品油购销存情况明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_cpygxcslmxb" type="zzssyyybnsr_cpygxcslmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>成品油购销存数量明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jdclscqyxsmxb" type="zzssyyybnsr_jdclscqyxsmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车辆生产企业销售明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jdclscqyxsqktjb" type="zzssyyybnsr_jdclscqyxsqktjb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车辆生产企业销售情况统计表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jdcxstyfplycybb" type="zzssyyybnsr_jdcxstyfplycybb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票领用存月报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jdcxstyfpqd" type="zzssyyybnsr_jdcxstyfpqd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jdcljxqyxsmxb" type="zzssyyybnsr_jdcljxqyxsmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlqyzzsxxsehjxsecdd" type="dlqyzzsxxsehjxsecdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电力企业增值税销项税额和进项税额传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_zzsysfpdkqd" type="zzssyyybnsr_zzsysfpdkqd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税运输发票抵扣清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgwspzdklsjcjb" type="hgwspzdklsjcjb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>海关完税凭证抵扣联数据采集申请单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_ncphdkczzsjxsejsb" type="zzsybnsrsb_ncphdkczzsjxsejsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>农产品核定扣除增值税进项税额计算表（汇总表）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_hqysqyfzjgcdd" type="zzssyyybnsr_hqysqyfzjgcdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>投入产出法核定农产品增值税进项税额计算表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_cbfhdccpzzsjxsejsb" type="zzsybnsrsb_cbfhdccpzzsjxsejsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>成本法核定农产品增值税进项税额计算表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsb" type="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品直接销售核定农产品增值税进项税额计算表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_gjncpyyscjyqbgchwsthdncpzzsjxsejsb" type="zzssyyybnsr_gjncpyyscjyqbgchwsthdncpzzsjxsejsb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购进农产品用于生产经营且不构成货物实体核定农产品增值税进项税额计算表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_jyzyxsyphzb" type="zzsybnsrsb_jyzyxsyphzb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>加油站月销售油品汇总表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_jyzyfjyxxmxb" type="zzssyyybnsr_jyzyfjyxxmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>加油站月份加油信息明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_dkdjsstyjksdkqd" type="zzsybnsrsb_dkdjsstyjksdkqd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代扣代缴税收通用缴款书抵扣清单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_hznsqytycdd" type="zzssyyybnsr_hznsqytycdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业通用传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_hznsqyzzsfpb" type="zzssyyybnsr_hznsqyzzsfpb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_kstlqyzzsfpb" type="zzssyyybnsr_kstlqyzzsfpb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>跨省铁路企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_yzqyfzjgzzshznsxxcdd" type="zzsybnsrsb_yzqyfzjgzzshznsxxcdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>邮政企业分支机构增值税汇总纳税信息传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_tlysqyfzjgzzshznsxxcdd" type="zzsybnsrsb_tlysqyfzjgzzshznsxxcdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>铁路运输企业分支机构增值税汇总纳税信息传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_dxqyfzjgzzshznsxxcdd" type="zzsybnsrsb_dxqyfzjgzzshznsxxcdd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电信企业分支机构增值税汇总纳税信息传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsfjssb" type="zzsfjssb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>附加税申报纳税人申报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_bfcpxstjb" type="zzssyyybnsr_bfcpxstjb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>部分产品销售统计表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsjmssbmxb" type="zzsjmssbmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>增值税减免税申报明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_yqtqyzzsfpb" type="zzssyyybnsr_yqtqyzzsfpb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油气田企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_bqdkjxsejgmxb" type="zzssyyybnsr_bqdkjxsejgmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期抵扣进项税额结构明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_tljsjjnssbb" type="zzssyyybnsr_tljsjjnssbb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>铁路建设基金纳税申报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzssyyybnsr_ygzsffxcsmxb" type="zzssyyybnsr_ygzsffxcsmxb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>营改增税负分析测算明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

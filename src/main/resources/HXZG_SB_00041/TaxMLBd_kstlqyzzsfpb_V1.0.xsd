@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_kstlqyzzsfpbywbw">
+		<xs:annotation>
+			<xs:documentation>《跨省铁路企业增值税分配表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_kstlqyzzsfpb">
+						<xs:annotation>
+							<xs:documentation>跨省铁路企业增值税分配表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_kstlqyzzsfpb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_kstlqyzzsfpb">
+		<xs:annotation>
+			<xs:documentation>《跨省铁路企业增值税分配表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="kstlqyzzsfpbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="kstlqyzzsfpbGridlbVO" type="kstlqyzzsfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="kstlqyzzsfpbForm" type="kstlqyzzsfpbFormVO">
+				<xs:annotation>
+					<xs:documentation>跨省铁路企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kstlqyzzsfpbFormVO">
+		<xs:annotation>
+			<xs:documentation>跨省铁路企业增值税分配表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="kstlqyzzsfpbGrid">
+		<xs:annotation>
+			<xs:documentation>跨省铁路企业增值税分配表Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="kstlqyzzsfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>跨省铁路企业增值税分配表Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="szd" type="szd">
+				<xs:annotation>
+					<xs:documentation>所在地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgmc" type="fzjgmc">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分解比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="bqynse" type="bqynse">
+				<xs:annotation>
+					<xs:documentation>本期应缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

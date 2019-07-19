@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_cpygxcslmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《成品油购销存数量明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_cpygxcslmxb">
+						<xs:annotation>
+							<xs:documentation>成品油购销存数量明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_cpygxcslmxb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_cpygxcslmxb">
+		<xs:annotation>
+			<xs:documentation>《成品油购销存数量明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbHead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpygxcslmxbGrid">
+				<xs:annotation>
+					<xs:documentation>成品油购销存数量明细表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cpygxcslmxbGridlbVO" type="cpygxcslmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpygxcslmxbGrid">
+		<xs:annotation>
+			<xs:documentation>成品油购销存数量明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="cpygxcslmxbGridlb" type="cpygxcslmxbGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cpygxcslmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>成品油购销存数量明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ylxh" type="ylxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油量型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckcl" type="qckcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqgjl" type="bqgjl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期购进量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqcklYsxsl" type="bqcklYsxsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期出库量应税销售量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqcklYkcsl" type="bqcklYkcsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期出库量应扣除数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmkcl" type="qmkcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末库存量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

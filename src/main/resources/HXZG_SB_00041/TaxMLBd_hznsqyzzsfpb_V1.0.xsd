@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.chinatax.gov.cn/dataspec/">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_hznsqyzzsfpbywbw">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业增值税分配表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_hznsqyzzsfpb">
+						<xs:annotation>
+							<xs:documentation>汇总纳税企业增值税分配表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_hznsqyzzsfpb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_hznsqyzzsfpb">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业增值税分配表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hznsqyzzsfpbGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="hznsqyzzsfpbGridlbVO" type="hznsqyzzsfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hznsqyzzsfpbForm" type="hznsqyzzsfpbFormVO">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业增值税分配表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxx" type="sbbslxxVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hznsqyzzsfpbFormVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业增值税分配表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjgnsrmc" type="zjgnsrmc">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydz" type="yydz">
+				<xs:annotation>
+					<xs:documentation>营业地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="khyh" type="khyh">
+				<xs:annotation>
+					<xs:documentation>开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="yhzh" type="yhzh">
+				<xs:annotation>
+					<xs:documentation>银行账户</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="lxdh" type="lxdh">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgnsrsbh" type="zjgnsrsbh">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zfjgxsehj" type="zfjgxsehj">
+				<xs:annotation>
+					<xs:documentation>总分机构销售额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zfjgxssr" type="zfjgxssr">
+				<xs:annotation>
+					<xs:documentation>总分机构销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjggdfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>总机构固定分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwjzjtxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务即征即退销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwjzjtxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务即征即退销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwjzjtfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务即征即退分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwjzjtfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务即征即退分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgfpse" type="zjgfpse">
+				<xs:annotation>
+					<xs:documentation>总机构分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgybhwjlwjzjtfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>总机构一般货物及劳务即征即退分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="zjgysfwjzjtfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>总机构应税服务即征即退分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hznsqyzzsfpbGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业增值税分配表Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="hznsqyzzsfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业增值税分配表Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element minOccurs="0" name="fzjgnsrsbh" type="fzjgnsrsbh">
+				<xs:annotation>
+					<xs:documentation>分支机构纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgmc" type="fzjgmc">
+				<xs:annotation>
+					<xs:documentation>分支机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgxssr" type="fzjgxssr">
+				<xs:annotation>
+					<xs:documentation>分支机构销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwjzjtxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务即征即退销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwjzjtxssr" type="xssr">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务即征即退销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgFpbl" type="fzjgFpbl">
+				<xs:annotation>
+					<xs:documentation>分支机构分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwjzjtfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务即征即退分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwjzjtfpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务即征即退分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgfpse" type="fzjgfpse">
+				<xs:annotation>
+					<xs:documentation>分支机构分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgybhwjlwjzjtfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>分支机构一般货物及劳务即征即退分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" name="fzjgysfwjzjtfpse" type="se">
+				<xs:annotation>
+					<xs:documentation>分支机构应税服务即征即退分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

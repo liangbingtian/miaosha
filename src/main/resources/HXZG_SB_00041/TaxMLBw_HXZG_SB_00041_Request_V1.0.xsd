@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_zzsybnsr_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00041Request">
+		<xs:annotation>
+			<xs:documentation>增值税一般人申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="rdpzuuid"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="yhpzuuid"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="yjskuuid"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="SBSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>申报保存请求交互</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SBzzsybnsrldxxVO" type="SBSaveLdxxVO">
+						<xs:annotation>
+							<xs:documentation>申报增值税一般纳税人留底信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzsybsbSbbdxxVO" type="ZzsybsbSbbdxxVO">
+						<xs:annotation>
+							<xs:documentation>增值税一般人申报信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="SBSaveLdxxVO">
+		<xs:annotation>
+			<xs:documentation>申报保存留底数据信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+		<xs:element name="sqldpzxh" type="sqldpzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上期留抵凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="ysrxgmjmxsbbywbw">
+		<xs:annotation>
+			<xs:documentation>与收入相关面积明细申报表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="ysrxgmjmxsbb" type="ysrxgmjmxsbb">
+						<xs:annotation>
+							<xs:documentation>与收入相关面积明细申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ysrxgmjmxsbb">
+		<xs:annotation>
+			<xs:documentation>与收入相关面积明细申报表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysrxgmjmxsbbForm">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="ysrxgmjmxsbbForm"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ysrxgmjmxsbbForm">
+		<xs:sequence>
+			<xs:element name="ptzzmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss1" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj1" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他使用土地面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ptzzmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss2" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj2" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他总建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ptzzmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss3" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj3" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他可售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ptzzmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss4" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj4" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他已售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ptzzmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss5" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj5" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ptzzmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>普通住宅自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fptzzmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>非普通住宅自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="spmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>商 铺自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>车 库自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bglmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>办公楼自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hsmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>会 所自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxdggptss6" type="je">
+				<xs:annotation>
+					<xs:documentation>学校等公共配套设施自用建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmj6" type="je">
+				<xs:annotation>
+					<xs:documentation>其 他未售建筑面积</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

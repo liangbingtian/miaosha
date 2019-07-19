@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_zzsybnsrbqynseayskmfjbywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税一般纳税人本期应纳税额按预算科目分解表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_zzsybnsrbqynseayskmfjb">
+						<xs:annotation>
+							<xs:documentation>增值税一般纳税人本期应纳税额按预算科目分解表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_zzsybnsrbqynseayskmfjb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_zzsybnsrbqynseayskmfjb">
+		<xs:annotation>
+			<xs:documentation>《增值税一般纳税人本期应纳税额按预算科目分解表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzsybnsrbqynseayskmfjbFormVO" type="zzsybnsrbqynseayskmfjbFormVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrbqynseayskmfjbFormVO">
+		<xs:annotation>
+			<xs:documentation>《增值税一般纳税人本期应纳税额按预算科目分解表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ybzsxmBqybtse" type="ybzsxmBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般征税项目本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybzsxmZzsFjbl" type="ybzsxmZzsFjbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般征税项目增值税分解比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybzsxmZzsBqybtse" type="ybzsxmZzsBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般征税项目增值税本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybzsxmGzzzsFjbl" type="ybzsxmGzzzsFjbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般征税项目改征增值税分解比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybzsxmGzzzsBqybtse" type="ybzsxmGzzzsBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>一般征税项目改征增值税本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtzsxmBqybtse" type="jzjtzsxmBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>即征即退征税项目本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtzsxmZzsFjbl" type="jzjtzsxmZzsFjbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>即征即退征税项目增值税分解比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtzsxmZzsBqybtse" type="jzjtzsxmZzsBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>即征即退征税项目增值税本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtzsxmGzzzsFjbl" type="jzjtzsxmGzzzsFjbl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>即征即退征税项目改征增值税分解比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzjtzsxmGzzzsBqybtse" type="jzjtzsxmGzzzsBqybtse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>即征即退征税项目改征增值税本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

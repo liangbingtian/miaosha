@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_jdcxstyfpqdywbw">
+		<xs:annotation>
+			<xs:documentation>《机动车销售统一发票清单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_jdcxstyfpqd">
+						<xs:annotation>
+							<xs:documentation>机动车销售统一发票清单表单</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_jdcxstyfpqd"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jdcxstyfpqd">
+		<xs:annotation>
+			<xs:documentation>《机动车销售统一发票清单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdcxstyfpqdGrid">
+				<xs:annotation>
+					<xs:documentation>机动车销售统一发票清单</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jdcxstyfpqdGridlbVO" type="jdcxstyfpqdGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcxstyfpqdGrid">
+		<xs:annotation>
+			<xs:documentation>机动车销售统一发票清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jdcxstyfpqdGridlbVO" type="jdcxstyfpqdGridlbVO">
+				<xs:annotation>
+					<xs:documentation>行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcxstyfpqdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>机动车销售统一发票清单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fpDm" type="fpDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fphm" type="fphm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>发票号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="scqymc" type="scqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>生产企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpxh1" type="cpxh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>厂牌型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdm" type="clsbdm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆识别代码（车架号）||车辆识别代码（车架号）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jfhjje" type="jfhjje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>价费合计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

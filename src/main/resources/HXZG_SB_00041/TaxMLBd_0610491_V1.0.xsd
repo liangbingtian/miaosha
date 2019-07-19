@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_cbfhdccpzzsjxsejsbbw">
+		<xs:annotation>
+			<xs:documentation>《成本法核定农产品增值税进项税额计算表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_cbfhdccpzzsjxsejsb" type="zzsybnsrsb_cbfhdccpzzsjxsejsb">
+						<xs:annotation>
+							<xs:documentation>《成本法核定农产品增值税进项税额计算表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_cbfhdccpzzsjxsejsb">
+		<xs:annotation>
+			<xs:documentation>《成本法核定农产品增值税进项税额计算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGrid">
+				<xs:annotation>
+					<xs:documentation>《成本法核定农产品增值税进项税额计算表》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGridlbVO" type="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGrid">
+		<xs:annotation>
+			<xs:documentation>《成本法核定农产品增值税进项税额计算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGridlbVO" type="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_cbfhdccpzzsjxsejsbbwGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《成本法核定农产品增值税进项税额计算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dqyxdkncpjxse" type="dqyxdkncpjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期允许抵扣农产品进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncphyl" type="ncphyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>农产品耗用率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqzyywcb" type="dqzyywcb" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期主营业务成本元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcl" type="kcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpmc1" type="cpmc1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xh" type="xh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

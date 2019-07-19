@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsnssbb_dlqyzzsxxsehjxsecddywbw">
+		<xs:annotation>
+			<xs:documentation>《电力企业增值税销项税额和进项税额传递单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="dlqyzzsxxsehjxsecdd" type="dlqyzzsxxsehjxsecdd"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="dlqyzzsxxsehjxsecdd">
+		<xs:annotation>
+			<xs:documentation>《电力企业增值税销项税额和进项税额传递单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xxGrid">
+				<xs:annotation>
+					<xs:documentation>销项信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xxGridlbVO" type="xxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="jxGrid">
+				<xs:annotation>
+					<xs:documentation>进项信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jxGridlbVO" type="jxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="skzsForm" type="skzsFormVO">
+				<xs:annotation>
+					<xs:documentation>税款征收信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qylxFormVO">
+		<xs:annotation>
+			<xs:documentation>企业类型信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qylxDm" type="zzsqylxDm">
+				<xs:annotation>
+					<xs:documentation>企业类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slsdljt" type="qymc">
+				<xs:annotation>
+					<xs:documentation>所隶属电力集团</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xxGrid">
+		<xs:annotation>
+			<xs:documentation>销项信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="xxGridlbVO" type="xxGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>销项信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdl" type="xsdl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售电量上网电量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj2" type="dj2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdsr" type="sdsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销项-售电收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzsdjwfy" type="bzsdjwfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销项-其中不征税的价外费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysjwfy" type="ysjwfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销项-其中应税价外费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deslhyzl" type="deslhyzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定额税率或预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jxGrid">
+		<xs:annotation>
+			<xs:documentation>进项信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="jxGridlbVO" type="jxGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>进项信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfsjx" type="bqfsjx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-本期发生进项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mshwyjxse" type="mshwyjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-免税货物用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzcssjxse" type="fzcssjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-非正常损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zrjxse" type="zrjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-折让</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjdkjxse" type="bqsjdkjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-本期实际抵扣进项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="skzsFormVO">
+		<xs:annotation>
+			<xs:documentation>税款征收信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qylxDm" type="qylxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业类型代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slsdljt" type="slsdljt" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所隶属电力集团</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdl" type="xsdl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售电量上网电量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dj" type="dj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>单价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sdsr" type="sdsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销项-售电收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bzsJwfy" type="bzsJwfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>价外费用其中不征税的价外费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysJwfy" type="ysJwfy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>价外费用应税价外费用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deslhyzl" type="deslhyzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>定额税率或预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfsjx" type="bqfsjx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进项-本期发生进项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mshwy" type="mshwy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税货物用</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzcss" type="fzcss" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非正常损失</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zr" type="zr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>折让</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjdkjx" type="bqsjdkjx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期实际抵扣进项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjzzs1" type="bqyjzzs1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应缴增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjzzs" type="bqyjzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款征收-本期应缴增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqqjzzs" type="bqqjzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款征收-本期欠缴增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljjnzzs" type="bnljjnzzs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税款征收-本年累计缴纳增值税</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="shxxFormVO">
+		<xs:annotation>
+			<xs:documentation>审核信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0">
+			<xs:element name="shswry" type="swryxm">
+				<xs:annotation>
+					<xs:documentation>审核税务人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

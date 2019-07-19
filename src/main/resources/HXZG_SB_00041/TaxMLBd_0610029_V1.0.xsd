@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_jdcljxqyxsmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《机动车辆经销企业销售明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_jdcljxqyxsmxb" type="zzssyyybnsr_jdcljxqyxsmxb">
+						<xs:annotation>
+							<xs:documentation>《机动车辆经销企业销售明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jdcljxqyxsmxb">
+		<xs:annotation>
+			<xs:documentation>《机动车辆经销企业销售明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jdcljxqyxsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jdcljxqyxsmxbGridlbVO" type="jdcljxqyxsmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcljxqyxsmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《机动车辆经销企业销售明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jdcljxqyxsmxbGridlbVO" type="jdcljxqyxsmxbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdcljxqyxsmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jsjg" type="jsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>计税价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="clsbdm" type="clsbdm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>车辆识别代码（车架号）||车辆识别代码（车架号）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpxh1" type="cpxh1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>厂牌型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdxmc" type="xsdxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售对象名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhqdNsrsbh" type="jhqdNsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进货渠道纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jhqdQymc" type="jhqdQymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进货渠道企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jdcljxqyxsmxb1"/>
+</xs:schema>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsybnsrsb_dkdjsstyjksdkqdbw">
+		<xs:annotation>
+			<xs:documentation>《代扣代缴税收通用缴款书抵扣清单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_dkdjsstyjksdkqd" type="zzsybnsrsb_dkdjsstyjksdkqd">
+						<xs:annotation>
+							<xs:documentation>《代扣代缴税收通用缴款书抵扣清单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_dkdjsstyjksdkqd">
+		<xs:annotation>
+			<xs:documentation>《代扣代缴税收通用缴款书抵扣清单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjsstyjksdkqdGrid">
+				<xs:annotation>
+					<xs:documentation>《固定资产进项税额抵扣情况表》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dkdjsstyjksdkqdGridlb" type="dkdjsstyjksdkqdGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dkdjsstyjksdkqdGrid">
+		<xs:annotation>
+			<xs:documentation>《代扣代缴税收通用缴款书抵扣清单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dkdjsstyjksdkqdGridlb" type="dkdjsstyjksdkqdGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="dkdjsstyjksdkqdGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《代扣代缴税收通用缴款书抵扣清单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="se" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjpzbh" type="dkdjpzbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代扣代缴凭证编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dkdjxm" type="dkdjxm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>代扣代缴项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsjgmc" type="zsjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>征收机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrmc" type="kjrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kjrnsrsbh" type="kjrnsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣缴人纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="jsds_yhsxxVO" type="jsds_yhsxxVOType"/>
+  <xs:complexType name="sbbinfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="sbzlbh"/>
+      <xs:element type="xs:string" name="ssqq">
+        <xs:annotation>
+          <xs:documentation>申报种类编号</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ssqz">
+        <xs:annotation>
+          <xs:documentation>所属期起</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsrsbh">
+        <xs:annotation>
+          <xs:documentation>所属期止</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="area">
+        <xs:annotation>
+          <xs:documentation>申报的纳税人识别号</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsqxdm">
+        <xs:annotation>
+          <xs:documentation>区域</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sbbGridlbVOType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="ewbhxh"/>
+      <xs:element type="xs:string" name="bqsfsyzzsxgmnsrjzzcjmxzdm09049901"/>
+      <xs:element type="xs:string" name="bqsfsyzzsxgmnsryhzc">
+        <xs:annotation>
+          <xs:documentation>上海</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsxgmnsrxsjzbl">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzbl">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111  浙江</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="gxhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jgclhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsgckcsjhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzazgccbhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cczlhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaysfywfzwthbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaysfywfzwthbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaysfywfzwthbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaysfywfzwthbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hwyshtaysfywfzwthbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbghtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ccbxhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshthdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jshtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjhdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="cqzysjbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbhdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjmxzdmhdbl">
+        <xs:annotation>
+          <xs:documentation>减免性质代码##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjzzjdzbbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjzzjdzbbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjzzjdzbbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjzzjdzbbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbjzzjdzbbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdhdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zbzzesszbzbgjdbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzaszsjsjehjs">
+        <xs:annotation>
+          <xs:documentation>按实征收##计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzjmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqzzsxgmnsrjzehdbl">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzyspz">
+        <xs:annotation>
+          <xs:documentation>应税凭证</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzhdzshdyjje">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qlxkzzbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jmsehdbl">
+        <xs:annotation>
+          <xs:documentation>减免税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqybtsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dlrgzsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jbrsfzhmsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhthdzshdyj">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhthdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtjsjehjs">
+        <xs:annotation>
+          <xs:documentation>计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jkhtbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbjsjehjs">
+        <xs:annotation>
+          <xs:documentation>计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbhdzshdyj">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yyzbqtzbsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjjsjehjs">
+        <xs:annotation>
+          <xs:documentation>计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>1111111111111111111111111 本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbsyslhdbl">
+        <xs:annotation>
+          <xs:documentation>适用税率##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbjsjehjs">
+        <xs:annotation>
+          <xs:documentation>计税金额或件数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqjmsejmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbhdzshdyj">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定依据</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqzzsxgmnsrjzejmse">
+        <xs:annotation>
+          <xs:documentation>本期增值税小规模纳税人减征额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqybtsejmse">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqynsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期应纳税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqyjsehdbl">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbbqjmsejmse">
+        <xs:annotation>
+          <xs:documentation>本期减免税额##减免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zjzbhdzshdbl">
+        <xs:annotation>
+          <xs:documentation>核定征收##核定比例</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="jsds_yhs_sbbType" mixed="true">
+    <xs:sequence>
+      <xs:element type="sbbGridlbVOType" name="sbbGridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期是否适用增值税小规模纳税人减征政策(减免性质代码：09049901)0100 购销合同0200 加工承揽合同0300 建设工程勘察设计合同0400 建筑安装工程承包合同0500 财产租赁合同0600 货物运输合同0700 仓储保管合同0900 财产保险合同1000 技术合同1190 产权转移书据1201 营业帐簿1202 资本增值额(实收资本、资本公积等)1300 权利、许可证照代理人(公章)经办人身份证号码: 上海  1111111111111111111111111 借款合同 1111111111111111111111111 营业帐簿 (其他帐簿) 1111111111111111111111111 合计 1111111111111111111111111  浙江  1111111111111111111111111 资金账簿</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jsds_yhsxxVOType">
+    <xs:sequence>
+      <xs:element type="sbbinfoType" name="sbbinfo">
+        <xs:annotation>
+          <xs:documentation>纳税期限代码 1:月 2:季 3:半年 4:年 5:次</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="jsds_yhs_sbbType" name="jsds_yhs_sbb"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

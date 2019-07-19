@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr03_ysfwkcxmmxywbw">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表附列资料三（应税服务扣除项目明细）</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr03_ysfwkcxmmx" type="zzssyyybnsr03_ysfwkcxmmx">
+						<xs:annotation>
+							<xs:documentation>增值税纳税申报表附列资料三（应税服务扣除项目明细）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr03_ysfwkcxmmx">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表附列资料三（应税服务扣除项目明细）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO"/>
+			<xs:element name="ysfwkcxmmxGrid">
+				<xs:annotation>
+					<xs:documentation>增值税纳税申报表附列资料三（应税服务扣除项目明细）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="ysfwkcxmmxGridlbVO" type="ysfwkcxmmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ysfwkcxmmxGrid">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表附列资料（附表三）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ysfwkcxmmxGridlbVO" type="ysfwkcxmmxGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ysfwkcxmmxGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号(特殊：营改增新增第4行6%税率的金融商品转让项目-->7;第5行5%征收率的项目-->8)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye" type="qcye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="qmye" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxse" type="msxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqykcje" type="bqykcje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税服务扣除项目_本期应扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjkcje" type="bqsjkcje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税服务扣除项目_本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfse" type="bqfse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsds_yhsxxVO>
+	<sbbinfo>
+		<sbzlbh>10111</sbzlbh> <!-- 申报种类编号 -->
+		<ssqq>2019-02-01</ssqq> <!-- 所属期起 -->
+		<ssqz>2019-02-28</ssqz> <!-- 所属期止 -->
+		<nsrsbh>91110108MA01ATW72J</nsrsbh> <!-- 申报的纳税人识别号 -->
+		<area>32</area> <!-- 区域 -->
+		<nsqxdm>1</nsqxdm> <!--纳税期限代码 1:月 2:季 3:半年 4:年 5:次-->
+	</sbbinfo>
+	<jsds_yhs_sbb>
+		<!--本期是否适用增值税小规模纳税人减征政策(减免性质代码：09049901)-->
+		<sbbGridlbVO>
+			<ewbhxh>1</ewbhxh>
+			<!---->
+			<bqsfsyzzsxgmnsrjzzcjmxzdm09049901/>
+			
+			<!-- 上海 -->
+			<bqsfsyzzsxgmnsryhzc/> <!-- 1111111111111111111111111 -->
+			<zzsxgmnsrxsjzbl/> <!-- 1111111111111111111111111 -->
+			
+			<!-- 浙江 -->
+			<jzbl/>
+		</sbbGridlbVO>
+		<!--0100 购销合同-->
+		<sbbGridlbVO>
+			<ewbhxh>2</ewbhxh>
+			<!--核定征收##核定比例-->
+			<gxhthdzshdbl/>
+			<!--本期已缴税额##核定比例-->
+			<gxhtbqyjsehdbl/>
+			<!--适用税率##核定比例-->
+			<gxhtsyslhdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<gxhtbqzzsxgmnsrjzehdbl/>
+			<!--核定征收##核定依据金额-->
+			<gxhthdzshdyjje/>
+			<!--减免税额##核定比例-->
+			<gxhtjmsehdbl/>
+			<!--应税凭证-->
+			<gxhtyspz/>
+			<!--本期应补(退)税额##核定比例-->
+			<gxhtbqybtsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<gxhtaszsjsjehjs/>
+			
+			 <!-- 1111111111111111111111111 -->
+			<!--本期应补(退)税额##减免税额-->
+			<gxhtbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<gxhtbqynsehdbl/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<gxhtbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免税额-->
+			<gxhtbqjmsejmse/>
+			<!--本期减免税额##减免税额-->
+			<gxhtbqjmsejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<gxhtbqjmsejmxzdm/>
+		</sbbGridlbVO>
+		<!--0200 加工承揽合同-->
+		<sbbGridlbVO>
+			<ewbhxh>3</ewbhxh>
+			<!--本期已缴税额##核定比例-->
+			<jgclhtbqyjsehdbl/>
+			<!--核定征收##核定依据金额-->
+			<jgclhthdzshdyjje/>
+			<!--本期应补(退)税额##核定比例-->
+			<jgclhtbqybtsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<jgclhtaszsjsjehjs/>
+			<!--适用税率##核定比例-->
+			<jgclhtsyslhdbl/>
+			<!--核定征收##核定比例-->
+			<jgclhthdzshdbl/>
+			<!--减免税额##核定比例-->
+			<jgclhtjmsehdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<jgclhtbqzzsxgmnsrjzehdbl/>
+			<!--应税凭证-->
+			<jgclhtyspz/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<jgclhtbqzzsxgmnsrjzejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<jgclhtbqybtsejmse/>
+			<!--本期已缴税额##核定比例-->
+			<jgclhtbqyjsehdbl/>
+			<!--本期减免税额##减免性质代码-->
+			<jgclhtbqjmsejmxzdm/>
+			<!--本期减免税额##减免税额-->
+			<jgclhtbqjmsejmse/>
+		</sbbGridlbVO>
+		<!--0300 建设工程勘察设计合同-->
+		<sbbGridlbVO>
+			<ewbhxh>4</ewbhxh>
+			<!--应税凭证-->
+			<jsgckcsjhtyspz/>
+			<!--按实征收##计税金额或件数-->
+			<jsgckcsjhtaszsjsjehjs/>
+			<!--核定征收##核定依据金额-->
+			<jsgckcsjhthdzshdyjje/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<jsgckcsjhtbqzzsxgmnsrjzehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<jsgckcsjhtbqybtsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<jsgckcsjhtbqyjsehdbl/>
+			<!--核定征收##核定比例-->
+			<jsgckcsjhthdzshdbl/>
+			<!--适用税率##核定比例-->
+			<jsgckcsjhtsyslhdbl/>
+			<!--减免税额##核定比例-->
+			<jsgckcsjhtjmsehdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免性质代码-->
+			<jsgckcsjhtbqjmsejmxzdm/> 
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<jsgckcsjhtbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免税额-->
+			<jsgckcsjhtbqjmsejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<jsgckcsjhtbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<jsgckcsjhtbqynsehdbl/>
+		</sbbGridlbVO>
+		<!--0400 建筑安装工程承包合同-->
+		<sbbGridlbVO>
+			<ewbhxh>5</ewbhxh>
+			<!--应税凭证-->
+			<jzazgccbhtyspz/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<jzazgccbhtbqzzsxgmnsrjzehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<jzazgccbhtbqyjsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<jzazgccbhtaszsjsjehjs/>
+			<!--核定征收##核定依据金额-->
+			<jzazgccbhthdzshdyjje/>
+			<!--减免税额##核定比例-->
+			<jzazgccbhtjmsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<jzazgccbhtbqybtsehdbl/>
+			<!--核定征收##核定比例-->
+			<jzazgccbhthdzshdbl/>
+			<!--适用税率##核定比例-->
+			<jzazgccbhtsyslhdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免税额-->
+			<jzazgccbhtbqjmsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<jzazgccbhtbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<jzazgccbhtbqjmsejmxzdm/>
+			<!--本期应纳税额##核定比例-->
+			<jzazgccbhtbqynsehdbl/>
+			<!--本期应补(退)税额##减免税额-->
+			<jzazgccbhtbqybtsejmse/>
+		</sbbGridlbVO>
+		<!--0500 财产租赁合同-->
+		<sbbGridlbVO>
+			<ewbhxh>6</ewbhxh>
+			<!--减免税额##核定比例-->
+			<cczlhtjmsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<cczlhtbqybtsehdbl/>
+			<!--应税凭证-->
+			<cczlhtyspz/>
+			<!--核定征收##核定比例-->
+			<cczlhthdzshdbl/>
+			<!--按实征收##计税金额或件数-->
+			<cczlhtaszsjsjehjs/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<cczlhtbqzzsxgmnsrjzehdbl/>
+			<!--适用税率##核定比例-->
+			<cczlhtsyslhdbl/>
+			<!--核定征收##核定依据金额-->
+			<cczlhthdzshdyjje/>
+			<!--本期已缴税额##核定比例-->
+			<cczlhtbqyjsehdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免性质代码-->
+			<cczlhtbqjmsejmxzdm/>
+			<!--本期应补(退)税额##减免税额-->
+			<cczlhtbqybtsejmse/>
+			<!--本期减免税额##减免税额-->
+			<cczlhtbqjmsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<cczlhtbqzzsxgmnsrjzejmse/>
+			<!--本期应纳税额##核定比例-->
+			<cczlhtbqynsehdbl/>
+		</sbbGridlbVO>
+		<!--0600 货物运输合同-->
+		<sbbGridlbVO>
+			<ewbhxh>7</ewbhxh>
+			<!--本期应补(退)税额##核定比例-->
+			<hwyshtbqybtsehdbl/>
+			<!--核定征收##核定比例-->
+			<hwyshthdzshdbl/>
+			<!--适用税率##核定比例-->
+			<hwyshtsyslhdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<hwyshtbqzzsxgmnsrjzehdbl/>
+			<!--核定征收##核定依据金额-->
+			<hwyshthdzshdyjje/>
+			<!--减免税额##核定比例-->
+			<hwyshtjmsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<hwyshtbqyjsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<hwyshtaszsjsjehjs/>
+			<!--应税凭证-->
+			<hwyshtyspz/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免性质代码-->
+			<hwyshtaysfywfzwthbqjmsejmxzdm/>
+			<!--本期应纳税额##核定比例-->
+			<hwyshtaysfywfzwthbqynsehdbl/>
+			<!--本期应补(退)税额##减免税额-->
+			<hwyshtaysfywfzwthbqybtsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<hwyshtaysfywfzwthbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免税额-->
+			<hwyshtaysfywfzwthbqjmsejmse/>
+		</sbbGridlbVO>
+		<!--0700 仓储保管合同-->
+		<sbbGridlbVO>
+			<ewbhxh>8</ewbhxh>
+			<!--本期应补(退)税额##核定比例-->
+			<ccbghtbqybtsehdbl/>
+			<!--应税凭证-->
+			<ccbghtyspz/>
+			<!--按实征收##计税金额或件数-->
+			<ccbghtaszsjsjehjs/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<ccbghtbqzzsxgmnsrjzehdbl/>
+			<!--减免税额##核定比例-->
+			<ccbghtjmsehdbl/>
+			<!--核定征收##核定比例-->
+			<ccbghthdzshdbl/>
+			<!--核定征收##核定依据金额-->
+			<ccbghthdzshdyjje/>
+			<!--适用税率##核定比例-->
+			<ccbghtsyslhdbl/>
+			<!--本期已缴税额##核定比例-->
+			<ccbghtbqyjsehdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免税额-->
+			<ccbghtbqjmsejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<ccbghtbqjmsejmxzdm/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<ccbghtbqzzsxgmnsrjzejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<ccbghtbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<ccbghtbqynsehdbl/>
+		</sbbGridlbVO>
+		<!--0900 财产保险合同-->
+		<sbbGridlbVO>
+			<ewbhxh>9</ewbhxh>
+			<!--适用税率##核定比例-->
+			<ccbxhtsyslhdbl/>
+			<!--核定征收##核定比例-->
+			<ccbxhthdzshdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<ccbxhtbqzzsxgmnsrjzehdbl/>
+			<!--应税凭证-->
+			<ccbxhtyspz/>
+			<!--核定征收##核定依据金额-->
+			<ccbxhthdzshdyjje/>
+			<!--本期已缴税额##核定比例-->
+			<ccbxhtbqyjsehdbl/>
+			<!--减免税额##核定比例-->
+			<ccbxhtjmsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<ccbxhtbqybtsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<ccbxhtaszsjsjehjs/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期应补(退)税额##减免税额-->
+			<ccbxhtbqybtsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<ccbxhtbqzzsxgmnsrjzejmse/>
+			<!--本期应纳税额##核定比例-->
+			<ccbxhtbqynsehdbl/>
+			<!--本期减免税额##减免税额-->
+			<ccbxhtbqjmsejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<ccbxhtbqjmsejmxzdm/>
+		</sbbGridlbVO>
+		<!--1000 技术合同-->
+		<sbbGridlbVO>
+			<ewbhxh>10</ewbhxh>
+			<!--适用税率##核定比例-->
+			<jshtsyslhdbl/>
+			<!--核定征收##核定比例-->
+			<jshthdzshdbl/>
+			<!--核定征收##核定依据金额-->
+			<jshthdzshdyjje/>
+			<!--按实征收##计税金额或件数-->
+			<jshtaszsjsjehjs/>
+			<!--本期已缴税额##核定比例-->
+			<jshtbqyjsehdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<jshtbqzzsxgmnsrjzehdbl/>
+			<!--减免税额##核定比例-->
+			<jshtjmsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<jshtbqybtsehdbl/>
+			<!--应税凭证-->
+			<jshtyspz/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免税额-->
+			<jshtbqjmsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<jshtbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<jshtbqjmsejmxzdm/>
+			<!--本期应补(退)税额##减免税额-->
+			<jshtbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<jshtbqynsehdbl/>
+		</sbbGridlbVO>
+		<!--1190 产权转移书据-->
+		<sbbGridlbVO>
+			<ewbhxh>11</ewbhxh>
+			<!--本期应补(退)税额##核定比例-->
+			<cqzysjbqybtsehdbl/>
+			<!--核定征收##核定比例-->
+			<cqzysjhdzshdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<cqzysjbqzzsxgmnsrjzehdbl/>
+			<!--应税凭证-->
+			<cqzysjyspz/>
+			<!--按实征收##计税金额或件数-->
+			<cqzysjaszsjsjehjs/>
+			<!--核定征收##核定依据金额-->
+			<cqzysjhdzshdyjje/>
+			<!--适用税率##核定比例-->
+			<cqzysjsyslhdbl/>
+			<!--减免税额##核定比例-->
+			<cqzysjjmsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<cqzysjbqyjsehdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<cqzysjbqzzsxgmnsrjzejmse/>
+			<!--本期应纳税额##核定比例-->
+			<cqzysjbqynsehdbl/>
+			<!--本期应补(退)税额##减免税额-->
+			<cqzysjbqybtsejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<cqzysjbqjmsejmxzdm/>
+			<!--本期减免税额##减免税额-->
+			<cqzysjbqjmsejmse/>
+		</sbbGridlbVO>
+		<!--1201 营业帐簿--> 13
+		<sbbGridlbVO>
+			<ewbhxh>12</ewbhxh>
+			<!--本期已缴税额##核定比例-->
+			<yyzbbqyjsehdbl/>
+			<!--核定征收##核定比例-->
+			<yyzbhdzshdbl/>
+			<!--适用税率##核定比例-->
+			<yyzbsyslhdbl/>
+			<!--应税凭证-->
+			<yyzbyspz/>
+			<!--本期应补(退)税额##核定比例-->
+			<yyzbbqybtsehdbl/>
+			<!--按实征收##计税金额或件数-->
+			<yyzbaszsjsjehjs/>
+			<!--减免税额##核定比例-->
+			<yyzbjmsehdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<yyzbbqzzsxgmnsrjzehdbl/>
+			<!--核定征收##核定依据金额-->
+			<yyzbhdzshdyjje/>
+			<!--减免性质代码##核定比例-->
+			<yyzbjmxzdmhdbl/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免税额-->
+			<yyzbjzzjdzbbqjmsejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<yyzbjzzjdzbbqybtsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<yyzbjzzjdzbbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<yyzbjzzjdzbbqjmsejmxzdm/>
+			<!--本期应纳税额##核定比例-->
+			<yyzbjzzjdzbbqynsehdbl/>
+		</sbbGridlbVO>
+		<!--1202 资本增值额(实收资本、资本公积等)-->
+		<sbbGridlbVO>
+			<ewbhxh>13</ewbhxh>
+			<!--按实征收##计税金额或件数-->
+			<zbzzesszbzbgjdaszsjsjehjs/>
+			<!--减免税额##核定比例-->
+			<zbzzesszbzbgjdjmsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<zbzzesszbzbgjdbqyjsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<zbzzesszbzbgjdbqybtsehdbl/>
+			<!--核定征收##核定比例-->
+			<zbzzesszbzbgjdhdzshdbl/>
+			<!--应税凭证-->
+			<zbzzesszbzbgjdyspz/>
+			<!--核定征收##核定依据金额-->
+			<zbzzesszbzbgjdhdzshdyjje/>
+			<!--适用税率##核定比例-->
+			<zbzzesszbzbgjdsyslhdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<zbzzesszbzbgjdbqzzsxgmnsrjzehdbl/>
+		</sbbGridlbVO>
+		<!--1300 权利、许可证照-->
+		<sbbGridlbVO>
+			<ewbhxh>14</ewbhxh>
+			<!--按实征收##计税金额或件数-->
+			<qlxkzzaszsjsjehjs/>
+			<!--减免税额##核定比例-->
+			<qlxkzzjmsehdbl/>
+			<!--本期增值税小规模纳税人减征额##核定比例-->
+			<qlxkzzbqzzsxgmnsrjzehdbl/>
+			<!--适用税率##核定比例-->
+			<qlxkzzsyslhdbl/>
+			<!--核定征收##核定比例-->
+			<qlxkzzhdzshdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<qlxkzzbqybtsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<qlxkzzbqyjsehdbl/>
+			<!--应税凭证-->
+			<qlxkzzyspz/>
+			<!--核定征收##核定依据金额-->
+			<qlxkzzhdzshdyjje/>
+			
+			<!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免税额-->
+			<qlxkzzbqjmsejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<qlxkzzbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<qlxkzzbqynsehdbl/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<qlxkzzbqzzsxgmnsrjzejmse/>
+			<!--本期减免税额##减免性质代码-->
+			<qlxkzzbqjmsejmxzdm/>
+		</sbbGridlbVO>
+		<!---->
+		<sbbGridlbVO>
+			<ewbhxh>15</ewbhxh>
+			<!--减免税额##核定比例-->
+			<jmsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<bqyjsehdbl/>
+			<!--本期应补(退)税额##核定比例-->
+			<bqybtsehdbl/>
+		</sbbGridlbVO>
+		<!--代理人(公章)-->
+		<sbbGridlbVO>
+			<ewbhxh>16</ewbhxh>
+			<!--适用税率##核定比例-->
+			<dlrgzsyslhdbl/>
+		</sbbGridlbVO>
+		<!--经办人身份证号码:-->
+		<sbbGridlbVO>
+			<ewbhxh>17</ewbhxh>
+			<!--适用税率##核定比例-->
+			<jbrsfzhmsyslhdbl/>
+		</sbbGridlbVO>
+		<!-- 上海 --><!-- 1111111111111111111111111 -->
+		<!--借款合同-->
+		<sbbGridlbVO>
+			<ewbhxh>18</ewbhxh>
+			<!--核定征收##核定依据-->
+			<jkhthdzshdyj/>
+			<!--核定征收##核定比例-->
+			<jkhthdzshdbl/>
+			<!--计税金额或件数-->
+			<jkhtjsjehjs/>
+			<!--本期已缴税额##核定比例-->
+			<jkhtbqyjsehdbl/>
+			<!--适用税率##核定比例-->
+			<jkhtsyslhdbl/>
+			<!--本期减免税额##减免税额-->
+			<jkhtbqjmsejmse/> <!-- 1111111111111111111111111 -->
+			<!--本期减免税额##减免性质代码-->
+			<jkhtbqjmsejmxzdm/> <!-- 1111111111111111111111111 -->
+			<!--本期应补(退)税额##减免税额-->
+			<jkhtbqybtsejmse/> <!-- 1111111111111111111111111 -->
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<jkhtbqzzsxgmnsrjzejmse/> <!-- 1111111111111111111111111 -->
+			<!--本期应纳税额##核定比例-->
+			<jkhtbqynsehdbl/> <!-- 1111111111111111111111111 -->
+		</sbbGridlbVO>
+		<!--营业帐簿 (其他帐簿)--> <!-- 1111111111111111111111111 -->
+		<sbbGridlbVO>
+			<ewbhxh>19</ewbhxh>
+			<!--计税金额或件数-->
+			<yyzbqtzbjsjehjs/>
+			<!--本期应补(退)税额##减免税额-->
+			<yyzbqtzbbqybtsejmse/>
+			<!--本期已缴税额##核定比例-->
+			<yyzbqtzbbqyjsehdbl/>
+			<!--本期减免税额##减免税额-->
+			<yyzbqtzbbqjmsejmse/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<yyzbqtzbbqzzsxgmnsrjzejmse/>
+			<!--核定征收##核定比例-->
+			<yyzbqtzbhdzshdbl/>
+			<!--本期减免税额##减免性质代码-->
+			<yyzbqtzbbqjmsejmxzdm/>
+			<!--本期应纳税额##核定比例-->
+			<yyzbqtzbbqynsehdbl/>
+			<!--核定征收##核定依据-->
+			<yyzbqtzbhdzshdyj/>
+			<!--适用税率##核定比例-->
+			<yyzbqtzbsyslhdbl/>
+		</sbbGridlbVO>
+		<!--合计-->
+		<sbbGridlbVO>
+			<ewbhxh>20</ewbhxh>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<hjbqzzsxgmnsrjzejmse/> <!-- 1111111111111111111111111 -->
+			<!--本期应纳税额##核定比例-->
+			<hjbqynsehdbl/> <!-- 1111111111111111111111111 -->
+			<!--本期已缴税额##核定比例-->
+			<hjbqyjsehdbl/>
+			<!--计税金额或件数-->
+			<hjjsjehjs/>
+			<!--本期减免税额##减免税额-->
+			<hjbqjmsejmse/> <!-- 1111111111111111111111111 -->
+			<!--本期应补(退)税额##减免税额-->
+			<hjbqybtsejmse/> <!-- 1111111111111111111111111 -->
+		</sbbGridlbVO>
+		<!-- 浙江 --><!-- 1111111111111111111111111 -->
+		<!--资金账簿-->
+		<sbbGridlbVO>
+			<ewbhxh>21</ewbhxh>
+			<!--适用税率##核定比例-->
+			<zjzbsyslhdbl/>
+			<!--计税金额或件数-->
+			<zjzbjsjehjs/>
+			<!--本期减免税额##减免性质代码-->
+			<zjzbbqjmsejmxzdm/>
+			<!--核定征收##核定依据-->
+			<zjzbhdzshdyj/>
+			<!--本期增值税小规模纳税人减征额##减免税额-->
+			<zjzbbqzzsxgmnsrjzejmse/>
+			<!--本期应补(退)税额##减免税额-->
+			<zjzbbqybtsejmse/>
+			<!--本期应纳税额##核定比例-->
+			<zjzbbqynsehdbl/>
+			<!--本期已缴税额##核定比例-->
+			<zjzbbqyjsehdbl/>
+			<!--本期减免税额##减免税额-->
+			<zjzbbqjmsejmse/>
+			<!--核定征收##核定比例-->
+			<zjzbhdzshdbl/>
+		</sbbGridlbVO>
+	</jsds_yhs_sbb>
+</jsds_yhsxxVO>

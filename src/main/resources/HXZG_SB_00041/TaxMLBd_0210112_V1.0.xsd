@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_hgwspzdklsjcjbywbw">
+		<xs:annotation>
+			<xs:documentation>《海关完税凭证抵扣联数据采集表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="hgwspzdklsjcjb">
+						<xs:annotation>
+							<xs:documentation>海关完税凭证抵扣联数据采集表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="hgwspzdklsjcjb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="hgwspzdklsjGrid">
+		<xs:annotation>
+			<xs:documentation>海关完税凭证抵扣联数据Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hgwspzdklsjGridlb" type="hgwspzdklsjGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hgwspzdklsjGridlbVO">
+		<xs:annotation>
+			<xs:documentation>海关完税凭证抵扣联数据Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="hgwspzhm" type="hgwspzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>海关完税凭证号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jkkaDm" type="jkkaDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>进口口岸代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tfrq" type="tfrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填发日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="se" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzjg" type="rzjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>认证结果</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hgwspzdklsjcjb">
+		<xs:annotation>
+			<xs:documentation>《海关完税凭证抵扣联数据采集表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hgwspzdklsjGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="hgwspzdklsjGridlbVO" type="hgwspzdklsjGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxForm" type="sbbslxxVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

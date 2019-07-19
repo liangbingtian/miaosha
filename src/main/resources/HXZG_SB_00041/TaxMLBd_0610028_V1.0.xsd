@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_jdclscqyxsmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《机动车辆生产企业销售明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_jdclscqyxsmxb" type="zzssyyybnsr_jdclscqyxsmxb">
+						<xs:annotation>
+							<xs:documentation>《机动车辆生产企业销售明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jdclscqyxsmxb">
+		<xs:annotation>
+			<xs:documentation>《机动车辆生产企业销售明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="sbbxxVO"/>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="jdcljxqyxsmxbGrid">
+				<xs:annotation>
+					<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jdclscqyxsmxbGridlbVO" type="jdclscqyxsmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdclscqyxsmxbGrid">
+		<xs:annotation>
+			<xs:documentation>《机动车辆生产企业销售明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jdcljxqyxsmxbGridlbVO" type="jdclscqyxsmxbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>机动车辆经销企业销售明细表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jdclscqyxsmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>机动车辆生产企业销售明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsqkClsbdm" type="xsqkClsbdm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售情况车辆识别代码车架号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsqkCpxh" type="xsqkCpxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售情况厂牌型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ghfnsrrbh" type="ghfnsrrbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>购货方纳税人认别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdxmc" type="xsdxmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售对象名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsqkXsjg" type="xsqkXsjg" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>销售情况销售价格</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbxxVO">
+		<xs:annotation>
+			<xs:documentation>申报表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbrq" type="tbrq">
+				<xs:annotation>
+					<xs:documentation>填表日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

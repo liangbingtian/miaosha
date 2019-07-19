@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_jyzyfjyxxmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《加油站月份加油信息明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_jyzyfjyxxmxb">
+						<xs:annotation>
+							<xs:documentation>加油站月份加油信息明细</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_jyzyfjyxxmxb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jyzyfjyxxmxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>加油站月份加油信息明细Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fddbr" type="fddbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zqs" type="zqs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总枪数</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyqccbh" type="jyqccbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>加油枪出厂编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ypxh" type="ypxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>油品型号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yljjyl" type="yljjyl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>月累计加油量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yljje" type="yljje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>月累计金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yynzzse" type="yynzzse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>月应纳增值税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tbr" type="tbr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>填表人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jyzyfjyxxmxGrid">
+		<xs:annotation>
+			<xs:documentation>加油站月份加油信息明细Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jyzyfjyxxmxGridlbVO" type="jyzyfjyxxmxGridlbVO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_jyzyfjyxxmxb">
+		<xs:annotation>
+			<xs:documentation>《加油站月份加油信息明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyzyfjyxxmxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jyzyfjyxxmxGridlbVO" type="jyzyfjyxxmxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxx" type="sbbslxxVO"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_hznsqytycddywbw">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业通用传递单》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_hznsqytycdd">
+						<xs:annotation>
+							<xs:documentation>汇总纳税企业通用传递单</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_hznsqytycdd"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_hznsqytycdd">
+		<xs:annotation>
+			<xs:documentation>《汇总纳税企业通用传递单》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hznsqytycddxxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="hznsqytycddxxGridlbVO" type="hznsqytycddxxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hznsqytycddjxGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="hznsqytycddjxGridlbVO" type="hznsqytycddjxGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="hznsqytycddForm" type="hznsqytycddFormVO">
+				<xs:annotation>
+					<xs:documentation>汇总纳税企业通用传递单</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slxx" type="sbbslxxVO">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hznsqytycddFormVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业通用传递单</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fddbrxm" type="fddbrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lxdh" type="lxdh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yydz" type="yydz">
+				<xs:annotation>
+					<xs:documentation>营业地址</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="khyh" type="khyh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>开户银行</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yhzh" type="yhzh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>银行账户</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dhhm" type="dhhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>电话号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgshyj" type="zgswjgshyj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关审核意见</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswry" type="zgswry" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shswry" type="shswry" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>审核税务人员</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsdw" type="bsdw" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报送单位</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hznsqytycddxxGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业通用传递单Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="hznsqytycddxxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业通用传递单Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjsk" type="yjsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>已缴税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpsk" type="fpsk" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分配税款</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="ynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzl" type="yzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>预征率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxssr" type="ysxssr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税销售收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmmc" type="ysxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysxmDm" type="ysxmDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应税项目_代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="hznsqytycddjxGrid">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业通用传递单Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="hznsqytycddjxGridlbVO">
+		<xs:annotation>
+			<xs:documentation>汇总纳税企业通用传递单Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfsjx" type="bqfsjx" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期发生进项</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mshwyJxsezc" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税货物用进项税额转出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzcssJxsezc" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>非正常损失进项税额转出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtJxsezc" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>其他进项税额转出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xjJxsezc" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>小计进项税额转出</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjkce" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期实际扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

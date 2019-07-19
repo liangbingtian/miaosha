@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="HXZGSB00041Response">
+		<xs:annotation>
+			<xs:documentation>增值税一般纳税人人申报保存返回报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="SBSaveReturnVO" type="SBSaveReturnVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>申报保存响应交互</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="SBZzsSaveReturnVO" type="SBZzsSaveReturnVO">
+						<xs:annotation>
+							<xs:documentation>申报增值税保存响应交互</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

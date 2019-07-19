@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jmsezssbbywbw">
+		<xs:annotation>
+			<xs:documentation>《减免税额折算表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="jmsezssbb">
+						<xs:annotation>
+							<xs:documentation>《减免税额折算表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="jmsezssbbGrid">
+									<xs:annotation>
+										<xs:documentation>减免税额折算表列表</xs:documentation>
+									</xs:annotation>
+									<xs:complexType>
+										<xs:sequence maxOccurs="unbounded">
+											<xs:element name="jmsezssbbGridlb" type="jmsezssbbGridlbVO">
+												<xs:annotation>
+													<xs:documentation>减免税额折算表申报信息列表</xs:documentation>
+												</xs:annotation>
+											</xs:element>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jmsezssbb">
+		<xs:annotation>
+			<xs:documentation>《减免税额折算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="headFrom" type="headFrom">
+				<xs:annotation>
+					<xs:documentation>表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsezssbbGrid">
+				<xs:annotation>
+					<xs:documentation>减免税额折算表列表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="jmsezssbbGridlb" type="jmsezssbbGridlbVO">
+							<xs:annotation>
+								<xs:documentation>减免税额折算表申报信息列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxFrom" type="slxxFrom">
+				<xs:annotation>
+					<xs:documentation>受理信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmsezssbbGrid">
+		<xs:annotation>
+			<xs:documentation>减免税额折算表申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="jmsezssbbGridlb" type="jmsezssbbGridlbVO">
+				<xs:annotation>
+					<xs:documentation>减免税额折算表申报信息列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="jmsezssbbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>减免税额折算表明细列表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jmxzDm" type="jmxzDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免性质代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmxzmc" type="jmxzmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免性质名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="srzl" type="srzl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收入种类</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmsr" type="jmsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="sl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="jmse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="headFrom">
+		<xs:annotation>
+			<xs:documentation>表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbheadVO">
+				<xs:sequence>
+					<xs:element name="tbrq" type="tbrq">
+						<xs:annotation>
+							<xs:documentation>填表日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="slxxFrom">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sdrq" type="sdrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收到日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsr" type="jsr" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>接收人</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgswjgDm" type="zgswjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主管税务机关</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

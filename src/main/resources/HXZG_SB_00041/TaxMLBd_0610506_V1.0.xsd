@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsbywbw">
+		<xs:annotation>
+			<xs:documentation>《购进农产品直接销售核定农产品增值税进项税额计算表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsb">
+						<xs:annotation>
+							<xs:documentation>购进农产品直接销售核定农产品增值税进项税额计算表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gjncpzjxshdncpzzsjxseGridlbVO">
+		<xs:annotation>
+			<xs:documentation>购进农产品直接销售核定农产品增值税进项税额Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xh" type="xh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cpmc1" type="cpmc1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>产品名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqxsncpsl" type="dqxsncpsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期销售农产品数量吨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shsl1" type="shsl1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>损耗数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncpgjsl" type="ncpgjsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>农产品购进数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="shl" type="shl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>损耗率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qckcncpsl" type="qckcncpsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初库存农产品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcpjmj" type="qcpjmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初平均买价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqgjncpsl" type="dqgjncpsl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期购进农产品数量</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqmj" type="dqmj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期买价元/吨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncppjgmdj" type="ncppjgmdj" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>农产品平均购买单价元/吨</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kcl" type="kcl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dqyxdkncpjxse" type="dqyxdkncpjxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>当期允许抵扣农产品进项税额元</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="gjncpzjxshdncpzzsjxseGrid">
+		<xs:annotation>
+			<xs:documentation>购进农产品直接销售核定农产品增值税进项税额Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="gjncpzjxshdncpzzsjxseGridlbVO" type="gjncpzjxshdncpzzsjxseGridlbVO">
+				<xs:annotation>
+					<xs:documentation>购进农产品直接销售核定农产品增值税进项税额Grid列表VO</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzssyyybnsr_gjncpzjxshdncpzzsjxsejsb">
+		<xs:annotation>
+			<xs:documentation>《购进农产品直接销售核定农产品增值税进项税额计算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadVO">
+				<xs:annotation>
+					<xs:documentation>申报表表头</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gjncpzjxshdncpzzsjxseGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gjncpzjxshdncpzzsjxseGridlbVO" type="gjncpzjxshdncpzzsjxseGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

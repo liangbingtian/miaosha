@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="zzsybnsrsb_ndhkysqyqsbbw">
+		<xs:annotation>
+			<xs:documentation>《年度航空运输企业年度清算表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsybnsrsb_ndhkysqyqsb" type="zzsybnsrsb_ndhkysqyqsb">
+						<xs:annotation>
+							<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsybnsrsb_ndhkysqyqsb">
+		<xs:annotation>
+			<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbheadVO" type="sbbVO">
+				<xs:annotation>
+					<xs:documentation>申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndhkysqyqsbGrid">
+				<xs:annotation>
+					<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="ndhkysqyqsbGridlb">
+							<xs:annotation>
+								<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:extension base="ndhkysqyqsbGridlbVO"/>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ndhkysqyqsbGrid">
+		<xs:annotation>
+			<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="ndhkysqyqsbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>《年度航空运输企业年度清算表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ce" type="ce" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>差额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndyjse" type="ndyjse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度预缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndqsdynse" type="ndqsdynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度清算的应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ndxse" type="ndxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年度销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szd" type="szd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所在地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgmc" type="fzjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分支机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgsbh" type="fzjgsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分支机构识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hkysqymc" type="hkysqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>航空运输企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sbbVO">
+		<xs:annotation>
+			<xs:documentation>申报表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hkysqymc" type="hkysqymc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>航空运输企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjghzdndxse" type="zjghzdndxse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构汇总的年度销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjghzdndynse" type="zjghzdndynse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构汇总的年度应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
