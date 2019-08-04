@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_qysdsczzsyjdsbnew_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB00863Request">
+		<xs:annotation>
+			<xs:documentation>居民企业（查账征收）企业所得税月季度申报申报保存接入报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="sbxxGrid">
+						<xs:annotation>
+							<xs:documentation>申报数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="jmxxGrid">
+						<xs:annotation>
+							<xs:documentation>减免数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jmxxGridlb" type="SBSbjmTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="yjxxGrid">
+						<xs:annotation>
+							<xs:documentation>预缴税款数据信息</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="yjxxGridlb" type="SBSbyjTjVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="qysdsczzsyjdSbbdxxVO" type="qysdsczzsyjdsbywbw">
+						<xs:annotation>
+							<xs:documentation>居民企业（查账征收）企业所得税月季度申报申报表单数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="sbSBbcTjqtxxVO" type="SBSBbcTjqtxxVO">
+						<xs:annotation>
+							<xs:documentation>申报纳税人申报保存提交其他信息对象</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

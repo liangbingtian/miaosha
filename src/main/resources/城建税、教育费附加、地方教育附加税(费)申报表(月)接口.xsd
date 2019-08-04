@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="jsds_fjsxxVO" type="jsds_fjsxxVOType"/>
+  <xs:complexType name="sbbinfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="sbzlbh"/>
+      <xs:element type="xs:string" name="ssqq">
+        <xs:annotation>
+          <xs:documentation>城建税、教育费附加、地方教育附加税(费)申报表(月)  申报种类编号</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ssqz">
+        <xs:annotation>
+          <xs:documentation>所属期起</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jtnsrsbh">
+        <xs:annotation>
+          <xs:documentation>所属期止</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsrsbh">
+        <xs:annotation>
+          <xs:documentation>集团纳税人识别号</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="area">
+        <xs:annotation>
+          <xs:documentation>申报的纳税人识别号</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsqxdm">
+        <xs:annotation>
+          <xs:documentation>区域</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sbbGridlbVOType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element name="ewbhxh">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+            <xs:enumeration value="9"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="bqybtsfehjjme">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额本期应补(退)税(费)额##合计##减免额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="slzslhjmdse">
+        <xs:annotation>
+          <xs:documentation>税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额税率(征收率)##合计##免抵税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqynsfehjmdse">
+        <xs:annotation>
+          <xs:documentation>本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额本期应纳税(费)额##合计##免抵税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjmsfehjjmxzdm">
+        <xs:annotation>
+          <xs:documentation>本期减免税(费)额##合计##减免性质代码本期减免税(费)额##合计##减免性质代码本期减免税(费)额##合计##减免性质代码本期减免税(费)额##合计##减免性质代码本期减免税(费)额##合计##减免性质代码本期减免税(费)额##合计##减免性质代码</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsfyjhjmdse">
+        <xs:annotation>
+          <xs:documentation>计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额计税(费)依据##合计##免抵税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsfyjzzsybzzs">
+        <xs:annotation>
+          <xs:documentation>计税(费)依据##增值税##一般增值税计税(费)依据##增值税##一般增值税计税(费)依据##增值税##一般增值税计税(费)依据##增值税##一般增值税计税(费)依据##增值税##一般增值税计税(费)依据##增值税##一般增值税</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsfyjxfsmdse">
+        <xs:annotation>
+          <xs:documentation>计税(费)依据##消费税##免抵税额计税(费)依据##消费税##免抵税额计税(费)依据##消费税##免抵税额计税(费)依据##消费税##免抵税额计税(费)依据##消费税##免抵税额计税(费)依据##消费税##免抵税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqyjsfehjjme">
+        <xs:annotation>
+          <xs:documentation>本期已缴税(费)额##合计##减免额本期已缴税(费)额##合计##减免额本期已缴税(费)额##合计##减免额本期已缴税(费)额##合计##减免额本期已缴税(费)额##合计##减免额本期已缴税(费)额##合计##减免额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsfyjzzsmdse">
+        <xs:annotation>
+          <xs:documentation>计税(费)依据##增值税##免抵税额计税(费)依据##增值税##免抵税额计税(费)依据##增值税##免抵税额计税(费)依据##增值税##免抵税额计税(费)依据##增值税##免抵税额计税(费)依据##增值税##免抵税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjmsfehjjme">
+        <xs:annotation>
+          <xs:documentation>本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额本期减免税(费)额##合计##减免额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="jsds_fjs_sbbType">
+    <xs:sequence>
+      <xs:element type="sbbGridlbVOType" name="sbbGridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>城市维护建设税城市维护建设税 | 市区(消费税附征)教育费附加教育费附加 | 消费税教育费附加地方教育附加地方教育附加 | 消费税地方教育附加合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jsds_fjsxxVOType">
+    <xs:sequence>
+      <xs:element type="sbbinfoType" name="sbbinfo">
+        <xs:annotation>
+          <xs:documentation>纳税期限代码  1:月 2:季 3:半年 4:年 5:次</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="jsds_fjs_sbbType" name="jsds_fjs_sbb">
+        <xs:annotation>
+          <xs:documentation>城建税、教育费附加、地方教育附加税(费)申报表(月)  附加税</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

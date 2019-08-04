@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.service.GoodsService;
 import com.imooc.miaosha.vo.GoodsVo;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
@@ -33,6 +34,14 @@ public class UserController {
   @ResponseBody
   public Result<MiaoshaUser> toList(MiaoshaUser miaoshaUser) {
     return Result.success(miaoshaUser);
+  }
+
+
+  @RequestMapping("/num")
+  @ResponseBody
+  public String getNum(@RequestParam(value = "num", defaultValue = "1", required = false) Integer num) {
+    System.out.println(num);
+    return String.valueOf(num);
   }
 
 }

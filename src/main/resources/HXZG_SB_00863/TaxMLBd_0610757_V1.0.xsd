@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="bzssrhsjljmbw">
+		<xs:annotation>
+			<xs:documentation>《不征收收入和税基类减免附表1》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0">
+					<xs:element name="qysdsyjdyjnssbFbOne">
+						<xs:annotation>
+							<xs:documentation>《不征税收入和税基类减免应纳税所得额明细表（附表1）》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element name="hjBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>合计本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="hjLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>合计累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bzssrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>不征税收入本期</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bzzsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>不征税收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入本期</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入累计</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gzlxsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>国债利息收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gzlxsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>国债利息收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dfzfzqlxsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>地方政府债券利息收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dfzfzqlxsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>地方政府债券利息收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdjmqyzjdgxhldqyxsyBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的居民企业之间的股息、红利等权益性投资收益本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdjmqyzjdgxhldqyxsyLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的居民企业之间的股息、红利等权益性投资收益累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdfylzzdsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的非营利组织的收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdfylzzdsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的非营利组织的收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zqtzjjtzzqddmssrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>证券投资基金投资者取得的免税收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zqtzjjtzzqddmssrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>证券投资基金投资者取得的免税收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zqtzjjglrqddmssrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>证券投资基金管理人取得的免税收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zqtzjjglrqddmssrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>证券投资基金管理人取得的免税收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zgqjfzjzjjqddsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>中国清洁发展机制基金取得的收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zgqjfzjzjjqddsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>中国清洁发展机制基金取得的收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="szdqqyqddjzhzhhfcjkxdsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>受灾地区企业取得的救灾和灾后恢复重建款项等收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="szdqqyqddjzhzhhfcjkxdsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>受灾地区企业取得的救灾和灾后恢复重建款项等收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt1" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他1(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt1Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他1本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt1Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他1累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt2" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他2(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt2Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他2本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="mssrqt2Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税收入其他2累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减计收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减计收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zhlyzysccpqddsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>综合利用资源生产产品取得的收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zhlyzysccpqddsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>综合利用资源生产产品取得的收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jrbxdjgqddsllxbfsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>金融、保险等机构取得的涉农利息、保费收入本期</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jrbxdjgqddsllxbfsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>金融、保险等机构取得的涉农利息、保费收入累计</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qddzgtljszqlxsrBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>取得的中国铁路建设债券利息收入本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qddzgtljszqlxsrLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>取得的中国铁路建设债券利息收入累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjsrqt" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减计收入其他(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjsrqtBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减计收入其他本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jjsrqtLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减计收入其他累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="llmyyxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>农、林、牧、渔业项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="llmyyxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>农、林、牧、渔业项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="msxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="msxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>免税项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jbzsxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减半征收项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jbzsxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>减半征收项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gjzdfcdggjcssxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>国家重点扶持的公共基础设施项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="gjzdfcdggjcssxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>国家重点扶持的公共基础设施项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdhjbhjnjsxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的环境保护、节能节水项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdhjbhjnjsxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的环境保护、节能节水项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdjszrxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的技术转让项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="fhtjdjszrxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>符合条件的技术转让项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ssqjfzjzxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>实施清洁发展机制项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="ssqjfzjzxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>实施清洁发展机制项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jnfwgssshtnyglxmBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>节能服务公司实施合同能源管理项目本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="jnfwgssshtnyglxmLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>节能服务公司实施合同能源管理项目累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt1" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他1(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt1Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他1本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt1Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他1累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt2" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他2(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt2Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他2本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="sdjmqt2Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>所得减免其他2累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="xcpxgyxjsyffyjjkcBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>新产品、新工艺、新技术研发费用加计扣除本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="xcpxgyxjsyffyjjkcLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>新产品、新工艺、新技术研发费用加计扣除累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dkynssdeBq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>抵扣应纳税所得额本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="dkynssdeLj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>抵扣应纳税所得额累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt1" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他1(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt1Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他1本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt1Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他1累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt2" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他2(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt2Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他2本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt2Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他2累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt3" type="jmxzDm" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他3(减免性质代码)</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt3Bq" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他3本期金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="qt3Lj" type="je" minOccurs="0">
+									<xs:annotation>
+										<xs:documentation>其他3累计金额</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

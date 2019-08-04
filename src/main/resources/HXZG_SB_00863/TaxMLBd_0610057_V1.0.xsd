@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by liuwei (liuweicss) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbbywbw">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税汇总纳税分支机构所得税分配表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbb" type="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbb">
+						<xs:annotation>
+							<xs:documentation>《中华人民共和国企业所得税汇总纳税分支机构所得税分配表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="qysdsyjdsbczzs_qysdshznsfzjgsdsfpsbb">
+		<xs:annotation>
+			<xs:documentation>《中华人民共和国企业所得税汇总纳税分支机构所得税分配表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qysdshznsfzjgsdsfpsbbzjgFrom" type="qysdshznsfzjgsdsfpsbbzjgFrom">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国企业所得税汇总纳税分支机构所得税分配表总机构信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qysdshznsfzjgsdsfpsbbfzjgGrid">
+				<xs:annotation>
+					<xs:documentation>中华人民共和国企业所得税汇总纳税分支机构所得税分配表分支机构信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="qysdshznsfzjgsdsfpsbbfzjgGridlb" type="qysdshznsfzjgsdsfpsbbfzjgGridlbVO">
+							<xs:annotation>
+								<xs:documentation>企业所得税汇总纳税分支机构所得税分配表-分支机构列表</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdshznsfzjgsdsfpsbbfzjgGrid">
+		<xs:annotation>
+			<xs:documentation>企业所得税汇总纳税分支机构所得税分配表分支机构对应Grid</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="qysdshznsfzjgsdsfpsbbfzjgGridlb" type="qysdshznsfzjgsdsfpsbbfzjgGridlbVO">
+				<xs:annotation>
+					<xs:documentation>企业所得税汇总纳税分支机构所得税分配表-分支机构列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdshznsfzjgsdsfpsbbfzjgGridlbVO">
+		<xs:annotation>
+			<xs:documentation>企业所得税汇总纳税分支机构所得税分配表分支机构对应明细</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="fzjgdjxh" type="djxh">
+				<xs:annotation>
+					<xs:documentation>分支机构登记序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgzgswjDm" type="swjgDm">
+				<xs:annotation>
+					<xs:documentation>分支机构税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjglxlb" type="bz">
+				<xs:annotation>
+					<xs:documentation>分支机构类型类别</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgnsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgmc" type="fzjgmc">
+				<xs:annotation>
+					<xs:documentation>分支机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgsrze" type="srze">
+				<xs:annotation>
+					<xs:documentation>收入总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjggzze" type="gzze">
+				<xs:annotation>
+					<xs:documentation>工资总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgzcze" type="zcze">
+				<xs:annotation>
+					<xs:documentation>资产总额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpse" type="fzjgfpse">
+				<xs:annotation>
+					<xs:documentation>分支机构分配税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxsdfjm" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>是否享受地方减免</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdfjmje" type="je">
+				<xs:annotation>
+					<xs:documentation>享受地方减免金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdfjmfd" type="je">
+				<xs:annotation>
+					<xs:documentation>享受地方减免幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="qysdshznsfzjgsdsfpsbbzjgFrom">
+		<xs:annotation>
+			<xs:documentation>企业所得税汇总纳税分支机构所得税分配表总机构信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zjgmc" type="zjgmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgnsrsbh" type="zjgnsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsdse" type="ynsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>应纳所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgftsdse" type="zjgftsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构分摊所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zjgczjzfpsdse" type="zjgczjzfpsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>总机构财政集中分配所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fzjgftdsdse" type="fzjgftdsdse" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>分支机构分摊的所得税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfxsdfjm" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>是否享受地方减免</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsdfjmfd" type="je">
+				<xs:annotation>
+					<xs:documentation>享受地方减免幅度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

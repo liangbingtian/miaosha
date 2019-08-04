@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="pzHmdVO">
+		<xs:sequence>
+			<xs:element name="phcd" type="phcd" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票号长度</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzqshm" type="pzqshm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证起始号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzgDm" type="pzzgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证字轨代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzlDm" type="pzzlDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证种类代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzzzhm" type="pzzzhm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证终止号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="whpbz" type="whpbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>无号票标志</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PZJcVO">
+		<xs:complexContent>
+			<xs:extension base="pzHmdVO">
+				<xs:sequence>
+					<xs:element name="bz" type="bz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>备注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="czyuuid" type="czyuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>操作员uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ffyxj" type="ffyxj" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>发放优先级</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jcsl" type="jcsl" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>结存数量</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhm" type="pzhm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证号码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzhsjgDm" type="pzhsjgDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证核算机关代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzjcuuid" type="pzjcuuid" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证结存uuid</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzg" type="pzzg" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证字轨</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzgmc" type="pzzg" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证字轨名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzzlmc" type="pzzlmc" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证种类名称</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="pzztDm" type="pzztDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>票证状态代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="rkrq" type="rkrq" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>入库日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="swryDm" type="swryDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>税务人员代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yprlxDm" type="yprlxDm" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>用票人类型代码</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yxbz" type="yxbz" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>有效标志</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="pzGlyVO">
+		<xs:annotation>
+			<xs:documentation>票证管理员VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gkjsc1" type="gkjsc1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>国库经收处</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jgjcDm" type="jgjcDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机关层级代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzglyDm" type="pzglyDm">
+				<xs:annotation>
+					<xs:documentation>票证管理员代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzglyuuid" type="pzglyuuid" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证管理员UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhsjgDm" type="pzhsjgDm">
+				<xs:annotation>
+					<xs:documentation>票证核算机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhsjgyxqsrq" type="pzhsjgyxqsrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证核算机关有效起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzhsjgyxzzrq" type="pzhsjgyxzzrq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>票证核算机关有效终止日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sjhsjgDm" type="sjhsjgDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上级核算机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

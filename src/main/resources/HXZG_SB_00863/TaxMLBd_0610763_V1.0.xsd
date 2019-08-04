@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="gdzcjszjbYjdbw">
+		<xs:annotation>
+			<xs:documentation>《固定资产加速折旧（扣除）明细表（附表2）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0">
+					<xs:element name="gdzcjszjkcFbFrie">
+						<xs:annotation>
+							<xs:documentation>《固定资产加速折旧（扣除）明细表（附表2）》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="gdzcjszjMx" type="gdzcjszjMxVO">
+									<xs:annotation>
+										<xs:documentation>固定资产加速折旧（扣除）明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="gdzcjszjMxVO">
+		<xs:annotation>
+			<xs:documentation>明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋建租房屋原值||房屋建租房屋原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwbqzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋、建筑物本期折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fwjzwljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>房屋、建筑物累计折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcbqzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产本期折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jqsbhqtgdzcljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>机器设备和其他固定资产累计折旧（扣除）额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjyz" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计原值||合计原值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjzjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额会计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzczjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqzjkcebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额税收加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjszjyhtjebqzje" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本期折旧（扣除）额加速折旧优惠统计额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjkjzjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额会计折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjzczjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额正常折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjbqzjkceljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额税收加速折旧额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjnstzeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额纳税调整额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hjjszjyhtjeljzjkce" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>合计本累计折旧（扣除）额加速折旧优惠统计额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hyDm" type="hyDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行业代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyLx" type="qylxbz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>企业类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

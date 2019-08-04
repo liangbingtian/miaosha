@@ -20,6 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="sbzlbh" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ssqq" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="ssqz" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="jtnsrsbh" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="nsrsbh" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="area" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="nsqxdm" type="{http://www.w3.org/2001/XMLSchema}string"/>
@@ -36,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
     "sbzlbh",
     "ssqq",
     "ssqz",
+    "jtnsrsbh",
     "nsrsbh",
     "area",
     "nsqxdm"
@@ -48,6 +50,8 @@ public class SbbinfoType {
     protected String ssqq;
     @XmlElement(required = true)
     protected String ssqz;
+    @XmlElement(required = true)
+    protected String jtnsrsbh;
     @XmlElement(required = true)
     protected String nsrsbh;
     @XmlElement(required = true)
@@ -125,6 +129,30 @@ public class SbbinfoType {
      */
     public void setSsqz(String value) {
         this.ssqz = value;
+    }
+
+    /**
+     * 获取jtnsrsbh属性的值。
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getJtnsrsbh() {
+        return jtnsrsbh;
+    }
+
+    /**
+     * 设置jtnsrsbh属性的值。
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setJtnsrsbh(String value) {
+        this.jtnsrsbh = value;
     }
 
     /**

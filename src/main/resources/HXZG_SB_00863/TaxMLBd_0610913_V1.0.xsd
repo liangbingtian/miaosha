@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="jscgtzrgqysdsdynsba">
+		<xs:annotation>
+			<xs:documentation>《技术成果投资入股企业所得税递延纳税备案表业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0">
+					<xs:element name="jscgtzrgqysdsdynsbaFbSix">
+						<xs:annotation>
+							<xs:documentation>技术成果投资入股企业所得税递延纳税备案表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="jscgdymx" type="jscgdyMxVO">
+									<xs:annotation>
+										<xs:documentation>递延纳税备案表明细表</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="jscgdyMxVO">
+		<xs:annotation>
+			<xs:documentation>明细信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="jscgmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>技术成果名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscglx" type="cwbbzlDm">
+				<xs:annotation>
+					<xs:documentation>技术成果类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jscgbh" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>技术成果编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gyjz" type="je">
+				<xs:annotation>
+					<xs:documentation>公允价值||公允价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsjc" type="je">
+				<xs:annotation>
+					<xs:documentation>计税基础</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gqqdsj" type="rq">
+				<xs:annotation>
+					<xs:documentation>股权取得时间</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dysd" type="je">
+				<xs:annotation>
+					<xs:documentation>递延所得</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btzqymc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>被投资企业名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="btznsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>被投资纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgmc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfwglqy" type="bz1">
+				<xs:annotation>
+					<xs:documentation>与投资方是否为关联企业||与投资方是否为关联企业</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bz" type="bz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>备注</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

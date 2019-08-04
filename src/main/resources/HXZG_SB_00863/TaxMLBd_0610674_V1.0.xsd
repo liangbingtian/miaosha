@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by xuxin (csstj) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+
+	<xs:complexType name="cgwgqyxxbgbYw">
+		<xs:annotation>
+			<xs:documentation>《参股外国企业信息报告表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="cgwgqyxxbgbYwFrie">
+						<xs:annotation>
+							<xs:documentation>《参股外国企业信息报告表》</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence minOccurs="0">
+								<xs:element name="cgwgxxbgbZbxx" type="cgwgxxbgbZbxx"/>
+								<xs:element name="cywgqyTengqGdxx" type="cywgqyTengqGdxx">
+									<xs:annotation>
+										<xs:documentation>持有外国企业10%以上股份或有表决权股份的其他股东情况</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="zgjmgrdrwgqyggqkVo" type="zgjmgrdrwgqyggqkVo">
+									<xs:annotation>
+										<xs:documentation>中国居民个人担任外国企业高管或董事情况</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bgrsgwgqygfqkVo" type="bgrsgwgqygfqkVo">
+									<xs:annotation>
+										<xs:documentation>报告人收购外国企业股份情况</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+								<xs:element name="bgrczwgqygfqkVo" type="bgrczwgqygfqkVo">
+									<xs:annotation>
+										<xs:documentation>报告人处置外国企业股份情况</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="cgwgxxbgbZbxx">
+		<xs:annotation>
+			<xs:documentation>被投资外国企业信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wgqyzwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqyzwcld" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业中文成立地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqywwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业外文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wgqywwcld" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>外国企业外文成立地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="szgnssbh" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>所在国纳税识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zyywlx" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>主营业务类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bgrcgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>报告人持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cywgqyTengqGdxx">
+		<xs:annotation>
+			<xs:documentation>持有外国企业10%以上股份或有表决权股份的其他股东情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="cywgqyTenGdxx" type="cywgqyTenGdxx">
+				<xs:annotation>
+					<xs:documentation>持有外国企业10%以上股份或有表决权股份的其他股东情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zgjmgrdrwgqyggqkVo">
+		<xs:annotation>
+			<xs:documentation>中国居民个人担任外国企业高管或董事情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="zgjmgrdrwgqyggqkMxxx" type="zgjmgrdrwgqyggqkMxxx">
+				<xs:annotation>
+					<xs:documentation>中国居民个人担任外国企业高管或董事情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zgjmgrdrwgqyggqkMxxx">
+		<xs:annotation>
+			<xs:documentation>中国居民个人担任外国企业高管或董事情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zgmjgrxm" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中国居民个人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zgjnczd" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>中国境内常住地</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjlx" type="sfzjlxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sfzjhm" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>身份证件号码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zw" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>职务</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrqq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>任职日期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rzrqz" type="skssqz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>任职日期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgrsgwgqygfqkVo">
+		<xs:annotation>
+			<xs:documentation>报告人收购外国企业股份情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgrsgwgqygfqkMxxx" type="bgrsgwgqygfqkMxxx">
+				<xs:annotation>
+					<xs:documentation>报告人收购外国企业股份情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgrsgwgqygfqkMxxx">
+		<xs:annotation>
+			<xs:documentation>报告人收购外国企业股份情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bsggflx" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被收购股份类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jyrq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>交易日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgfs" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收购方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sgqbgrzwgqycgfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收购前报告人在外国企业持股份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sghbgrzwgqycgfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>收购后报告人在外国企业持股份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgrczwgqygfqkVo">
+		<xs:annotation>
+			<xs:documentation>报告人处置外国企业股份情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="bgrczwgqygfqkMxxx" type="bgrczwgqygfqkMxxx">
+				<xs:annotation>
+					<xs:documentation>报告人处置外国企业股份情况</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="bgrczwgqygfqkMxxx">
+		<xs:annotation>
+			<xs:documentation>报告人处置外国企业股份情况</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="bczgflx" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>被处置股份类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czrq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czfs" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置方式</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czqbgrzwgqycgfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置前报告人在外国企业持股份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="czhbgrzwgqycgfe" type="je" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>处置后报告人在外国企业持股份额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="cywgqyTenGdxx">
+		<xs:sequence>
+			<xs:element name="cggdzwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股股东中文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cggdwwmc" type="nsrmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股股东外文名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdhcldzw" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>居住地或成立地中文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jzdhcldww" type="dz" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>居住地或成立地外文</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cglx" type="nsrsbh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cgbl" type="bl" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>持股比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyfeqsrq" type="skssqq" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>权益份额的起始日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mxxh" type="pzxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>明细序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
