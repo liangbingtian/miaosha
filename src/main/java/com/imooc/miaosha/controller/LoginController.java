@@ -39,7 +39,7 @@ public class LoginController {
       throw new GlobalException(CodeMsg.SERVER_ERROR);
     }
     logger.info(loginVo.toString());
-    return miaoshaUserService.login(loginVo, response);
+    return Result.success(miaoshaUserService.login(loginVo, response));
   }
 
 }

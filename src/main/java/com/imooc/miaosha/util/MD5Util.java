@@ -23,7 +23,7 @@ public class MD5Util {
     return md5(str);
   }
 
-  public static String inputPassToDBPass(String input, String salt) {
+  public static String inputPassToDbPass(String input, String salt) {
     String formPass = inputPassToFormPass(input);
     return formPassToDBPass(formPass, salt);
   }

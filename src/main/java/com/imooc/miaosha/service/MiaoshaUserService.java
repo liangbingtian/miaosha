@@ -32,7 +32,7 @@ public class MiaoshaUserService {
   private RedisService redisService;
 
 
-  public Result<String> login(LoginVo loginVo, HttpServletResponse response) {
+  public String login(LoginVo loginVo, HttpServletResponse response) {
     String mobile = loginVo.getMobile();
     String formPass = loginVo.getPassword();
     MiaoshaUserExample example = new MiaoshaUserExample();
@@ -51,8 +51,10 @@ public class MiaoshaUserService {
     if (!dbPass.equals(calcPass)) {
       throw new GlobalException(CodeMsg.PASSWORD_ERROR);
     }
-    addCookie(response, userVO);
-    return Result.success("登录成功");
+    //生成token
+    String token = UUIDUtil.uuid();
+    addCookie(response, token, userVO);
+    return token;
   }
 
   public MiaoshaUser getByToken(HttpServletResponse response, String token) {
@@ -62,15 +64,13 @@ public class MiaoshaUserService {
     MiaoshaUser userVO = redisService.get(MiaoshaUserKey.token, token, MiaoshaUser.class);
     //延长有效期
     if (userVO!=null){
-      addCookie(response, userVO);
+      addCookie(response, token, userVO);
     }
     return userVO;
   }
 
 
-  private void addCookie(HttpServletResponse response, MiaoshaUser userVO) {
-    //生成token
-    String token = UUIDUtil.uuid();
+  private void addCookie(HttpServletResponse response,String token,  MiaoshaUser userVO) {
     redisService.set(MiaoshaUserKey.token, token, userVO);
     //生成cookie
     Cookie cookie = new Cookie(COOKI_NAME_TOKEN, token);
