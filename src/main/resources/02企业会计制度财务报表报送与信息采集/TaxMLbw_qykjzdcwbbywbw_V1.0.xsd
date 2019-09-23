@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610155_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610165_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610176_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610180_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:complexType name="qykjzdcwbbywbw">
+		<xs:annotation>
+			<xs:documentation>企业会计制度财务报表报送与信息采集总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="qykjzdcwbbzcfzbVO" type="qykjzdcwbbzcfzbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>资产负债表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qykjzdcwbblrbVO" type="qykjzdcwbblrbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>利润表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qykjzdcwbbxjllbVO" type="qykjzdcwbbxjllbVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>现金流量表表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qykjzdcwbbqybVO" type="qykjzdcwbbqybVO" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>所有者权益表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="qykjzdfzForm" type="QykjzdfzForm">
+						<xs:annotation>
+							<xs:documentation>企业会计制度附注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yszkdplVO" type="YszkdplVO">
+						<xs:annotation>
+							<xs:documentation>应收账的披露</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="chdplVO" type="ChdplVO">
+						<xs:annotation>
+							<xs:documentation>存货的披露</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dqtzdplVO" type="DqtzdplVO">
+						<xs:annotation>
+							<xs:documentation>短期投资的披露</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cqtzdplVO" type="CqtzdplVO">
+						<xs:annotation>
+							<xs:documentation>长期投资的披露</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cqdtfydplVO" type="CqdtfydplVO">
+						<xs:annotation>
+							<xs:documentation>长期待摊费用的披露（适用执行企业会计制度的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cqgptzdplVO" type="CqgptzdplVO">
+						<xs:annotation>
+							<xs:documentation>长期股票投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="cqzqtzdplVO" type="CqzqtzdplVO">
+						<xs:annotation>
+							<xs:documentation>长期债券投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="gdzcdplVO" type="GdzcdplVO">
+						<xs:annotation>
+							<xs:documentation>固定资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="wxzcdplVO" type="WxzcdplVO">
+						<xs:annotation>
+							<xs:documentation>无形资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="WxzcdplVO">
+		<xs:annotation>
+			<xs:documentation>无形资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="wxzcdplGrid">
+				<xs:annotation>
+					<xs:documentation>无形资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="wxzcdplGridlb" type="WxzcdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GdzcdplVO">
+		<xs:annotation>
+			<xs:documentation>固定资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="gdzcdplGrid">
+				<xs:annotation>
+					<xs:documentation>固定资产的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="gdzcdplGridlb" type="GdzcdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CqzqtzdplVO">
+		<xs:annotation>
+			<xs:documentation>长期债券投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cqzqtzdplGrid">
+				<xs:annotation>
+					<xs:documentation>长期债券投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cqzqtzdplGridlb" type="CqzqtzdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CqgptzdplVO">
+		<xs:annotation>
+			<xs:documentation>长期股票投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cqgptzdplGrid">
+				<xs:annotation>
+					<xs:documentation>长期股票投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cqgptzdplGridlb" type="CqgptzdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CqdtfydplVO">
+		<xs:annotation>
+			<xs:documentation>长期待摊费用的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cqdtfydplGrid">
+				<xs:annotation>
+					<xs:documentation>长期待摊费用的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cqdtfydplGridlb" type="CqdtfydplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ChdplVO">
+		<xs:annotation>
+			<xs:documentation>存货的披露</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="chdplGrid">
+				<xs:annotation>
+					<xs:documentation>存货的披露</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="chdplGridlb" type="ChdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YszkdplVO">
+		<xs:annotation>
+			<xs:documentation>应收账款的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yszkdplGrid">
+				<xs:annotation>
+					<xs:documentation>应收账款的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yszkdplGridlb" type="YszkdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="DqtzdplVO">
+		<xs:annotation>
+			<xs:documentation>短期投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="dqtzdplGrid">
+				<xs:annotation>
+					<xs:documentation>短期投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="dqtzdplGridlb" type="DqtzdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="CqtzdplVO">
+		<xs:annotation>
+			<xs:documentation>长期投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="cqtzdplGrid">
+				<xs:annotation>
+					<xs:documentation>长期投资的披露（适用执行企业会计制度的企业）</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="cqtzdplGridlb" type="CqtzdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

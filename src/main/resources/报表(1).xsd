@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xs:schema [
+  <!ELEMENT xs:schema (xs1:element|xs:complexType)*>
+  <!ATTLIST xs:schema
+    attributeFormDefault CDATA #REQUIRED
+    elementFormDefault CDATA #REQUIRED
+    targetNamespace CDATA #REQUIRED
+    xmlns:xs CDATA #REQUIRED>
+  <!ELEMENT xs1:element (#PCDATA)>
+  <!ATTLIST xs1:element
+    maxOccurs CDATA #IMPLIED
+    minOccurs CDATA #IMPLIED
+    name CDATA #REQUIRED
+    type CDATA #REQUIRED
+    xmlns:xs CDATA #REQUIRED
+    xmlns:xs1 CDATA #REQUIRED>
+  <!ELEMENT xs:complexType (xs:sequence)*>
+  <!ATTLIST xs:complexType
+    name CDATA #REQUIRED>
+  <!ELEMENT xs:sequence (xs:element|xs1:element)*>
+  <!ELEMENT xs:element (xs:simpleType)*>
+  <!ATTLIST xs:element
+    name CDATA #REQUIRED
+    type CDATA #IMPLIED>
+  <!ELEMENT xs:simpleType (xs:restriction)*>
+  <!ELEMENT xs:restriction (xs:enumeration)*>
+  <!ATTLIST xs:restriction
+    base CDATA #REQUIRED>
+  <!ELEMENT xs:enumeration (#PCDATA)>
+  <!ATTLIST xs:enumeration
+    value CDATA #REQUIRED>
+  ]>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://sxbw.audit.gov.cn/AccountingSoftwareDataInterfaceStandard/2010/SOE/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs1:element name="总账" type="xs:总账Type" xmlns:xs="http://sxbw.audit.gov.cn/AccountingSoftwareDataInterfaceStandard/2010/SOE/XMLSchema" xmlns:xs1="http://www.w3.org/2001/XMLSchema"/>
+  <xs:complexType name="报表集Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="报表编号"/>
+      <xs:element type="xs:string" name="报表名称"/>
+      <xs:element type="xs:string" name="报表报告日"/>
+      <xs:element type="xs:string" name="报表报告期"/>
+      <xs:element type="xs:string" name="编制单位"/>
+      <xs:element type="xs:string" name="货币单位"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="报表项数据Type">
+    <xs:sequence>
+      <xs:element type="xs:string" name="报表编号"/>
+      <xs:element type="xs:string" name="报表项编号"/>
+      <xs:element type="xs:string" name="报表项名称"/>
+      <xs:element type="xs:string" name="报表项公式"/>
+      <xs:element name="报表项数值">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="0.00"/>
+            <xs:enumeration value="10.00"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="总账Type">
+    <xs:sequence>
+      <xs1:element type="xs:报表集Type" name="报表集" xmlns:xs="http://sxbw.audit.gov.cn/AccountingSoftwareDataInterfaceStandard/2010/SOE/XMLSchema" xmlns:xs1="http://www.w3.org/2001/XMLSchema"/>
+      <xs1:element type="xs:报表项数据Type" name="报表项数据" maxOccurs="unbounded" minOccurs="0" xmlns:xs="http://sxbw.audit.gov.cn/AccountingSoftwareDataInterfaceStandard/2010/SOE/XMLSchema" xmlns:xs1="http://www.w3.org/2001/XMLSchema"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

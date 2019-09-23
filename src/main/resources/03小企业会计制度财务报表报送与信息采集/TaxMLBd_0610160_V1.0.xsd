@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="syxqyzcfzbywbw">
+		<xs:annotation>
+			<xs:documentation>资产负债表(适用执行小企业会计准则的企业)</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syxqyzcfzb" type="syxqyzcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表(适用执行小企业会计准则的企业)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="syxqyzcfzbVO">
+		<xs:annotation>
+			<xs:documentation>资产负债表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm1" type="nsrxxForm1VO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syxqyzcfzbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqyzcfzbGridlb" type="xqyzcfzbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm1VO">
+		<xs:annotation>
+			<xs:documentation>申报表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrq" type="bsrq">
+				<xs:annotation>
+					<xs:documentation>报送日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqyzcfzbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>申报信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zcxmmc" type="zcxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>资产项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmyeZc" type="qmyeZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末余额_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncyeZc" type="ncyeZc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初余额_资产</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qyxmmc" type="qyxmmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>负债和所有者权益权益项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmyeQy" type="qmyeQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末余额_权益 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ncyeQy" type="ncyeQy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>年初余额_权益</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

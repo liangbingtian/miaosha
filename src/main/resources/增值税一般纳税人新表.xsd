@@ -1,0 +1,2075 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="jxds_zzs_ybnsrxxVO" type="jxds_zzs_ybnsrxxVOType"/>
+  <xs:complexType name="sbbinfoType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="sbbname"/>
+      <xs:element type="xs:string" name="companycode">
+        <xs:annotation>
+          <xs:documentation>云帐房创建企业的qyid 必填</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsqxdm">
+        <xs:annotation>
+          <xs:documentation>纳税期限代码 必填 1月2季3半年4年5次</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="zbGridlbVOType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="ewbhxh"/>
+      <xs:element type="xs:string" name="yasysljsxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)按适用税率计税销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yasysljsxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)按适用税率计税销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yasysljsxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)按适用税率计税销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yasysljsxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)按适用税率计税销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzyshwxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：应税货物销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzyshwxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：应税货物销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzyshwxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：应税货物销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzyshwxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：应税货物销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yslwxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应税劳务销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yslwxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应税劳务销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yslwxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应税劳务销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yslwxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应税劳务销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsjcdzdxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>纳税检查调整的销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsjcdzdxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>纳税检查调整的销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsjcdzdxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>纳税检查调整的销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsjcdzdxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>纳税检查调整的销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eajybfjsxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)按简易办法计税销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eajybfjsxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)按简易办法计税销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eajybfjsxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)按简易办法计税销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eajybfjsxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)按简易办法计税销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qznsjcdzdxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：纳税检查调整的销售额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qznsjcdzdxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：纳税检查调整的销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qznsjcdzdxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：纳税检查调整的销售额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qznsjcdzdxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：纳税检查调整的销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtbfckxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(三)免、抵、退办法出口销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtbfckxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(三)免、抵、退办法出口销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(四)免税销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(四)免税销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzmshwxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：免税货物销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzmshwxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：免税货物销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mslwxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税劳务销售额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mslwxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税劳务销售额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销项税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销项税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销项税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销项税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sqldseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>上期留抵税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sqldsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>上期留抵税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sqldseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>上期留抵税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxsezcybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额转出##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxsezcjzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额转出##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jxsezcybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>进项税额转出##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtytseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免、抵、退应退税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtytseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免、抵、退应退税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="asysljsdnsjcybjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>按适用税率计算的纳税检查应补缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="asysljsdnsjcybjseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>按适用税率计算的纳税检查应补缴税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ydksehjybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应抵扣税额合计##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ydksehjjzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应抵扣税额合计##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sjdkseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实际抵扣税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sjdkseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实际抵扣税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sjdksejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实际抵扣税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sjdksejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实际抵扣税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmldsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末留抵税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmldseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末留抵税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmldseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末留抵税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jyjsbfjsdynsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>简易计税办法计算的应纳税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jyjsbfjsdynseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>简易计税办法计算的应纳税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jyjsbfjsdynsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>简易计税办法计算的应纳税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jyjsbfjsdynseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>简易计税办法计算的应纳税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ajyjsbfjsdnsjcybjseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>按简易计税办法计算的纳税检查应补缴税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ajyjsbfjsdnsjcybjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>按简易计税办法计算的纳税检查应补缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzeybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额减征额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额减征额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzeybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额减征额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsejzejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额减征额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsehjybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额合计##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsehjjzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额合计##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsehjybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额合计##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ynsehjjzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>应纳税额合计##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjsedjwfsjzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴税额(多缴为负数)##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjsedjwfsybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴税额(多缴为负数)##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjsedjwfsjzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴税额(多缴为负数)##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjsedjwfsybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴税额(多缴为负数)##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ssckkjzyjkstseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实收出口开具专用缴款书退税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ssckkjzyjkstseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>实收出口开具专用缴款书退税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqyjsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqyjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqyjseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期已缴税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fcyjsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>①分次预缴税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fcyjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>①分次预缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ckkjzyjksyjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>②出口开具专用缴款书预缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnsqynseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>③本期缴纳上期应纳税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnsqynseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>③本期缴纳上期应纳税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnsqynsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>③本期缴纳上期应纳税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnsqynsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>③本期缴纳上期应纳税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnqjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>④本期缴纳欠缴税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnqjseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>④本期缴纳欠缴税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnqjsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>④本期缴纳欠缴税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjnqjsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>④本期缴纳欠缴税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjsedjwfsybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴税额(多缴为负数)##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjsedjwfsjzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴税额(多缴为负数)##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjsedjwfsybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴税额(多缴为负数)##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjsedjwfsjzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴税额(多缴为负数)##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzqjseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：欠缴税额(≥0)##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzqjsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：欠缴税额(≥0)##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqybtseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqybtsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期应补(退)税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtsjtsejzjtxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退实际退税额##即征即退项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtsjtsejzjtxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退实际退税额##即征即退项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjcbseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴查补税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcwjcbseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初未缴查补税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrkcbseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期入库查补税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrkcbseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期入库查补税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjcbseybxmbnlj" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴查补税额##一般项目##本年累计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmwjcbseybxmbys" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末未缴查补税额##一般项目##本月数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_zbType">
+    <xs:sequence>
+      <xs:element type="zbGridlbVOType" name="zbGridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)按适用税率计税销售额其中：应税货物销售额应税劳务销售额纳税检查调整的销售额(二)按简易办法计税销售额其中：纳税检查调整的销售额(三)免、抵、退办法出口销售额(四)免税销售额其中：免税货物销售额免税劳务销售额销项税额进项税额上期留抵税额进项税额转出免、抵、退应退税额按适用税率计算的纳税检查应补缴税额应抵扣税额合计实际抵扣税额应纳税额期末留抵税额简易计税办法计算的应纳税额按简易计税办法计算的纳税检查应补缴税额应纳税额减征额应纳税额合计期初未缴税额(多缴为负数)实收出口开具专用缴款书退税额本期已缴税额①分次预缴税额②出口开具专用缴款书预缴税额③本期缴纳上期应纳税额④本期缴纳欠缴税额期末未缴税额(多缴为负数)其中：欠缴税额(≥0)本期应补(退)税额即征即退实际退税额期初未缴查补税额本期入库查补税额期末未缴查补税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fb1GridlbVOType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="ewbhxh"/>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##未开具发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwnsjcdzxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##纳税检查调整##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##纳税检查调整##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwnsjcdzxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##纳税检查调整##销售额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##纳税检查调整##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwkjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##开具税控增值税专用发票##销售额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##合计##销售额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwhjxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##合计##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwkjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##开具其他发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##未开具发票##销售额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwkjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##开具税控增值税专用发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldhwjjgxlxplwkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务##开具其他发票##销售额一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##扣除后##含税(免税)销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##合计##销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##开具其他发票##销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##开具税控增值税专用发票##销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##开具税控增值税专用发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzcwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##未开具发票##销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##合计##价税合计一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzcnsjcdzxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##纳税检查调整##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##纳税检查调整##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzchjxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##合计##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##开具其他发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzcnsjcdzxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##纳税检查调整##销售额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##纳税检查调整##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzckchxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##扣除后##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##扣除后##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmsldfwbdchwxzcwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产##未开具发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##开具税控增值税专用发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##6%税率##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslnsjcdzxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##纳税检查调整##销项(应纳)税额一、一般计税方法计税##全部征税项目##6%税率##纳税检查调整##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##开具其他发票##销售额一、一般计税方法计税##全部征税项目##6%税率##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##未开具发票##销售额一、一般计税方法计税##全部征税项目##6%税率##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##开具其他发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##6%税率##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##开具税控增值税专用发票##销售额一、一般计税方法计税##全部征税项目##6%税率##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslhjxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##合计##销售额一、一般计税方法计税##全部征税项目##6%税率##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslnsjcdzxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##纳税检查调整##销售额一、一般计税方法计税##全部征税项目##6%税率##纳税检查调整##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##未开具发票##销项(应纳)税额一、一般计税方法计税##全部征税项目##6%税率##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslhjxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##13%税率##合计##销项(应纳)税额一、一般计税方法计税##全部征税项目##6%税率##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkchxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##6%税率##扣除后##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslhjjshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##6%税率##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##6%税率##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqbzsxmslkchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##6%税率##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjthwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjthwjjgxlxplwhjxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzchjxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzckchxxynse">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##扣除后##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yybjsffjsqzjzjtxmjzjtfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##开具其他发票##销售额二、简易计税方法计税##全部征税项目##4%征收率##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslkjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##开具其他发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##4%征收率##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslkjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##开具税控增值税专用发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##4%征收率##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##未开具发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##4%征收率##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslkjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##开具税控增值税专用发票##销售额二、简易计税方法计税##全部征税项目##4%征收率##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslhjxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##合计##销售额二、简易计税方法计税##全部征税项目##4%征收率##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslhjxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##合计##销项(应纳)税额二、简易计税方法计税##全部征税项目##4%征收率##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzslwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##6%征收率##未开具发票##销售额二、简易计税方法计税##全部征税项目##4%征收率##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwkjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##开具税控增值税专用发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwhjxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##合计##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##未开具发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##未开具发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##开具其他发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwkjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##开具其他发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwkjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##开具税控增值税专用发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldhwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务##合计##销售额二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##合计##价税合计二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzchjxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##合计##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzcwkjfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##未开具发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##未开具发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzcwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##未开具发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##开具税控增值税专用发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##开具税控增值税专用发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##合计##销售额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckjqtfpxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##开具其他发票##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##开具其他发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##开具其他发票##销售额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##扣除后##含税(免税)销售额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqbzsxmzsldfwbdchwxzckchxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产##扣除后##销项(应纳)税额二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产##扣除后##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjthwjjgxlxplwhjxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjthwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzchjxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzckchxxynse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##扣除后##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ejyjsffjsqzjzjtxmjzjtfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtshwjjgxlxplwkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##货物及加工修理修配劳务##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtshwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtshwjjgxlxplwwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##货物及加工修理修配劳务##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzcwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzckjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smdtsfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>三、免抵退税##服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smshwjjgxlxplwkjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##货物及加工修理修配劳务##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smshwjjgxlxplwkjskzzszyfpxxynse">
+        <xs:annotation>
+          <xs:documentation>四、免税##货物及加工修理修配劳务##开具税控增值税专用发票##销项(应纳)税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smshwjjgxlxplwkjskzzszyfpxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##货物及加工修理修配劳务##开具税控增值税专用发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smshwjjgxlxplwwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##货物及加工修理修配劳务##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smshwjjgxlxplwhjxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##货物及加工修理修配劳务##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzckchhsmsxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##扣除后##含税(免税)销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzchjjshj">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##合计##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzcysfwkcxmbqsjkcjejshj">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##应税服务扣除项目本期实际扣除金额##价税合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzckjqtfpxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##开具其他发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzchjxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##合计##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="smsfwbdchwxzcwkjfpxse">
+        <xs:annotation>
+          <xs:documentation>四、免税##服务、不动产和无形资产##未开具发票##销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_fb1Type">
+    <xs:sequence>
+      <xs:element type="fb1GridlbVOType" name="fb1GridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一、一般计税方法计税##全部征税项目##17%税率的货物及加工修理修配劳务一、一般计税方法计税##全部征税项目##17%税率的服务、不动产和无形资产一、一般计税方法计税##全部征税项目##13%税率一、一般计税方法计税##全部征税项目##11%税率的货物及加工修理修配劳务一、一般计税方法计税##全部征税项目##11%税率的服务、不动产和无形资产一、一般计税方法计税##全部征税项目##6%税率一、一般计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务一、一般计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产二、简易计税方法计税##全部征税项目##6%征收率二、简易计税方法计税##全部征税项目##5%征收率的货物及加工修理修配劳务二、简易计税方法计税##全部征税项目##5%征收率的服务、不动产和无形资产二、简易计税方法计税##全部征税项目##4%征收率二、简易计税方法计税##全部征税项目##3%征收率的货物及加工修理修配劳务二、简易计税方法计税##全部征税项目##3%征收率的服务、不动产和无形资产二、简易计税方法计税##其中：即征即退项目##即征即退货物及加工修理修配劳务二、简易计税方法计税##其中：即征即退项目##即征即退服务、不动产和无形资产三、免抵退税##货物及加工修理修配劳务三、免抵退税##服务、不动产和无形资产四、免税##货物及加工修理修配劳务四、免税##服务、不动产和无形资产</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fb2GridlbVOType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="ewbhxh"/>
+      <xs:element type="xs:string" name="yrzxfdskzzszyfpse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)认证相符的税控增值税专用发票1=2+3##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yrzxfdskzzszyfpje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)认证相符的税控增值税专用发票1=2+3##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="yrzxfdskzzszyfpfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)认证相符的税控增值税专用发票1=2+3##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzbqrzxfqbqsbdkje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：本期认证相符且本期申报抵扣##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzbqrzxfqbqsbdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：本期认证相符且本期申报抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzbqrzxfqbqsbdkse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：本期认证相符且本期申报抵扣##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qqrzxfqbqsbdkse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>前期认证相符且本期申报抵扣##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qqrzxfqbqsbdkje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>前期认证相符且本期申报抵扣##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qqrzxfqbqsbdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>前期认证相符且本期申报抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eqtkspzje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)其他扣税凭证1##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eqtkspzse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)其他扣税凭证1##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eqtkspzsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)其他扣税凭证##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eqtkspzfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)其他扣税凭证1##份数(二)其他扣税凭证##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzhgjkzzszyjksje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：海关进口增值税专用缴款书##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzhgjkzzszyjksse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：海关进口增值税专用缴款书##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzhgjkzzszyjksfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：海关进口增值税专用缴款书##份数其中：海关进口增值税专用缴款书1##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ncpsgfphzxsfpje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>农产品收购发票或者销售发票##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ncpsgfphzxsfpse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>农产品收购发票或者销售发票##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ncpsgfphzxsfpseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>农产品收购发票或者销售发票1##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ncpsgfphzxsfpfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>农产品收购发票或者销售发票##份数农产品收购发票或者销售发票1##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dkdjssjkpzsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>代扣代缴税收缴款凭证1##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dkdjssjkpzfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>代扣代缴税收缴款凭证##份数代扣代缴税收缴款凭证1##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dkdjssjkpzse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>代扣代缴税收缴款凭证##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jjkcncpjxsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>加计扣除农产品进项税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他##份数其他1##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyygjbdcdkspzje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(三)本期用于购建不动产的扣税凭证##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyygjbdcdkspzfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(三)本期用于购建不动产的扣税凭证##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyygjbdcdkspzse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(三)本期用于购建不动产的扣税凭证##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyydkdlkysfwkspzfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(四)本期用于抵扣的旅客运输服务扣税凭证##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyydkdlkysfwkspzje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(四)本期用于抵扣的旅客运输服务扣税凭证##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sbqyydkdlkysfwkspzse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(四)本期用于抵扣的旅客运输服务扣税凭证##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="wwmqyjxsedkzmse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(五)外贸企业进项税额抵扣证明##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dqsbdkjxsehjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>当期申报抵扣进项税额合计##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dqsbdkjxsehjje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>当期申报抵扣进项税额合计##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="dqsbdkjxsehjfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>当期申报抵扣进项税额合计##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqjxszcese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期进项税转出额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzmsxmyse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：免税项目用##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jtflgrxfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>集体福利、个人消费##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzcssse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>非正常损失##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jyjsffzsxmyse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>简易计税方法征税项目用##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsbfbddkdjxsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税办法不得抵扣的进项税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="nsjcdjjxsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>纳税检查调减进项税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hzzyfptzdzmdjxsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>红字专用发票通知单注明的进项税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sqldsedjqsse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>上期留抵税额抵减欠税##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sqldsetsse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>上期留抵税额退税##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtyzjxsezcdqxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他应作进项税额转出的情形##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcyrzxfdwsbdksese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初已认证相符但未申报抵扣##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcyrzxfdwsbdkseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初已认证相符但未申报抵扣##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcyrzxfdwsbdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期初已认证相符但未申报抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfqbqwsbdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符且本期未申报抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfqbqwsbdkseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符且本期未申报抵扣##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfqbqwsbdksese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符且本期未申报抵扣##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmyrzxfdwsbdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末已认证相符但未申报抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmyrzxfdwsbdksese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末已认证相符但未申报抵扣##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmyrzxfdwsbdkseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>期末已认证相符但未申报抵扣##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzazsfgdbyxdkseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：按照税法规定不允许抵扣##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzazsfgdbyxdksese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：按照税法规定不允许抵扣##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzazsfgdbyxdkfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：按照税法规定不允许抵扣##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="eqtkspzseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(二)其他扣税凭证##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzhgjkzzszyjkssese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：海关进口增值税专用缴款书1##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qzhgjkzzszyjksseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其中：海关进口增值税专用缴款书1##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ncpsgfphzxsfpsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>农产品收购发票或者销售发票1##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtseje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他1##税额##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qtsese" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>其他1##税额##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfdskzzszyfpfs" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符的税控增值税专用发票##份数</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfdskzzszyfpje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符的税控增值税专用发票##金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqrzxfdskzzszyfpse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>本期认证相符的税控增值税专用发票##税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_fb2Type">
+    <xs:sequence>
+      <xs:element type="fb2GridlbVOType" name="fb2GridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>(一)认证相符的税控增值税专用发票1=2+3其中：本期认证相符且本期申报抵扣前期认证相符且本期申报抵扣(二)其他扣税凭证1其中：海关进口增值税专用缴款书农产品收购发票或者销售发票代扣代缴税收缴款凭证加计扣除农产品进项税额其他(三)本期用于购建不动产的扣税凭证(四)本期用于抵扣的旅客运输服务扣税凭证(五)外贸企业进项税额抵扣证明当期申报抵扣进项税额合计本期进项税转出额其中：免税项目用集体福利、个人消费非正常损失简易计税方法征税项目用免抵退税办法不得抵扣的进项税额纳税检查调减进项税额红字专用发票通知单注明的进项税额上期留抵税额抵减欠税上期留抵税额退税其他应作进项税额转出的情形期初已认证相符但未申报抵扣本期认证相符且本期未申报抵扣期末已认证相符但未申报抵扣其中：按照税法规定不允许抵扣(二)其他扣税凭证其中：海关进口增值税专用缴款书1农产品收购发票或者销售发票1代扣代缴税收缴款凭证1其他1本期认证相符的税控增值税专用发票</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fb3GridlbVOType">
+    <xs:sequence>
+      <xs:element name="ewbhxh">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldyxdczlfwbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>11%税率的应税服务##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldysfwbhjrspzrbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的应税服务(不含金融商品转让)##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="sldjrspzrxmysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>6%税率的金融商品转让项目##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldxmbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>5%征收率的项目##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zsldysfwysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3%征收率的应税服务##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="mdtsdysfwysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免抵退税的应税服务##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwysfwkcxmbqykcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##应税服务扣除项目##本期应扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwysfwkcxmbqsjkcje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##应税服务扣除项目##本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwysfwkcxmqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##应税服务扣除项目##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwbqysfwjshjemsxse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##本期应税服务价税合计额(免税销售额)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwysfwkcxmbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##应税服务扣除项目##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="msdysfwysfwkcxmqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>免税的应税服务##应税服务扣除项目##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_fb3Type">
+    <xs:sequence>
+      <xs:element type="fb3GridlbVOType" name="fb3GridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>17%税率的有形动产租赁服务11%税率的应税服务6%税率的应税服务(不含金融商品转让)6%税率的金融商品转让项目5%征收率的项目3%征收率的应税服务免抵退税的应税服务免税的应税服务</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fb4GridlbVOType">
+    <xs:sequence>
+      <xs:element name="ewbhxh">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsskxtzysbfjjswhfbqsjdjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsskxtzysbfjjswhfqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsskxtzysbfjjswhfbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsskxtzysbfjjswhfbqydjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="zzsskxtzysbfjjswhfqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzjgyzjnskqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>分支机构预征缴纳税款##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzjgyzjnskbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>分支机构预征缴纳税款##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzjgyzjnskbqsjdjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>分支机构预征缴纳税款##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzjgyzjnskbqydjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>分支机构预征缴纳税款##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="fzjgyzjnskqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>分支机构预征缴纳税款##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzfwyzjnskqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>建筑服务预征缴纳税款##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzfwyzjnskbqydjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>建筑服务预征缴纳税款##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzfwyzjnskbqsjdjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>建筑服务预征缴纳税款##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzfwyzjnskbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>建筑服务预征缴纳税款##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzfwyzjnskqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>建筑服务预征缴纳税款##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xsbdcyzjnskbqsjdjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销售不动产预征缴纳税款##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xsbdcyzjnskqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销售不动产预征缴纳税款##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xsbdcyzjnskbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销售不动产预征缴纳税款##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xsbdcyzjnskbqydjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销售不动产预征缴纳税款##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="xsbdcyzjnskqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>销售不动产预征缴纳税款##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="czbdcyzjnskqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>出租不动产预征缴纳税款##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="czbdcyzjnskbqsjdjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>出租不动产预征缴纳税款##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="czbdcyzjnskbqydjse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>出租不动产预征缴纳税款##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="czbdcyzjnskbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>出租不动产预征缴纳税款##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="czbdcyzjnskqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>出租不动产预征缴纳税款##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsbqydjsebqdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##本期应抵减税额##本期调减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsqmyebqsjdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##期末余额##本期实际抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsbqsjdjsebqkdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##本期实际抵减税额##本期可抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="ybxmjjdjejsqmyeqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>一般项目加计抵减额计算##期末余额##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsbqsjdjsebqkdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##本期实际抵减税额##本期可抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsqmyebqsjdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##期末余额##本期实际抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsqmyeqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##期末余额##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsbqydjsebqdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##本期应抵减税额##本期调减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jzjtxmjjdjejsbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>即征即退项目加计抵减额计算##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqydjsebqdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##本期应抵减税额##本期调减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqfse" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjqmyebqsjdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##期末余额##本期实际抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjbqsjdjsebqkdje" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##本期实际抵减税额##本期可抵减额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjqmyeqmye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##期末余额##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="hjqcye" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>合计##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_fb4Type">
+    <xs:sequence>
+      <xs:element type="fb4GridlbVOType" name="fb4GridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>增值税税控系统专用设备费及技术维护费分支机构预征缴纳税款建筑服务预征缴纳税款销售不动产预征缴纳税款出租不动产预征缴纳税款一般项目加计抵减额计算即征即退项目加计抵减额计算合计</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jmssbmxbGridlbVOType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="xs:string" name="ewbhxh"/>
+      <xs:element type="xs:string" name="bqfse">
+        <xs:annotation>
+          <xs:documentation>3##本期发生额4##本期发生额5##本期发生额6##本期发生额7##本期发生额8##本期发生额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqsjdjse">
+        <xs:annotation>
+          <xs:documentation>3##本期实际抵减税额4##本期实际抵减税额5##本期实际抵减税额6##本期实际抵减税额7##本期实际抵减税额8##本期实际抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmye">
+        <xs:annotation>
+          <xs:documentation>3##期末余额4##期末余额5##期末余额6##期末余额7##期末余额8##期末余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcye">
+        <xs:annotation>
+          <xs:documentation>3##期初余额4##期初余额5##期初余额6##期初余额7##期初余额8##期初余额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqydjse">
+        <xs:annotation>
+          <xs:documentation>3##本期应抵减税额4##本期应抵减税额5##本期应抵减税额6##本期应抵减税额7##本期应抵减税额8##本期应抵减税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsxzdmjmc">
+        <xs:annotation>
+          <xs:documentation>4##减税性质代码及名称5##减税性质代码及名称6##减税性质代码及名称7##减税性质代码及名称8##减税性质代码及名称</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qcyemzzzsxmxse">
+        <xs:annotation>
+          <xs:documentation>12##期初余额##免征增值税项目n销售额13##期初余额##免征增值税项目n销售额14##期初余额##免征增值税项目n销售额15##期初余额##免征增值税项目n销售额16##期初余额##免征增值税项目n销售额17##期初余额##免征增值税项目n销售额18##期初余额##免征增值税项目n销售额19##期初余额##免征增值税项目n销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="qmyemse">
+        <xs:annotation>
+          <xs:documentation>12##期末余额##免税额15##期末余额##免税额16##期末余额##免税额17##期末余额##免税额18##期末余额##免税额19##期末余额##免税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqsjdjsemsxsedydjxse">
+        <xs:annotation>
+          <xs:documentation>12##本期实际抵减税额##免税销售额n对应的进项税额15##本期实际抵减税额##免税销售额n对应的进项税额16##本期实际抵减税额##免税销售额n对应的进项税额17##本期实际抵减税额##免税销售额n对应的进项税额18##本期实际抵减税额##免税销售额n对应的进项税额19##本期实际抵减税额##免税销售额n对应的进项税额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqfsemsxsekcxmbqsjkcje">
+        <xs:annotation>
+          <xs:documentation>12##本期发生额##免税销售额扣除项目n本期实际扣除金额15##本期发生额##免税销售额扣除项目n本期实际扣除金额16##本期发生额##免税销售额扣除项目n本期实际扣除金额17##本期发生额##免税销售额扣除项目n本期实际扣除金额18##本期发生额##免税销售额扣除项目n本期实际扣除金额19##本期发生额##免税销售额扣除项目n本期实际扣除金额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="bqydjsekchmsxse">
+        <xs:annotation>
+          <xs:documentation>12##本期应抵减税额##扣除后免税销售额15##本期应抵减税额##扣除后免税销售额16##本期应抵减税额##扣除后免税销售额17##本期应抵减税额##扣除后免税销售额18##本期应抵减税额##扣除后免税销售额19##本期应抵减税额##扣除后免税销售额</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element type="xs:string" name="jsxzdmjmcmsxzdmjmc">
+        <xs:annotation>
+          <xs:documentation>15##减税性质代码及名称##免税性质代码及名称16##减税性质代码及名称##免税性质代码及名称17##减税性质代码及名称##免税性质代码及名称18##减税性质代码及名称##免税性质代码及名称19##减税性质代码及名称##免税性质代码及名称</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsr_jmssbmxbType">
+    <xs:sequence>
+      <xs:element type="jmssbmxbGridlbVOType" name="jmssbmxbGridlbVO" maxOccurs="unbounded" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>3456781213141516171819</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="jxds_zzs_ybnsrxxVOType">
+    <xs:sequence>
+      <xs:element type="sbbinfoType" name="sbbinfo"/>
+      <xs:element type="jxds_zzs_ybnsr_zbType" name="jxds_zzs_ybnsr_zb"/>
+      <xs:element type="jxds_zzs_ybnsr_fb1Type" name="jxds_zzs_ybnsr_fb1"/>
+      <xs:element type="jxds_zzs_ybnsr_fb2Type" name="jxds_zzs_ybnsr_fb2"/>
+      <xs:element type="jxds_zzs_ybnsr_fb3Type" name="jxds_zzs_ybnsr_fb3"/>
+      <xs:element type="jxds_zzs_ybnsr_fb4Type" name="jxds_zzs_ybnsr_fb4"/>
+      <xs:element type="jxds_zzs_ybnsr_jmssbmxbType" name="jxds_zzs_ybnsr_jmssbmxb"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610160_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610327_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610335_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610499_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610501_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610671_V1.0.xsd"/>	
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>	
+	<xs:complexType name="xqycwkjzzcwbszywbw">
+		<xs:annotation>
+			<xs:documentation>总业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syxqyzcfzb" type="syxqyzcfzbVO">
+						<xs:annotation>
+							<xs:documentation>资产负债表(适用执行小企业会计准则的企业)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syxqylrb" type="syxqylrbVO">
+						<xs:annotation>
+							<xs:documentation>利润表(适用执行小企业会计准则的企业)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syxqyxjllb" type="syxqyxjllbVO">
+						<xs:annotation>
+							<xs:documentation>现金流量表(适用执行小企业会计准则的企业)</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqylrbnb" type="xqylrbnbVO">
+						<xs:annotation>
+							<xs:documentation>小企业会计制度利润表年报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="syxqyxjllbnb" type="syxqyxjllbnbVO">
+						<xs:annotation>
+							<xs:documentation>小企业会计制度现金流量表年报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzChdpl" type="xqykjzzChdplVO">
+						<xs:annotation>
+							<xs:documentation>存货的披露（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzDqtzdpl" type="xqykjzzDqtzdplVO">
+						<xs:annotation>
+							<xs:documentation>短期投资的披露（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzGdzcdpl" type="xqykjzzGdzcdplVO">
+						<xs:annotation>
+							<xs:documentation>固定资产的披露（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzLrfpb" type="xqykjzzLrfpbVO">
+						<xs:annotation>
+							<xs:documentation>利润分配表（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzYfzgxcmxb" type="xqykjzzYfzgxcmxbVO">
+						<xs:annotation>
+							<xs:documentation>应付职工薪酬明细表（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzYjsfmxb" type="xqykjzzYjsfmxbVO">
+						<xs:annotation>
+							<xs:documentation>应交税费明细表（适用执行小企业会计准则的企业）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ndcwkjbgshbgVO" type="NdcwkjbgshbgVO">
+						<xs:annotation>
+							<xs:documentation>年度财务会计报告审核报告</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="xqykjzzfzForm" type="XqykjzzfzForm">
+						<xs:annotation>
+							<xs:documentation>小企业会计准则附注</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yfzcfzzhzbVO" type="YfzcfzzhzbVO">
+						<xs:annotation>
+							<xs:documentation>“研发支出”辅助账汇总表VO</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="yszkazljgplVO" type="YszkazljgplVO">
+						<xs:annotation>
+							<xs:documentation>应收账款按账龄结构披露</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="YszkazljgplVO">
+		<xs:annotation>
+			<xs:documentation>应收账款按账龄结构披露</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="yszkazljgplGrid">
+				<xs:annotation>
+					<xs:documentation>应收账款按账龄结构披露</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="yszkazljgplGridlb" type="YszkazljgplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YszkazljgplGridlbVO">
+		<xs:annotation>
+			<xs:documentation>应收账款按账龄结构披露</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xmmc" type="xmmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额 </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye" type="je">
+				<xs:annotation>
+					<xs:documentation>年初账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="syxqylrbnbywbw">
+		<xs:annotation>
+			<xs:documentation>小企业会计制度利润表年报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="syxqylrbnb" type="xqylrbnbVO">
+						<xs:annotation>
+							<xs:documentation>小企业会计制度利润表年报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="xqylrbnbVO">
+		<xs:annotation>
+			<xs:documentation>小企业会计制度利润表年报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrxxForm4" type="nsrxxForm4VO">
+				<xs:annotation>
+					<xs:documentation>纳税人基本信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="syxqylrbnbGrid">
+				<xs:annotation>
+					<xs:documentation>财政补助收入支出表</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqylrbnbGridlb" type="xqylrbnbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="nsrxxForm4VO">
+		<xs:annotation>
+			<xs:documentation>申报表头信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="nsrsbh" type="nsrsbh">
+				<xs:annotation>
+					<xs:documentation>纳税人识别号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nsrmc" type="nsrmc">
+				<xs:annotation>
+					<xs:documentation>纳税人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrq" type="bsrq">
+				<xs:annotation>
+					<xs:documentation>报送日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqq" type="skssqq">
+				<xs:annotation>
+					<xs:documentation>税款所属期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skssqz" type="skssqz">
+				<xs:annotation>
+					<xs:documentation>税款所属期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqylrbnbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>财政补助收入支出表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnljje" type="bnljje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本年累计金额||适用于财务报表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snje" type="snje" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>上年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

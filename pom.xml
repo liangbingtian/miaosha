@@ -90,6 +90,12 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>com.dagm</groupId>
+      <artifactId>dev-tool</artifactId>
+      <version>0.0.1-RELEASE</version>
+      <type>N/A</type>
+    </dependency>
   </dependencies>
 
   <build>

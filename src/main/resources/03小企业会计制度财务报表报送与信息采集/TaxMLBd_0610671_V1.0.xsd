@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:complexType name="xqykjzzChdplVO">
+		<xs:annotation>
+			<xs:documentation>存货的披露（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzChdplGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzChdplGridlb" type="xqykjzzChdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzChdplGridlbVO">
+		<xs:annotation>
+			<xs:documentation>存货的披露列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsj" type="je">
+				<xs:annotation>
+					<xs:documentation>期末市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmyeyqmsjdce" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额与期末市价的差额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzDqtzdplVO">
+		<xs:annotation>
+			<xs:documentation>短期投资的披露（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzDqtzdplGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzDqtzdplGridlb" type="xqykjzzDqtzdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzDqtzdplGridlbVO">
+		<xs:annotation>
+			<xs:documentation>短期投资的披露列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmsj" type="je">
+				<xs:annotation>
+					<xs:documentation>期末市价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmyeyqmsjdce" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额与期末市价的差额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzGdzcdplVO">
+		<xs:annotation>
+			<xs:documentation>固定资产的披露（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzGdzcdplGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzGdzcdplGridlb" type="xqykjzzGdzcdplGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzGdzcdplGridlbVO">
+		<xs:annotation>
+			<xs:documentation>固定资产的披露列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcyz" type="je">
+				<xs:annotation>
+					<xs:documentation>原价</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="gdzcljzj" type="je">
+				<xs:annotation>
+					<xs:documentation>累计折旧</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmjz" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面价值</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzLrfpbVO">
+		<xs:annotation>
+			<xs:documentation>利润分配表（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzLrfpbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzLrfpbGridlb" type="xqykjzzLrfpbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzLrfpbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>利润分配表列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bnje" type="je">
+				<xs:annotation>
+					<xs:documentation>本年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="snje" type="je">
+				<xs:annotation>
+					<xs:documentation>上年金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzYfzgxcmxbVO">
+		<xs:annotation>
+			<xs:documentation>应付职工薪酬明细表（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzYfzgxcmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzYfzgxcmxbGridlb" type="xqykjzzYfzgxcmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzYfzgxcmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>应付职工薪酬明细表列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nczmye" type="je">
+				<xs:annotation>
+					<xs:documentation>年初账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzYjsfmxbVO">
+		<xs:annotation>
+			<xs:documentation>应交税费明细表（适用执行小企业会计准则的企业）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xqykjzzYjsfmxbGrid">
+				<xs:annotation>
+					<xs:documentation>申报信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="xqykjzzYjsfmxbGridlb" type="xqykjzzYjsfmxbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xqykjzzYjsfmxbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>应交税费明细表列表信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc">
+				<xs:annotation>
+					<xs:documentation>项目名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmzmye" type="je">
+				<xs:annotation>
+					<xs:documentation>期末账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="nczmye" type="je">
+				<xs:annotation>
+					<xs:documentation>年初账面余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
