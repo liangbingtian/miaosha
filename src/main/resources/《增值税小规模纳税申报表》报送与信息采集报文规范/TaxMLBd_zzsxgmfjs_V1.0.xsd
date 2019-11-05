@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="xgmfjssbywbw">
+		<xs:annotation>
+			<xs:documentation>附加税申报业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjssb" type="zzsxgmfjssb">
+						<xs:annotation>
+							<xs:documentation>增值税小规模附加税申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsxgmfjssb">
+		<xs:annotation>
+			<xs:documentation>附加税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="xgmfjsxxGrid" type="xgmfjsxxGrid"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xgmfjsxxGrid">
+		<xs:annotation>
+			<xs:documentation>附加税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="xgmfjsxxGridlb" type="xgmfjsxxGridlb">
+				<xs:annotation>
+					<xs:documentation>附加税申报明细列表</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="xgmfjsxxGridlb">
+		<xs:annotation>
+			<xs:documentation>附加税申报</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sybh" type="sybh">
+				<xs:annotation>
+					<xs:documentation>税源编号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdpzuuid" type="rdpzuuid">
+				<xs:annotation>
+					<xs:documentation>认定凭证UUID</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jsyj" type="je">
+				<xs:annotation>
+					<xs:documentation>计税依据</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sl1" type="je">
+				<xs:annotation>
+					<xs:documentation>税率</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynse" type="je">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ssjmxzDm" type="ssjmxzDm">
+				<xs:annotation>
+					<xs:documentation>减免性质</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jmse" type="je">
+				<xs:annotation>
+					<xs:documentation>减免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yjse1" type="je">
+				<xs:annotation>
+					<xs:documentation>已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="je">
+				<xs:annotation>
+					<xs:documentation>本期应补（退）税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdyxqq">
+				<xs:annotation>
+					<xs:documentation>认定有效期起</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rdyxqz">
+				<xs:annotation>
+					<xs:documentation>认定有效期止</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

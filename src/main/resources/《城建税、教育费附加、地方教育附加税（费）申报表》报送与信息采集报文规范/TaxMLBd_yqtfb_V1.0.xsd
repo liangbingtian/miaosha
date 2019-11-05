@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by www.hbnu.com (www.hbnu.com) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:complexType name="yqtfb">
+		<xs:annotation>
+			<xs:documentation>油气田附表</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="yqtfpGrid" type="yqtfpGrid">
+						<xs:annotation>
+							<xs:documentation>《zyssb》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="yqtfpGrid">
+		<xs:annotation>
+			<xs:documentation/>
+		</xs:annotation>
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="yqtfpList" type="SByqtfpxxVO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation/>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SByqtfpxxVO">
+		<xs:annotation>
+			<xs:documentation>油气田分配vo</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbuuid" type="sbuuid">
+				<xs:annotation>
+					<xs:documentation>申报uuid</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="pzxh" type="pzxh">
+				<xs:annotation>
+					<xs:documentation>凭证序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skgkDm" type="skgkDm">
+				<xs:annotation>
+					<xs:documentation>收款国库代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yskmDm" type="yskmDm">
+				<xs:annotation>
+					<xs:documentation>预算科目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfpblDm" type="ysfpblDm">
+				<xs:annotation>
+					<xs:documentation>预算分配比例代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zszmDm" type="zszmDm">
+				<xs:annotation>
+					<xs:documentation>征收子目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ybtse" type="ybtse">
+				<xs:annotation>
+					<xs:documentation>应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xzqhszDm" type="xzqhszDm">
+				<xs:annotation>
+					<xs:documentation>行政区划代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zsxmDm" type="zsxmDm">
+				<xs:annotation>
+					<xs:documentation>征收项目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zspmDm" type="zspmDm">
+				<xs:annotation>
+					<xs:documentation>征收品目代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fpbl" type="fpbl">
+				<xs:annotation>
+					<xs:documentation>分配比例</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

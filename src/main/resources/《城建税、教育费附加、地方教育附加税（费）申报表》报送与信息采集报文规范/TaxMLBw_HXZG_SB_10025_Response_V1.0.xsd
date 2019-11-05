@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by 123 (1232) -->
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBw_fjssb_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicSBType.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yqtfb_V1.0.xsd"/>
+	<xs:complexType name="HXZGSB10025Response">
+		<xs:annotation>
+			<xs:documentation>附加税错误更正初始化申报</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjssbbw" type="fjssbbw">
+						<xs:annotation>
+							<xs:documentation>原申报返回数据信息</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="fjsytqfpGrid">
+						<xs:annotation>
+							<xs:documentation>新疆油气田分配Grid</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence maxOccurs="unbounded">
+								<xs:element name="ytqfpList" type="SByqtfpxxVO">
+									<xs:annotation>
+										<xs:documentation>新疆油气田Gridlb</xs:documentation>
+									</xs:annotation>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="sbxxGrid">
+						<xs:complexType>
+							<xs:sequence minOccurs="0" maxOccurs="unbounded">
+								<xs:element name="sbxxGridlb" type="SBSbxxJhVO"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsxgmflzlsedjqkbywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税纳税申报表（小规模纳税人适用）附列资料（税额抵减情况表）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsxgmflzlsedjqkb" type="zzsxgmflzlsedjqkb">
+						<xs:annotation>
+							<xs:documentation>增值税纳税申报表（小规模纳税人适用）附列资料（税额抵减情况表）</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsxgmflzlsedjqkb">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表（小规模纳税人适用）附列资料（税额抵减情况表）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="flzlsedjqkbGrid">
+				<xs:annotation>
+					<xs:documentation>附列资料（税额抵减情况表）申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="flzlsedjqkbGridlb" type="flzlsedjqkbGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="flzlsedjqkbGridlbVO">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表（小规模纳税人适用）附列资料（税额抵减情况表）</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="djxm" type="djxm">
+				<xs:annotation>
+					<xs:documentation>抵减项目</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye" type="qcye">
+				<xs:annotation>
+					<xs:documentation>期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfse" type="bqfse">
+				<xs:annotation>
+					<xs:documentation>本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqydjse" type="bqydjse">
+				<xs:annotation>
+					<xs:documentation>本期应抵减税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjdjse" type="bqsjdjse">
+				<xs:annotation>
+					<xs:documentation>本期实际抵减税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="qmye">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="sedjqkbSlxxFormVO">
+		<xs:annotation>
+			<xs:documentation>受理信息</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="sbbslxxVO">
+				<xs:sequence>
+					<xs:element name="tbrq1" type="tbrq1">
+						<xs:annotation>
+							<xs:documentation>填表日期</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsjmssbmxbywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税减免税申报明细表》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsjmssbmxb">
+						<xs:annotation>
+							<xs:documentation>增值税减免税申报明细表</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:complexContent>
+								<xs:extension base="zzsjmssbmxb"/>
+							</xs:complexContent>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsjmssbmxb">
+		<xs:annotation>
+			<xs:documentation>《增值税减免税申报明细表》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="zzsjmssbmxbjsxmGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zzsjmssbmxbjsxmGridlbVO" type="zzsjmssbmxbjsxmGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="zzsjmssbmxbmsxmGrid">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="zzsjmssbmxbmsxmGridlbVO" type="zzsjmssbmxbmsxmGridlbVO"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsjmssbmxbjsxmGrid">
+		<xs:annotation>
+			<xs:documentation>增值税减免税申报明细表减税项目Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="zzsjmssbmxbjsxmGridlbVO">
+		<xs:annotation>
+			<xs:documentation>增值税减免税申报明细表减税项目Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxDm" type="swsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqydjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期应抵减税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjdjse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期实际抵减税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsjmssbmxbmsxmGrid">
+		<xs:annotation>
+			<xs:documentation>增值税减免税申报明细表免税项目Grid</xs:documentation>
+		</xs:annotation>
+	</xs:complexType>
+	<xs:complexType name="zzsjmssbmxbmsxmGridlbVO">
+		<xs:annotation>
+			<xs:documentation>增值税减免税申报明细表免税项目Grid列表VO</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ewbhxh" type="ewbhxh" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>二维表行序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hmc" type="hmc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>行名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swsxDm" type="swsxDm" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>税务事项代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mzzzsxmxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免征增值税项目销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqsjkcje" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>本期实际扣除金额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kchmsxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>扣除后免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxsedyjxse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税销售额对应的进项税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mse" type="se" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

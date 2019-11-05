@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610611_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610343_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_X610028_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_X610025_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_X610535_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_zzsxgmfjs_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_0610758_V1.0.xsd"/>
+	<xs:complexType name="zzssyyxgmnsrywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税纳税申报表（适用小规模纳税人）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyxgmnsr" type="zzssyyxgmnsr">
+						<xs:annotation>
+							<xs:documentation>《增值税纳税申报表（适用小规模纳税人）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzsxgmflzl" type="zzsxgmflzl" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《增值税纳税申报表（适用于增值税小规模纳税人）附列资料》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jdclscqyxsmxb" type="jdclscqyxsmxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《机动车辆生产企业销售明细表》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="jdcxstyfpqdb" type="jdcxstyfpqd" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《机动车销售统一发票清单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="dlqyzzsxxsehjxsecdd" type="dlqyzzsxxsehjxsecdd" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>《电力企业增值税销项税额和进项税额传递单》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzsxgmfjssb" type="zzsxgmfjssb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>附加税申报纳税人申报表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="zzsjmssbmxb" type="zzsjmssbmxb" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>增值税减免税申报明细表</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

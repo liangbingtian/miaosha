@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by aaa (aaa) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzsxgmflzlywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税纳税申报表（适用于增值税小规模纳税人）附列资料》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzsxgmflzl" type="zzsxgmflzl">
+						<xs:annotation>
+							<xs:documentation>《增值税纳税申报表（适用于增值税小规模纳税人）附列资料》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzsxgmflzl">
+		<xs:annotation>
+			<xs:documentation>增值税纳税申报表（适用于增值税小规模纳税人）附列资料</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="flzlForm" type="flzlFormVO">
+				<xs:annotation>
+					<xs:documentation>附列资料申报表信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="flzlFormVO">
+		<xs:annotation>
+			<xs:documentation>机动车辆生产企业销售明细表</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="qcye" type="qcye">
+				<xs:annotation>
+					<xs:documentation>期初余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfse" type="bqfse">
+				<xs:annotation>
+					<xs:documentation>本期发生额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkce" type="bqkce">
+				<xs:annotation>
+					<xs:documentation>本期扣除额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye" type="qmye">
+				<xs:annotation>
+					<xs:documentation>期末余额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxsqbhssr" type="ysfwxsqbhssr">
+				<xs:annotation>
+					<xs:documentation>全部含税收入</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxshsxse" type="ysfwxshsxse">
+				<xs:annotation>
+					<xs:documentation>含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxsbhsxse" type="ysfwxsbhsxse">
+				<xs:annotation>
+					<xs:documentation>不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qcye5" type="qcye">
+				<xs:annotation>
+					<xs:documentation>期初余额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqfse5" type="bqfse">
+				<xs:annotation>
+					<xs:documentation>本期发生额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqkce5" type="bqkce">
+				<xs:annotation>
+					<xs:documentation>本期扣除额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qmye5" type="qmye">
+				<xs:annotation>
+					<xs:documentation>期末余额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxsqbhssr5" type="ysfwxsqbhssr">
+				<xs:annotation>
+					<xs:documentation>全部含税收入（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxshsxse5" type="ysfwxshsxse">
+				<xs:annotation>
+					<xs:documentation>含税销售额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ysfwxsbhsxse5" type="ysfwxsbhsxse">
+				<xs:annotation>
+					<xs:documentation>不含税销售额（5%征收率）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

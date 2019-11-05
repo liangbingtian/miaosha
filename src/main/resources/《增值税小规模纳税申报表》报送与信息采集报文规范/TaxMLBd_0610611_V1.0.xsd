@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLPublicType.xsd"/>
+	<xs:complexType name="zzssyyxgmnsrzbywbw">
+		<xs:annotation>
+			<xs:documentation>《增值税纳税申报表（适用小规模纳税人）》业务报文</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="zzssyyxgmnsr" type="zzssyyxgmnsr">
+						<xs:annotation>
+							<xs:documentation>《增值税纳税申报表（适用小规模纳税人）》</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="zzssyyxgmnsr">
+		<xs:annotation>
+			<xs:documentation>《增值税纳税申报表（适用小规模纳税人）》</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sbbhead" type="sbbheadkz1VO">
+				<xs:annotation>
+					<xs:documentation>申报表头信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="zzsxgmGrid">
+				<xs:annotation>
+					<xs:documentation>增值税（适用小规模纳税人）申报表信息</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence minOccurs="4" maxOccurs="4">
+						<xs:element name="zzsxgmGridlb" type="zzsxgmGridlbVO">
+							<xs:annotation>
+								<xs:documentation>增值税（适用小规模纳税人）申报表信息</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="slxxForm" type="slxxForm">
+				<xs:annotation>
+					<xs:documentation>受理人信息</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="slxxForm">
+		<xs:annotation>
+			<xs:documentation>受理人信息</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="sfzxsb" type="bz1">
+				<xs:annotation>
+					<xs:documentation>是否自行申报 Y/N </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrxm" type="bsrxm">
+				<xs:annotation>
+					<xs:documentation>办税人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cwfzrxm" type="cwfzrxm">
+				<xs:annotation>
+					<xs:documentation>财务负责人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fddbrxm" type="fddbrxm">
+				<xs:annotation>
+					<xs:documentation>法定代表人（负责人）</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bsrlxdh" type="bsrlxdh">
+				<xs:annotation>
+					<xs:documentation>办税人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dlrmc" type="dlrmc">
+				<xs:annotation>
+					<xs:documentation>代理人名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blrysfzjlxDm" type="blrysfzjlxDm">
+				<xs:annotation>
+					<xs:documentation>办理人员身份证件类型</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="blrysfzjhm" type="blrysfzjhm">
+				<xs:annotation>
+					<xs:documentation>办理人员身份证件号码</xs:documentation>
+				</xs:annotation> 
+			</xs:element>
+			<xs:element name="jbrxm" type="jbr">
+				<xs:annotation>
+					<xs:documentation>经办人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgDm" type="zgswjgDm">
+				<xs:annotation>
+					<xs:documentation>受理税务机关代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slswjgMc" type="swjgmc">
+				<xs:annotation>
+					<xs:documentation>受理税务机关名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="jbrlxdh" type="jbrlxdh">
+				<xs:annotation>
+					<xs:documentation>经办人联系电话</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrDm" type="jsrDm">
+				<xs:annotation>
+					<xs:documentation>受理人代码</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrxm" type="slrxm">
+				<xs:annotation>
+					<xs:documentation>受理人姓名</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="slrq" type="jsrq">
+				<xs:annotation>
+					<xs:documentation>受理日期</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="zzsxgmGridlbVO">
+		<xs:sequence>
+			<xs:element name="ewblxh" type="ewblxh">
+				<xs:annotation>
+					<xs:documentation>二维表列序号</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lmc" type="lmc">
+				<xs:annotation>
+					<xs:documentation>列名称</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="yzzzsbhsxse" type="yzzzsbhsxse">
+				<xs:annotation>
+					<xs:documentation>应征增值税不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgdkdzzszyfpbhsxse" type="swjgdkdzzszyfpbhsxse">
+				<xs:annotation>
+					<xs:documentation>税务机关代开的增值税专用发票不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skqjkjdptfpbhsxse" type="skqjkjdptfpbhsxse">
+				<xs:annotation>
+					<xs:documentation>税控器具开具的普通发票不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xsczbdcbhsxse" type="xse">
+				<xs:annotation>
+					<xs:documentation>销售、出租不动产不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="swjgdkdzzszyfpbhsxse1" type="swjgdkdzzszyfpbhsxse">
+				<xs:annotation>
+					<xs:documentation>税务机关代开的增值税专用发票不含税销售额(销售、出租不动产)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skqjkjdptfpbhsxse2" type="skqjkjdptfpbhsxse">
+				<xs:annotation>
+					<xs:documentation>税控器具开具的普通发票不含税销售额(销售、出租不动产)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xssygdysgdzcbhsxse" type="xssygdysgdzcbhsxse">
+				<xs:annotation>
+					<xs:documentation>销售使用过的应税固定资产不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skqjkjdptfpbhsxse1" type="skqjkjdptfpbhsxse1">
+				<xs:annotation>
+					<xs:documentation>其中：税控器具开具的普通发票不含税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="msxse" type="msxse">
+				<xs:annotation>
+					<xs:documentation>免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xwqymsxse" type="xwqymsxse">
+				<xs:annotation>
+					<xs:documentation>小微企业免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzdxse" type="wdqzdxse">
+				<xs:annotation>
+					<xs:documentation>未达起征点销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qtmsxse" type="qtmsxse">
+				<xs:annotation>
+					<xs:documentation>其他免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ckmsxse" type="ckmsxse">
+				<xs:annotation>
+					<xs:documentation>出口免税销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="skqjkjdptfpxse1" type="skqjkjdptfpxse1">
+				<xs:annotation>
+					<xs:documentation>出口免税销售额_税控器具开具的普通发票销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdxse" type="hdxse">
+				<xs:annotation>
+					<xs:documentation>核定销售额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynse" type="bqynse">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hdynse" type="hdynse">
+				<xs:annotation>
+					<xs:documentation>核定应纳税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqynsejze" type="bqynsejze">
+				<xs:annotation>
+					<xs:documentation>本期应纳税额减征额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqmse" type="bqmse">
+				<xs:annotation>
+					<xs:documentation>本期免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="xwqymse" type="xwqymse">
+				<xs:annotation>
+					<xs:documentation>小微企业免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="wdqzdmse" type="wdqzdmse">
+				<xs:annotation>
+					<xs:documentation>未达起征点免税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ynsehj" type="ynsehj">
+				<xs:annotation>
+					<xs:documentation>应纳税额合计</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqyjse1" type="bqyjse1">
+				<xs:annotation>
+					<xs:documentation>本期已缴税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="bqybtse" type="bqybtse">
+				<xs:annotation>
+					<xs:documentation>本期应补退税额</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

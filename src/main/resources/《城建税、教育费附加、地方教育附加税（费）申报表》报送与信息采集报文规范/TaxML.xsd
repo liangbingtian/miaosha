@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.chinatax.gov.cn/dataspec/" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxDoc.xsd"/>
+	<xs:include schemaLocation="TaxMLPublic.xsd"/>
+	<xs:element name="taxML" type="taxDoc">
+		<xs:annotation>
+			<xs:documentation>本节点是国税总局行业数据规范的根节点，所有的业务报文都要用这个节点作为根</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

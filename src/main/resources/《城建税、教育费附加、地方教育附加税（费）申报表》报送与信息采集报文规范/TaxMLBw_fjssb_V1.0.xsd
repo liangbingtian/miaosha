@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 被2011 rel. 2 sp1 (TeaM DJiNN) 使用XMLSpy vTeaM DJiNN编辑的 (http://www.altova.com) by -->
+<!-- edited with XMLSpy v2010 rel. 3 (http://www.altova.com) by MESMERiZE (MSM) -->
+<xs:schema xmlns="http://www.chinatax.gov.cn/dataspec/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.chinatax.gov.cn/dataspec/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:include schemaLocation="TaxML.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_1610115_V1.0.xsd"/>
+	<xs:include schemaLocation="TaxMLBd_yqtfb_V1.0.xsd"/>
+	<xs:complexType name="fjssbbw">
+		<xs:annotation>
+			<xs:documentation>附加税申报</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="taxDoc">
+				<xs:sequence>
+					<xs:element name="fjssbb" type="fjssbb">
+						<xs:annotation>
+							<xs:documentation>附加税申报</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					  <xs:element name="yqtfb" type="yqtfb">
+                   <xs:annotation>
+                       <xs:documentation>油气田附表</xs:documentation>
+                   </xs:annotation>
+               </xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>
