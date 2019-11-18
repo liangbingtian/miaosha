@@ -6,14 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="miaosha-main" />
-        <module name="spring-boot-starter-metadata" />
+        <module name="miaosha" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="miaosha" target="1.8" />
-      <module name="miaosha-main" target="1.8" />
-      <module name="spring-boot-starter-metadata" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
