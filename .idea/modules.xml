@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/miaosha.iml" filepath="$PROJECT_DIR$/miaosha.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miaosha-mian/miaosha-mian.iml" filepath="$PROJECT_DIR$/miaosha-mian/miaosha-mian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-starter-metadata/spring-boot-starter-metadata.iml" filepath="$PROJECT_DIR$/spring-boot-starter-metadata/spring-boot-starter-metadata.iml" />
     </modules>
   </component>
 </project>
