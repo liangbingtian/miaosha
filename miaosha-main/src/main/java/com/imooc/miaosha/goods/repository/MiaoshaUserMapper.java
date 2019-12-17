@@ -1,18 +1,18 @@
-package com.imooc.miaosha.repository;
+package com.imooc.miaosha.goods.repository;
 
-import com.imooc.miaosha.entity.Goods;
 import com.yonyou.einvoice.common.metadata.mp.repository.IMetaMapper;
+import com.imooc.miaosha.goods.entity.MiaoshaUser;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 
 /**
- * goods
+ * miaosha_user
  * @author liangbingtian
  *
  */
 @Mapper
 @Repository
-public interface GoodsMapper extends IMetaMapper<Goods> {
+public interface MiaoshaUserMapper extends IMetaMapper<MiaoshaUser> {
   
 }

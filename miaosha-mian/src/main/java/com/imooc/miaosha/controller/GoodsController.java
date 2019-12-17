@@ -1,9 +1,12 @@
 package com.imooc.miaosha.controller;
 
+import com.imooc.miaosha.entity.Goods;
 import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.redis.GoodsKey;
 import com.imooc.miaosha.redis.RedisService;
 import com.imooc.miaosha.service.GoodsService;
+import com.imooc.miaosha.service.IGoodsService;
+import com.imooc.miaosha.util.BeanUtils;
 import com.imooc.miaosha.vo.GoodsVo;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +15,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,7 +38,8 @@ public class GoodsController {
   private Logger logger = LoggerFactory.getLogger(getClass());
 
   @Autowired
-  private GoodsService goodsService;
+  @Qualifier("goodsServiceImpl")
+  private IGoodsService goodsService;
 
   @Autowired
   private RedisService redisService;
@@ -52,8 +57,8 @@ public class GoodsController {
     logger.info("进入了接口了");
     model.addAttribute("user", miaoshaUser);
 
-    List<GoodsVo> goodsVoList = goodsService.listGoodsVo();
-    model.addAttribute("goodsList", goodsVoList);
+    List<Goods> goodsVoList = goodsService.selectList(null);
+    model.addAttribute("goodsList", BeanUtils.batchTransform(GoodsVo.class, goodsVoList));
 
     // return "goods_list";
     // 取缓存
@@ -79,7 +84,7 @@ public class GoodsController {
     // 用snowflack生成id主键
     model.addAttribute("user", miaoshaUser);
 
-    GoodsVo goodsVo = goodsService.getGoodsVoByGoodsId(goodsId);
+    GoodsVo goodsVo = BeanUtils.transfrom(GoodsVo.class ,goodsService.selectById(goodsId));
     model.addAttribute("goods", goodsVo);
 
     // 获取开始时间和结束时间

@@ -1,8 +1,8 @@
 package com.imooc.miaosha.service;
 
 import com.imooc.miaosha.entity.Goods;
-import com.imooc.miaosha.entity.GoodsExample;
 import com.imooc.miaosha.repository.GoodsMapper;
+import com.imooc.miaosha.util.BeanUtils;
 import com.imooc.miaosha.vo.GoodsVo;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,20 +22,21 @@ public class GoodsService {
 
 
   public List<GoodsVo> listGoodsVo() {
-    return goodsMapper.selectGoodsList();
+    List<Goods> goodsList = goodsMapper.selectList(null);
+    return BeanUtils.batchTransform(GoodsVo.class, goodsList);
   }
 
   public GoodsVo getGoodsVoByGoodsId(long goodsId) {
-    return goodsMapper.getGoodsVoByGoodsId(goodsId);
+    Goods goods = goodsMapper.selectById(goodsId);
+    return BeanUtils.transfrom(GoodsVo.class, goods);
   }
 
   @Transactional(rollbackFor = Exception.class)
   public void reduceStock(GoodsVo goodsVo) {
     Goods g = new Goods();
+    g.setId(goodsVo.getId());
     g.setGoodsStock(goodsVo.getGoodsStock() - 1);
-    GoodsExample goodsExample = new GoodsExample();
-    GoodsExample.Criteria criteria = goodsExample.createCriteria();
-    criteria.andIdEqualTo(goodsVo.getId());
-    goodsMapper.updateByExampleSelective(g, goodsExample);
+    goodsMapper.updateById(g);
+
   }
 }
