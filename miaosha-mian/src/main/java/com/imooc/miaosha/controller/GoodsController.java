@@ -4,9 +4,11 @@ import com.imooc.miaosha.entity.Goods;
 import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.redis.GoodsKey;
 import com.imooc.miaosha.redis.RedisService;
+import com.imooc.miaosha.result.Result;
 import com.imooc.miaosha.service.GoodsService;
 import com.imooc.miaosha.service.IGoodsService;
 import com.imooc.miaosha.util.BeanUtils;
+import com.imooc.miaosha.vo.GoodsDetailVo;
 import com.imooc.miaosha.vo.GoodsVo;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
@@ -56,16 +58,17 @@ public class GoodsController {
       Model model, MiaoshaUser miaoshaUser) {
     logger.info("进入了接口了");
     model.addAttribute("user", miaoshaUser);
-
-    List<Goods> goodsVoList = goodsService.selectList(null);
-    model.addAttribute("goodsList", BeanUtils.batchTransform(GoodsVo.class, goodsVoList));
-
-    // return "goods_list";
     // 取缓存
     String html = redisService.get(GoodsKey.getGoodsList, "", String.class);
     if (!StringUtils.isEmpty(html)) {
       return html;
     }
+
+    List<Goods> goodsVoList = goodsService.selectList(null);
+    model.addAttribute("goodsList", BeanUtils.batchTransform(GoodsVo.class, goodsVoList));
+
+    // return "goods_list";
+
     //手动渲染
     WebContext ctx = new WebContext(request, response, request.getServletContext()
         , request.getLocale(), model.asMap());
@@ -77,12 +80,18 @@ public class GoodsController {
   }
 
 
-  @RequestMapping("/to_detail/{goodsId}")
-  public String toList(Model model, MiaoshaUser miaoshaUser,
-      @PathVariable("goodsId") long goodsId) {
+  @RequestMapping(value = "/to_detail1/{goodsId}", produces = "text/html")
+  @ResponseBody
+  public String detail1(HttpServletRequest request, HttpServletResponse response,
+      Model model, MiaoshaUser miaoshaUser, @PathVariable("goodsId") long goodsId) {
     logger.info("进入了接口了");
     // 用snowflack生成id主键
     model.addAttribute("user", miaoshaUser);
+    //取缓存
+    String html = redisService.get(GoodsKey.getGoodsDetail,""+goodsId,String.class);
+    if (!StringUtils.isEmpty(html)) {
+      return html;
+    }
 
     GoodsVo goodsVo = BeanUtils.transfrom(GoodsVo.class ,goodsService.selectById(goodsId));
     model.addAttribute("goods", goodsVo);
@@ -113,7 +122,56 @@ public class GoodsController {
     model.addAttribute("miaoshaStatus", miaoshaStatus);
     model.addAttribute("remainSeconds", remainSeconds);
 
-    return "goods_detail";
+    //手动渲染
+    WebContext ctx = new WebContext(request, response, request.getServletContext()
+        , request.getLocale(), model.asMap());
+    html = thymeleafViewResolver.getTemplateEngine().process("goods_detail", ctx);
+    if (!StringUtils.isEmpty(html)) {
+      redisService.set(GoodsKey.getGoodsDetail, ""+goodsId, html);
+    }
+    return html;
+  }
+
+  @RequestMapping(value = "/to_detail/{goodsId}", produces = "text/html")
+  @ResponseBody
+  public Result<GoodsDetailVo> detail(HttpServletRequest request, HttpServletResponse response,
+      Model model, MiaoshaUser miaoshaUser, @PathVariable("goodsId") long goodsId) {
+    logger.info("进入了接口了");
+    // 用snowflack生成id主键
+    GoodsVo goodsVo = BeanUtils.transfrom(GoodsVo.class ,goodsService.selectById(goodsId));
+
+    // 获取开始时间和结束时间
+    int miaoshaStatus = 0;
+    int remainSeconds = 0;
+
+    long startAt = goodsVo.getStartDate().getTime();
+    long endAt = goodsVo.getEndDate().getTime();
+    long now = System.currentTimeMillis();
+
+    // 秒杀的过程
+    if (now < startAt) {
+      // 秒杀还没开始,倒计时
+      miaoshaStatus = 0;
+      remainSeconds = (int) ((startAt - now) / 1000);
+    } else if (now > endAt) {
+      // 秒杀已经结束
+      miaoshaStatus = 2;
+      remainSeconds = -1;
+    } else {
+      // 秒杀进行中
+      miaoshaStatus = 1;
+      remainSeconds = 0;
+    }
+
+    model.addAttribute("miaoshaStatus", miaoshaStatus);
+    model.addAttribute("remainSeconds", remainSeconds);
+
+    GoodsDetailVo vo = new GoodsDetailVo();
+    vo.setGoodsVo(goodsVo);
+    vo.setMiaoshaUser(miaoshaUser);
+    vo.setRemainSeconds(remainSeconds);
+    vo.setMiaoshaStatus(miaoshaStatus);
+    return Result.success(vo);
   }
 
 }

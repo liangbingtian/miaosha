@@ -1,9 +1,14 @@
 package com.imooc.miaosha.service;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.imooc.miaosha.entity.MiaoshaOrder;
 import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.entity.OrderInfo;
 import com.imooc.miaosha.exception.GlobalException;
+import com.imooc.miaosha.redis.OrderKey;
+import com.imooc.miaosha.redis.RedisService;
 import com.imooc.miaosha.repository.MiaoshaOrderMapper;
 import com.imooc.miaosha.repository.OrderInfoMapper;
 import com.imooc.miaosha.result.CodeMsg;
@@ -26,9 +31,11 @@ public class OrderService {
   @Autowired
   private MiaoshaOrderMapper miaoshaOrderMapper;
 
-  public MiaoshaOrder getMiaoshaOrderByUserIdGoodsId(long userid, long goodsId) {
+  @Autowired
+  private RedisService redisService;
 
-    return orderInfoMapper.getMiaoshaOrderByUserIdGoodsId(userid, goodsId);
+  public MiaoshaOrder getMiaoshaOrderByUserIdGoodsId(long userid, long goodsId) {
+    return redisService.get(OrderKey.getMiaoshaOrderByUidGid, userid+"_"+goodsId, MiaoshaOrder.class);
 
   }
 
@@ -49,6 +56,8 @@ public class OrderService {
     if (mResult != 1) {
       throw new GlobalException(CodeMsg.SERVER_ERROR);
     }
+
+    redisService.set(OrderKey.getMiaoshaOrderByUidGid, ""+user.getId()+"_"+goodsVo.getId(), miaoshaOrder);
     return orderInfo;
   }
 }

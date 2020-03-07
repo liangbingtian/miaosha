@@ -1,5 +1,7 @@
 package com.imooc.miaosha.service;
 
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.imooc.miaosha.entity.MiaoshaUser;
 import com.imooc.miaosha.entity.MiaoshaUserExample;
 import com.imooc.miaosha.exception.GlobalException;
@@ -30,6 +32,37 @@ public class MiaoshaUserService {
 
   @Autowired
   private RedisService redisService;
+
+  public MiaoshaUser getById(long id) {
+    //取缓存
+    MiaoshaUser user = redisService.get(MiaoshaUserKey.getById,""+id, MiaoshaUser.class);
+    if (user != null) {
+      return user;
+    }
+    //取数据库
+    user = miaoshaUserMapper.selectById(id);
+    if (user!=null) {
+      redisService.set(MiaoshaUserKey.getById, ""+id, user);
+    }
+    return user;
+  }
+
+  public boolean updatePassword(long id, String formPass){
+    //取user
+    MiaoshaUser user = getById(id);
+    if (user == null) {
+      throw new GlobalException(CodeMsg.MOBILE_NOT_EXIST);
+    }
+    MiaoshaUser updateMiaoshaUser = new MiaoshaUser();
+    updateMiaoshaUser.setId(id);
+    updateMiaoshaUser.setPassword(MD5Util.formPassToDBPass(formPass, user.getSalt()));
+    miaoshaUserMapper.updateById(updateMiaoshaUser);
+    //处理缓存
+    redisService.delete(MiaoshaUserKey.getById,""+id);
+    user.setPassword(updateMiaoshaUser.getPassword());
+    redisService.set(MiaoshaUserKey.token, ""+id, user);
+    return true;
+  }
 
 
   public String login(LoginVo loginVo, HttpServletResponse response) {
