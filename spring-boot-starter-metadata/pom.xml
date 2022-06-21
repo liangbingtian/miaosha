@@ -28,7 +28,7 @@
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <mybatis-spring-boot>1.2.0</mybatis-spring-boot>
         <mybatis.starter.version>2.1.1</mybatis.starter.version>
-        <mysql-connector>5.1.39</mysql-connector>
+        <mysql-connector>8.0.28</mysql-connector>
         <spqr.version>0.9.9</spqr.version>
     </properties>
 
